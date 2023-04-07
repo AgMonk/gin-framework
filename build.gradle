@@ -2,14 +2,14 @@
 plugins {
     id 'java'
     // springboot插件依赖
-    id 'org.springframework.boot' version '3.0.0'
+    id 'org.springframework.boot' version '3.0.4'
     // 版本管理插件依赖
     id 'io.spring.dependency-management' version '1.1.0'
     // 发布插件
     id 'maven-publish'
 }
 
-javadoc.options.encoding = "UTF-8"
+//javadoc.options.encoding = "UTF-8"
 
 // 为所有项目配置
 allprojects {
@@ -23,7 +23,7 @@ allprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'maven-publish'
 
-    javadoc.options.encoding = "UTF-8"
+//    javadoc.options.encoding = "UTF-8"
 
     java{
         withJavadocJar()
