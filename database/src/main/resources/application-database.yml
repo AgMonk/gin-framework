@@ -1,0 +1,40 @@
+spring:
+  config:
+    import:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 2
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 60000
+      max-evictable-idle-time-millis: 500000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall,slf4j
+  # JPA配置
+  jpa:
+    database: mysql
+    # 在控制台打印SQL
+    show-sql: true
+    # 数据库平台
+    database-platform: mysql
+    hibernate:
+      # 每次启动项目时，数据库初始化策略
+      ddl-auto: update
+    properties:
+      hibernate:
+        # 指定默认的存储引擎为InnoDB
+        dialect: org.hibernate.dialect.MySQLDialect
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+

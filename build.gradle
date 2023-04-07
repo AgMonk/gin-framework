@@ -1,0 +1,88 @@
+// 插件管理
+plugins {
+    id 'java'
+    // springboot插件依赖
+    id 'org.springframework.boot' version '3.0.0'
+    // 版本管理插件依赖
+    id 'io.spring.dependency-management' version '1.1.0'
+    // 发布插件
+    id 'maven-publish'
+}
+
+javadoc.options.encoding = "UTF-8"
+
+// 为所有项目配置
+allprojects {
+    group = 'com.gin.framework'
+    version = '1.0.0'
+    sourceCompatibility = JavaVersion.VERSION_17
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'maven-publish'
+
+    javadoc.options.encoding = "UTF-8"
+
+    java{
+        withJavadocJar()
+        withSourcesJar()
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+
+    // 发布配置
+    publishing {
+        publications {
+            myPublish(MavenPublication) {
+//                from components.java
+//                artifact bootJar
+                from components.java
+
+                versionMapping {
+                    usage('java-api') {
+                        fromResolutionOf('runtimeClasspath')
+                    }
+                    usage('java-runtime') {
+                        fromResolutionResult()
+                    }
+                }
+            }
+        }
+        // 发布到的仓库
+        repositories {
+            mavenLocal()
+            maven {
+                name 'project'
+                def rUrl = layout.projectDirectory.dir("repo/releases")
+                def sUrl = layout.projectDirectory.dir("repo/snapshots")
+                url version.endsWith("SNAPSHOT") ? sUrl : rUrl
+            }
+        }
+    }
+}
+
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+

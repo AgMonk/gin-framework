@@ -1,0 +1,89 @@
+23-04-07 13:01:28.783 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 20228 (D:\Project\Java\gin-framework\database\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-07 13:01:28.787 [INFO ] [           main] [                    boot.MainApplication: 630] - No active profile set, falling back to 1 default profile: "default"
+23-04-07 13:01:30.101 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 294] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-07 13:01:30.105 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-07 13:01:30.134 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+23-04-07 13:01:30.279 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[boot]' package. Please check your configuration.
+23-04-07 13:01:31.137 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 114] - Tomcat initialized with port(s): 18888 (http)
+23-04-07 13:01:31.151 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-07 13:01:31.151 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.1]
+23-04-07 13:01:31.311 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-07 13:01:31.312 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2461 ms
+23-04-07 13:01:31.912 [WARN ] [           main] [ConfigServletWebServerApplicationContext: 592] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+23-04-07 13:01:31.917 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Stopping service [Tomcat]
+23-04-07 13:01:31.986 [INFO ] [           main] [.s.b.a.l.ConditionEvaluationReportLogger:  82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+23-04-07 13:01:32.015 [ERROR] [           main] [  o.s.b.d.LoggingFailureAnalysisReporter:  40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+23-04-07 13:24:35.735 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 2396 (D:\Project\Java\gin-framework\database\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-07 13:24:35.739 [INFO ] [           main] [                    boot.MainApplication: 636] - The following 3 profiles are active: "base", "database", "database-dev"
+23-04-07 13:24:37.102 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 294] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-07 13:24:37.108 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-07 13:24:37.145 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+23-04-07 13:24:37.287 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[boot]' package. Please check your configuration.
+23-04-07 13:24:38.182 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 114] - Tomcat initialized with port(s): 18888 (http)
+23-04-07 13:24:38.197 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-07 13:24:38.198 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.1]
+23-04-07 13:24:38.359 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-07 13:24:38.360 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2545 ms
+23-04-07 13:24:40.084 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-07 13:24:40.198 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 226] - Tomcat started on port(s): 18888 (http) with context path ''
+23-04-07 13:24:40.226 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 5.189 seconds (process running for 6.194)
+23-04-07 13:24:40.464 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-07 13:24:40.464 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 525] - Initializing Servlet 'dispatcherServlet'
+23-04-07 13:24:40.466 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 547] - Completed initialization in 1 ms
+23-04-07 13:24:40.527 [INFO ] [)-192.168.0.200] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-07 14:11:19.463 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 23016 (D:\Project\Java\gin-framework\database\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-07 14:11:19.467 [INFO ] [           main] [                    boot.MainApplication: 636] - The following 3 profiles are active: "common", "database", "database-dev"
+23-04-07 14:11:20.839 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 294] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-07 14:11:20.843 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-07 14:11:20.873 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+23-04-07 14:11:21.013 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[boot]' package. Please check your configuration.
+23-04-07 14:11:21.925 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 114] - Tomcat initialized with port(s): 18888 (http)
+23-04-07 14:11:21.941 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-07 14:11:21.943 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.1]
+23-04-07 14:11:22.103 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-07 14:11:22.103 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2567 ms
+23-04-07 14:11:23.881 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-07 14:11:24.001 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 226] - Tomcat started on port(s): 18888 (http) with context path ''
+23-04-07 14:11:24.029 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 5.34 seconds (process running for 6.354)
+23-04-07 14:11:24.427 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-07 14:11:24.428 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 525] - Initializing Servlet 'dispatcherServlet'
+23-04-07 14:11:24.431 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 547] - Completed initialization in 3 ms
+23-04-07 14:11:24.497 [INFO ] [)-192.168.0.200] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-07 16:22:22.743 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 22672 (D:\Project\Java\gin-framework\database\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-07 16:22:22.747 [INFO ] [           main] [                    boot.MainApplication: 636] - The following 3 profiles are active: "common", "database", "database-dev"
+23-04-07 16:22:24.258 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 294] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-07 16:22:24.262 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-07 16:22:24.291 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+23-04-07 16:22:24.439 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[boot]' package. Please check your configuration.
+23-04-07 16:22:25.366 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 114] - Tomcat initialized with port(s): 8080 (http)
+23-04-07 16:22:25.381 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-07 16:22:25.381 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.1]
+23-04-07 16:22:25.530 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-07 16:22:25.531 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2704 ms
+23-04-07 16:22:28.158 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-07 16:22:28.288 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 226] - Tomcat started on port(s): 8080 (http) with context path ''
+23-04-07 16:22:28.318 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 6.339 seconds (process running for 7.394)
+23-04-07 16:22:28.677 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-07 16:22:28.677 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 525] - Initializing Servlet 'dispatcherServlet'
+23-04-07 16:22:28.679 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 547] - Completed initialization in 2 ms
+23-04-07 16:22:28.740 [INFO ] [)-192.168.0.200] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited

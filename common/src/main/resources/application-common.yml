@@ -1,0 +1,35 @@
+log-pattern: "%d{yy-MM-dd' 'HH:mm:ss.SSS} [%-5level] [%15.15t] [%40.40c{39}:%4.4L] - %m%n"
+
+logging:
+  pattern:
+    console: ${log-pattern}
+    file: ${log-pattern}
+  file:
+    path: ./logs
+
+
+server:
+  #开启响应压缩
+  compression:
+    enabled: true
+    #压缩类型
+    mime-types: application/javascript,text/css,application/json,application/xml,text/html,text/xml,text/plain
+    #使用压缩的体积阈值
+    min-response-size: 1024
+  servlet:
+    session:
+      cookie:
+        name: SECURITY-TOKEN
+
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      # 上传单个文件的体积限制
+      max-file-size: 1024MB
+      # 单次请求上传的最大限制
+      max-request-size: 1024MB
+  #      active: prod
