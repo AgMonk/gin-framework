@@ -1,6 +1,5 @@
 package controller;
 
-import annotation.MyRestController;
 import annotation.OpLog;
 import constant.ApiPath;
 import enums.OperationType;
@@ -10,6 +9,7 @@ import exception.file.FileNotExistsException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.annotation.Nullable;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -40,22 +40,18 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
  */
 
 
-//todo @PreAuthorize(Constant.Security.PRE_AUTHORITY_URI_OR_ADMIN)
-//todo @MenuItem(title = "数据库管理", description = "数据库镜像的查询、备份、还原、下载、上传、删除")
-@MyRestController(AbstractDatabaseController.API_PREFIX)
+
 @Tag(name = AbstractDatabaseController.GROUP_NAME)
 @Slf4j
 @CacheConfig(cacheManager = REDIS_CACHE_MANAGER, cacheNames = AbstractDatabaseController.CACHE_NAME)
 @RequiredArgsConstructor
 public abstract class AbstractDatabaseController
         implements OperationLogController {
-
-
+    public static final String API_PREFIX = "/database";
     /**
      * 缓存名称
      */
     public static final String CACHE_NAME = "database";
-    public static final String API_PREFIX = "/database";
     /**
      * 接口分组名称
      */
@@ -71,6 +67,25 @@ public abstract class AbstractDatabaseController
         return Res.of(service.getStatus(), service.getStatus().getZh());
     }
 
+    /**
+     * 主实体类型
+     * @return 主实体类型
+     */
+    @Override
+    public final Class<?> mainClass() {
+        return Database.class;
+    }
+
+    /**
+     * 主实体ID
+     * @param mainId 用户传入的主实体Id
+     * @return 主实体ID
+     */
+    @Nullable
+    @Override
+    public final Long mainId(Long mainId) {
+        return null;
+    }
 
     @GetMapping(ApiPath.DOWNLOAD)
     @Operation(summary = "下载镜像文件")
@@ -86,7 +101,6 @@ public abstract class AbstractDatabaseController
     @GetMapping(ApiPath.LIST)
     @Operation(summary = "查询镜像列表")
     @Cacheable(key = "#root.methodName")
-    //todo @MenuEntry
     public Res<List<FileInfo>> getList(@SuppressWarnings("unused") HttpServletRequest request) throws IOException {
         return Res.of(service.list());
     }

@@ -1,15 +1,15 @@
 package strategy;
 
-import constant.Constant;
+import Constant.Role;
 import lombok.extern.slf4j.Slf4j;
-import old.user.security.bo.MyUserDetails;
-import old.user.security.utils.MySecurityUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import route.annotation.MenuItem;
 import route.entity.EleMenuItem;
 import route.strategy.VisibleStrategy;
+import security.bo.MyUserDetails;
+import security.utils.MySecurityUtils;
 
 import java.lang.reflect.Method;
 
@@ -41,7 +41,7 @@ public class SpringSecurityStrategy implements VisibleStrategy {
             return true;
         }
         final MyUserDetails myUserDetails = MySecurityUtils.currentUserDetails();
-        if (myUserDetails.hasRole(Constant.Role.ADMIN)) {
+        if (myUserDetails.hasRole(Role.ADMIN)) {
             // 超管权限 全部展示
             return false;
         } else {

@@ -5,4 +5,7 @@ dependencies {
     api project(":operation-log")
     api project(":route")
     api "org.springframework.boot:spring-boot-starter-security"
+    // 验证码
+    implementation "com.github.whvcse:easy-captcha:1.6.2"
+    implementation "org.openjdk.nashorn:nashorn-core:15.4"
 }

@@ -1,7 +1,7 @@
 package vo.response;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import constant.Constant;
+import constant.Messages;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,7 +38,7 @@ public class ResPage<T> extends Res<List<T>> {
         data.setSize(page.getSize());
         data.setTotal(page.getTotal());
         data.setTotalPage(page.getPages());
-        data.setMessage(CollectionUtils.isEmpty(page.getRecords()) ? Constant.Messages.DATA_NOT_FOUND : "ok");
+        data.setMessage(CollectionUtils.isEmpty(page.getRecords()) ? Messages.DATA_NOT_FOUND : "ok");
         data.setData(page.getRecords());
         return data;
     }
@@ -49,7 +49,7 @@ public class ResPage<T> extends Res<List<T>> {
         data.setSize(page.getSize());
         data.setTotal(page.getTotal());
         data.setTotalPage(page.getPages());
-        data.setMessage(CollectionUtils.isEmpty(page.getRecords()) ? Constant.Messages.DATA_NOT_FOUND : "ok");
+        data.setMessage(CollectionUtils.isEmpty(page.getRecords()) ? Messages.DATA_NOT_FOUND : "ok");
         data.setData(page.getRecords().stream().map(func).toList());
         return data;
     }

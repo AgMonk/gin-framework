@@ -1,6 +1,6 @@
 package vo.response;
 
-import constant.Constant;
+import constant.Messages;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -36,7 +36,7 @@ public class Res<T> implements Serializable {
     }
 
     public static <T> Res<T> of(T data) {
-        return of(data, data == null ? Constant.Messages.DATA_NOT_FOUND : "ok");
+        return of(data, data == null ? Messages.DATA_NOT_FOUND : "ok");
     }
 
     public static <T> Res<T> of(T data, String message) {

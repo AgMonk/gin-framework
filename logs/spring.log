@@ -23,3 +23,148 @@
 23-04-10 12:01:06.456 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
 23-04-10 12:01:06.588 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 220] - Tomcat started on port(s): 8080 (http) with context path ''
 23-04-10 12:01:06.619 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 10.36 seconds (process running for 11.586)
+23-04-10 16:03:58.013 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 17252 (D:\Project\Java\gin-framework\security\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-10 16:03:58.016 [INFO ] [           main] [                    boot.MainApplication: 638] - The following 4 profiles are active: "common", "database", "database-dev", "user"
+23-04-10 16:03:59.669 [WARN ] [           main] [ocalVariableTableParameterNameDiscoverer: 123] - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration
+23-04-10 16:03:59.723 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:03:59.726 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-04-10 16:03:59.744 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+23-04-10 16:03:59.761 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:03:59.763 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-10 16:03:59.778 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+23-04-10 16:03:59.933 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[boot]' package. Please check your configuration.
+23-04-10 16:04:00.832 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 108] - Tomcat initialized with port(s): 8080 (http)
+23-04-10 16:04:00.847 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-10 16:04:00.848 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+23-04-10 16:04:01.019 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-10 16:04:01.019 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2935 ms
+23-04-10 16:04:01.908 [INFO ] [           main] [ o.hibernate.jpa.internal.util.LogHelper:  31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-04-10 16:04:01.994 [INFO ] [           main] [                   org.hibernate.Version:  44] - HHH000412: Hibernate ORM core version 6.1.7.Final
+23-04-10 16:04:02.526 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-10 16:04:03.131 [INFO ] [           main] [                             SQL dialect:  66] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23-04-10 16:04:03.594 [INFO ] [           main] [      o.h.e.t.j.p.i.JtaPlatformInitiator:  51] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-04-10 16:04:03.613 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:04:03.843 [WARN ] [           main] [JpaBaseConfiguration$JpaWebConfiguration: 231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-04-10 16:04:05.811 [WARN ] [           main] [.s.s.UserDetailsServiceAutoConfiguration:  87] - 
+
+Using generated security password: 5a0dd35d-7b26-4427-bfda-8779d645260f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+23-04-10 16:04:05.975 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-10 16:04:06.001 [INFO ] [           main] [    o.s.s.web.DefaultSecurityFilterChain:  54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@506654fa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4468ced2, org.springframework.security.web.context.SecurityContextHolderFilter@1bb3e150, org.springframework.security.web.header.HeaderWriterFilter@195d4780, org.springframework.web.filter.CorsFilter@21f421b8, org.springframework.security.web.csrf.CsrfFilter@6888746c, org.springframework.security.web.authentication.logout.LogoutFilter@4e23ddf0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@48cbb4c5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@21262bde, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4e3bc13b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4f4b7a2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ac76ad9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@427128a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c989d82, org.springframework.security.web.access.ExceptionTranslationFilter@2b30b25f, org.springframework.security.web.access.intercept.AuthorizationFilter@f83616]
+23-04-10 16:04:06.274 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 220] - Tomcat started on port(s): 8080 (http) with context path ''
+23-04-10 16:04:06.305 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 9.105 seconds (process running for 10.469)
+23-04-10 16:06:24.175 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 2796 (D:\Project\Java\gin-framework\security\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-10 16:06:24.179 [INFO ] [           main] [                    boot.MainApplication: 638] - The following 4 profiles are active: "common", "database", "database-dev", "user"
+23-04-10 16:06:25.807 [WARN ] [           main] [ocalVariableTableParameterNameDiscoverer: 123] - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration
+23-04-10 16:06:25.873 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:06:25.877 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-04-10 16:06:25.896 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+23-04-10 16:06:25.914 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:06:25.916 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-10 16:06:25.930 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+23-04-10 16:06:26.098 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[boot]' package. Please check your configuration.
+23-04-10 16:06:26.971 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 108] - Tomcat initialized with port(s): 8080 (http)
+23-04-10 16:06:26.986 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-10 16:06:26.986 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+23-04-10 16:06:27.140 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-10 16:06:27.141 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2887 ms
+23-04-10 16:06:27.969 [INFO ] [           main] [ o.hibernate.jpa.internal.util.LogHelper:  31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-04-10 16:06:28.049 [INFO ] [           main] [                   org.hibernate.Version:  44] - HHH000412: Hibernate ORM core version 6.1.7.Final
+23-04-10 16:06:28.520 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-10 16:06:29.095 [INFO ] [           main] [                             SQL dialect:  66] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23-04-10 16:06:29.580 [INFO ] [           main] [      o.h.e.t.j.p.i.JtaPlatformInitiator:  51] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-04-10 16:06:29.599 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:06:29.824 [WARN ] [           main] [JpaBaseConfiguration$JpaWebConfiguration: 231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-04-10 16:06:31.698 [WARN ] [           main] [.s.s.UserDetailsServiceAutoConfiguration:  87] - 
+
+Using generated security password: 69949424-60ed-4916-822b-5804d6e63420
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+23-04-10 16:06:31.864 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-10 16:06:31.890 [INFO ] [           main] [    o.s.s.web.DefaultSecurityFilterChain:  54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2040732f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@373fb666, org.springframework.security.web.context.SecurityContextHolderFilter@488c608a, org.springframework.security.web.header.HeaderWriterFilter@e6fbf82, org.springframework.web.filter.CorsFilter@7894a250, org.springframework.security.web.csrf.CsrfFilter@3bede349, org.springframework.security.web.authentication.logout.LogoutFilter@5bb661e0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7641c4e7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@79d8075c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1bd53c5c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@823f978, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55e02661, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59043128, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38affd02, org.springframework.security.web.access.ExceptionTranslationFilter@7c4697fc, org.springframework.security.web.access.intercept.AuthorizationFilter@507187c1]
+23-04-10 16:06:32.155 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 220] - Tomcat started on port(s): 8080 (http) with context path ''
+23-04-10 16:06:32.185 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 8.804 seconds (process running for 9.796)
+23-04-10 16:06:32.523 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-10 16:06:32.524 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 532] - Initializing Servlet 'dispatcherServlet'
+23-04-10 16:06:32.526 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 554] - Completed initialization in 2 ms
+23-04-10 16:07:57.124 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 6684 (D:\Project\Java\gin-framework\security\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-10 16:07:57.128 [INFO ] [           main] [                    boot.MainApplication: 638] - The following 4 profiles are active: "common", "database", "database-dev", "user"
+23-04-10 16:07:58.739 [WARN ] [           main] [ocalVariableTableParameterNameDiscoverer: 123] - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration
+23-04-10 16:07:58.807 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:07:58.810 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-04-10 16:07:58.836 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+23-04-10 16:07:58.855 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:07:58.857 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-10 16:07:58.871 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+23-04-10 16:07:59.035 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[com.gin.*.dao]' package. Please check your configuration.
+23-04-10 16:07:59.908 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 108] - Tomcat initialized with port(s): 8080 (http)
+23-04-10 16:07:59.922 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-10 16:07:59.923 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+23-04-10 16:08:00.071 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-10 16:08:00.071 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2862 ms
+23-04-10 16:08:00.877 [INFO ] [           main] [ o.hibernate.jpa.internal.util.LogHelper:  31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-04-10 16:08:00.955 [INFO ] [           main] [                   org.hibernate.Version:  44] - HHH000412: Hibernate ORM core version 6.1.7.Final
+23-04-10 16:08:01.411 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-10 16:08:01.991 [INFO ] [           main] [                             SQL dialect:  66] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23-04-10 16:08:02.468 [INFO ] [           main] [      o.h.e.t.j.p.i.JtaPlatformInitiator:  51] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-04-10 16:08:02.501 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:08:02.725 [WARN ] [           main] [JpaBaseConfiguration$JpaWebConfiguration: 231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-04-10 16:08:04.625 [WARN ] [           main] [.s.s.UserDetailsServiceAutoConfiguration:  87] - 
+
+Using generated security password: 2c642ce2-0d21-4bb2-a98f-516b4c35e892
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+23-04-10 16:08:04.793 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-10 16:08:04.818 [INFO ] [           main] [    o.s.s.web.DefaultSecurityFilterChain:  54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a3d52a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a0f1f9d, org.springframework.security.web.context.SecurityContextHolderFilter@1e6f7c25, org.springframework.security.web.header.HeaderWriterFilter@420068a, org.springframework.web.filter.CorsFilter@18356d9e, org.springframework.security.web.csrf.CsrfFilter@29dcad7e, org.springframework.security.web.authentication.logout.LogoutFilter@5cb4ba80, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@823f978, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@42a89cef, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e97da56, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1db7a4ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23243bc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73eaae1e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e8f3b76, org.springframework.security.web.access.ExceptionTranslationFilter@6f2b608e, org.springframework.security.web.access.intercept.AuthorizationFilter@542c6165]
+23-04-10 16:08:05.087 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 220] - Tomcat started on port(s): 8080 (http) with context path ''
+23-04-10 16:08:05.119 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 8.762 seconds (process running for 9.775)
+23-04-10 16:08:05.543 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-10 16:08:05.544 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 532] - Initializing Servlet 'dispatcherServlet'
+23-04-10 16:08:05.546 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 554] - Completed initialization in 2 ms
+23-04-10 16:09:10.491 [INFO ] [           main] [                    boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 16064 (D:\Project\Java\gin-framework\security\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-10 16:09:10.504 [INFO ] [           main] [                    boot.MainApplication: 638] - The following 4 profiles are active: "common", "database", "database-dev", "user"
+23-04-10 16:09:12.124 [WARN ] [           main] [ocalVariableTableParameterNameDiscoverer: 123] - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration
+23-04-10 16:09:12.190 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:09:12.193 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-04-10 16:09:12.220 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+23-04-10 16:09:12.239 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:09:12.241 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-10 16:09:12.256 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+23-04-10 16:09:13.320 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 108] - Tomcat initialized with port(s): 8080 (http)
+23-04-10 16:09:13.334 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-10 16:09:13.334 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+23-04-10 16:09:13.490 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-10 16:09:13.491 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 2914 ms
+23-04-10 16:09:14.390 [INFO ] [           main] [ o.hibernate.jpa.internal.util.LogHelper:  31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-04-10 16:09:14.477 [INFO ] [           main] [                   org.hibernate.Version:  44] - HHH000412: Hibernate ORM core version 6.1.7.Final
+23-04-10 16:09:14.998 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-10 16:09:15.594 [INFO ] [           main] [                             SQL dialect:  66] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23-04-10 16:09:16.042 [INFO ] [           main] [      o.h.e.t.j.p.i.JtaPlatformInitiator:  51] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-04-10 16:09:16.059 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:09:16.260 [WARN ] [           main] [JpaBaseConfiguration$JpaWebConfiguration: 231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-04-10 16:09:18.047 [WARN ] [           main] [.s.s.UserDetailsServiceAutoConfiguration:  87] - 
+
+Using generated security password: 7e574367-253a-470d-a233-3cb1bbd87086
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+23-04-10 16:09:18.213 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-10 16:09:18.240 [INFO ] [           main] [    o.s.s.web.DefaultSecurityFilterChain:  54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e68ccc9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1784fcab, org.springframework.security.web.context.SecurityContextHolderFilter@413e8246, org.springframework.security.web.header.HeaderWriterFilter@5f0a5848, org.springframework.web.filter.CorsFilter@63e4bbf9, org.springframework.security.web.csrf.CsrfFilter@6f5f892c, org.springframework.security.web.authentication.logout.LogoutFilter@38affd02, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@277dddcf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a175162, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@455cb6d9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@55159007, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2df7766b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@162a5c4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d7a343f, org.springframework.security.web.access.ExceptionTranslationFilter@4417755b, org.springframework.security.web.access.intercept.AuthorizationFilter@3507200d]
+23-04-10 16:09:18.419 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.RelationRolePermissionDao
+23-04-10 16:09:18.655 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.RelationUserRoleDao
+23-04-10 16:09:18.696 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemPermissionDao
+23-04-10 16:09:18.728 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemRoleDao
+23-04-10 16:09:18.757 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemUserAvatarDao
+23-04-10 16:09:18.786 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemUserDao
+23-04-10 16:09:18.816 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemUserInfoDao
+23-04-10 16:09:18.842 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemOperationLogDao
+23-04-10 16:09:18.881 [INFO ] [           main] [          config.redis.RedisMybatisCache:  17] - 初始化缓存: dao.SystemOperationLogOldDao
+23-04-10 16:09:19.016 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 220] - Tomcat started on port(s): 8080 (http) with context path ''
+23-04-10 16:09:19.048 [INFO ] [           main] [                    boot.MainApplication:  57] - Started MainApplication in 9.33 seconds (process running for 10.316)
+23-04-10 16:09:19.273 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-10 16:09:19.274 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 532] - Initializing Servlet 'dispatcherServlet'
+23-04-10 16:09:19.276 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 554] - Completed initialization in 2 ms
