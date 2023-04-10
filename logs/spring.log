@@ -168,3 +168,107 @@ This generated password is for development use only. Your security configuration
 23-04-10 16:09:19.273 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 23-04-10 16:09:19.274 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 532] - Initializing Servlet 'dispatcherServlet'
 23-04-10 16:09:19.276 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 554] - Completed initialization in 2 ms
+23-04-10 16:18:29.935 [INFO ] [           main] [   com.gin.security.boot.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 11572 (D:\Project\Java\gin-framework\security\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-10 16:18:29.939 [DEBUG] [           main] [   com.gin.security.boot.MainApplication:  52] - Running with Spring Boot v3.0.4, Spring v6.0.6
+23-04-10 16:18:29.940 [INFO ] [           main] [   com.gin.security.boot.MainApplication: 638] - The following 4 profiles are active: "common", "database", "database-dev", "user"
+23-04-10 16:18:31.576 [WARN ] [           main] [ocalVariableTableParameterNameDiscoverer: 123] - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration
+23-04-10 16:18:31.632 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:18:31.635 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-04-10 16:18:31.663 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+23-04-10 16:18:31.681 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:18:31.683 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-10 16:18:31.697 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+23-04-10 16:18:31.863 [WARN ] [           main] [     o.m.s.mapper.ClassPathMapperScanner:  44] - No MyBatis mapper was found in '[com.gin.common.boot]' package. Please check your configuration.
+23-04-10 16:18:32.825 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 108] - Tomcat initialized with port(s): 8080 (http)
+23-04-10 16:18:32.840 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-10 16:18:32.841 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+23-04-10 16:18:33.013 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-10 16:18:33.013 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 3001 ms
+23-04-10 16:18:33.882 [INFO ] [           main] [ o.hibernate.jpa.internal.util.LogHelper:  31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-04-10 16:18:33.968 [INFO ] [           main] [                   org.hibernate.Version:  44] - HHH000412: Hibernate ORM core version 6.1.7.Final
+23-04-10 16:18:34.471 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-10 16:18:35.125 [INFO ] [           main] [                             SQL dialect:  66] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23-04-10 16:18:35.584 [INFO ] [           main] [      o.h.e.t.j.p.i.JtaPlatformInitiator:  51] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-04-10 16:18:35.603 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:18:35.843 [WARN ] [           main] [JpaBaseConfiguration$JpaWebConfiguration: 231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-04-10 16:18:37.704 [WARN ] [           main] [.s.s.UserDetailsServiceAutoConfiguration:  87] - 
+
+Using generated security password: 97f743e9-dc19-42ae-8340-aabc67590a4a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+23-04-10 16:18:37.868 [INFO ] [           main] [     o.s.b.a.e.web.EndpointLinksResolver:  58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-04-10 16:18:37.896 [INFO ] [           main] [    o.s.s.web.DefaultSecurityFilterChain:  54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@235d46b2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1644cc2d, org.springframework.security.web.context.SecurityContextHolderFilter@501956f9, org.springframework.security.web.header.HeaderWriterFilter@3749c6ac, org.springframework.web.filter.CorsFilter@f83616, org.springframework.security.web.csrf.CsrfFilter@d426e01, org.springframework.security.web.authentication.logout.LogoutFilter@6f2b608e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e23ddf0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@276eafad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@162a5c4c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@413e8246, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fbed6fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75ff2b6d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f0bf0ed, org.springframework.security.web.access.ExceptionTranslationFilter@71d8794f, org.springframework.security.web.access.intercept.AuthorizationFilter@c5c2a84]
+23-04-10 16:18:38.161 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 220] - Tomcat started on port(s): 8080 (http) with context path ''
+23-04-10 16:18:38.192 [INFO ] [           main] [   com.gin.security.boot.MainApplication:  57] - Started MainApplication in 9.061 seconds (process running for 10.185)
+23-04-10 16:18:38.489 [INFO ] [)-192.168.0.200] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-04-10 16:18:38.490 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 532] - Initializing Servlet 'dispatcherServlet'
+23-04-10 16:18:38.492 [INFO ] [)-192.168.0.200] [       o.s.web.servlet.DispatcherServlet: 554] - Completed initialization in 2 ms
+23-04-10 16:19:58.710 [INFO ] [           main] [        com.gin.security.MainApplication:  51] - Starting MainApplication using Java 18.0.2 with PID 10760 (D:\Project\Java\gin-framework\security\build\classes\java\main started by bx002 in D:\Project\Java\gin-framework)
+23-04-10 16:19:58.724 [DEBUG] [           main] [        com.gin.security.MainApplication:  52] - Running with Spring Boot v3.0.4, Spring v6.0.6
+23-04-10 16:19:58.725 [INFO ] [           main] [        com.gin.security.MainApplication: 638] - The following 4 profiles are active: "common", "database", "database-dev", "user"
+23-04-10 16:20:00.679 [WARN ] [           main] [ocalVariableTableParameterNameDiscoverer: 123] - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration
+23-04-10 16:20:00.741 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:20:00.744 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-04-10 16:20:00.807 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 51 ms. Found 0 JPA repository interfaces.
+23-04-10 16:20:00.825 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 291] - Multiple Spring Data modules found, entering strict repository configuration mode
+23-04-10 16:20:00.827 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 138] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23-04-10 16:20:00.855 [INFO ] [           main] [.s.d.r.c.RepositoryConfigurationDelegate: 208] - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+23-04-10 16:20:02.027 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.064 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'mybatisPlusConfig' of type [com.gin.database.config.MybatisPlusConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.084 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'mybatisPlusInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.105 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.132 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.176 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.242 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.448 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.476 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration' of type [org.springframework.boot.autoconfigure.sql.init.DataSourceInitializationConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.498 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties' of type [org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.517 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'dataSourceScriptDatabaseInitializer' of type [org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.545 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.579 [INFO ] [           main] [    c.g.d.config.redis.RedisMybatisCache:  17] - 初始化缓存: com.gin.security.dao.SystemPermissionDao
+23-04-10 16:20:02.810 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'systemPermissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.828 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'systemPermissionDao' of type [jdk.proxy2.$Proxy123] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.844 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'systemPermissionServiceImpl' of type [com.gin.security.service.impl.SystemPermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.926 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'permissionEvaluatorProxyService' of type [com.gin.security.service.PermissionEvaluatorProxyService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:02.928 [INFO ] [           main] [trationDelegate$BeanPostProcessorChecker: 409] - Bean 'myMethodSecurityExpressionHandler' of type [com.gin.security.handler.MyMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23-04-10 16:20:03.460 [INFO ] [           main] [ o.s.b.w.embedded.tomcat.TomcatWebServer: 108] - Tomcat initialized with port(s): 8080 (http)
+23-04-10 16:20:03.476 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Starting service [Tomcat]
+23-04-10 16:20:03.476 [INFO ] [           main] [   o.apache.catalina.core.StandardEngine: 173] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+23-04-10 16:20:03.640 [INFO ] [           main] [      o.a.c.c.C.[Tomcat].[localhost].[/]: 173] - Initializing Spring embedded WebApplicationContext
+23-04-10 16:20:03.640 [INFO ] [           main] [w.s.c.ServletWebServerApplicationContext: 291] - Root WebApplicationContext: initialization completed in 4842 ms
+23-04-10 16:20:04.510 [INFO ] [           main] [    c.g.d.config.redis.RedisMybatisCache:  17] - 初始化缓存: com.gin.security.dao.SystemUserInfoDao
+23-04-10 16:20:04.634 [INFO ] [           main] [    c.g.d.config.redis.RedisMybatisCache:  17] - 初始化缓存: com.gin.security.dao.SystemUserDao
+23-04-10 16:20:04.750 [INFO ] [           main] [    c.g.d.config.redis.RedisMybatisCache:  17] - 初始化缓存: com.gin.security.dao.SystemRoleDao
+23-04-10 16:20:04.862 [INFO ] [           main] [    c.g.d.config.redis.RedisMybatisCache:  17] - 初始化缓存: com.gin.security.dao.RelationRolePermissionDao
+23-04-10 16:20:04.981 [INFO ] [           main] [    c.g.d.config.redis.RedisMybatisCache:  17] - 初始化缓存: com.gin.security.dao.RelationUserRoleDao
+23-04-10 16:20:05.340 [DEBUG] [           main] [  c.gin.security.component.MyLoginFilter: 240] - Filter 'myLoginFilter' configured for use
+23-04-10 16:20:05.474 [INFO ] [           main] [ o.hibernate.jpa.internal.util.LogHelper:  31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-04-10 16:20:05.558 [INFO ] [           main] [                   org.hibernate.Version:  44] - HHH000412: Hibernate ORM core version 6.1.7.Final
+23-04-10 16:20:06.067 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource: 996] - {dataSource-1} inited
+23-04-10 16:20:06.681 [INFO ] [           main] [                             SQL dialect:  66] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+23-04-10 16:20:08.205 [INFO ] [           main] [      o.h.e.t.j.p.i.JtaPlatformInitiator:  51] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-04-10 16:20:08.221 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:20:08.260 [WARN ] [           main] [ConfigServletWebServerApplicationContext: 592] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityAopConfig' defined in file [D:\Project\Java\gin-framework\security\build\classes\java\main\com\gin\security\aop\SecurityAopConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'service.SystemOperationLogService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+23-04-10 16:20:08.261 [INFO ] [           main] [j.LocalContainerEntityManagerFactoryBean: 650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-04-10 16:20:08.286 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource:2138] - {dataSource-1} closing ...
+23-04-10 16:20:08.290 [INFO ] [           main] [  com.alibaba.druid.pool.DruidDataSource:2211] - {dataSource-1} closed
+23-04-10 16:20:08.292 [INFO ] [           main] [  o.apache.catalina.core.StandardService: 173] - Stopping service [Tomcat]
+23-04-10 16:20:08.342 [INFO ] [           main] [.s.b.a.l.ConditionEvaluationReportLogger:  82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+23-04-10 16:20:08.470 [ERROR] [           main] [  o.s.b.d.LoggingFailureAnalysisReporter:  40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.gin.security.aop.SecurityAopConfig required a bean of type 'service.SystemOperationLogService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'service.SystemOperationLogService' in your configuration.
+
