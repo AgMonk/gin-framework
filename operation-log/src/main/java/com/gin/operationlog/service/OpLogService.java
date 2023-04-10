@@ -1,19 +1,19 @@
 package com.gin.operationlog.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import config.OperationLogProperties;
-import dto.param.OperationLogPageParam;
-import entity.BaseOperationLog;
-import entity.SystemOperationLog;
-import entity.SystemOperationLogOld;
+import com.gin.database.vo.response.ResPage;
+import com.gin.operationlog.config.OperationLogProperties;
+import com.gin.operationlog.dto.param.OperationLogPageParam;
+import com.gin.operationlog.entity.BaseOperationLog;
+import com.gin.operationlog.entity.SystemOperationLog;
+import com.gin.operationlog.entity.SystemOperationLogOld;
+import com.gin.operationlog.vo.SubClassOption;
+import com.gin.operationlog.vo.SystemOperationLogVo;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import vo.SubClassOption;
-import vo.SystemOperationLogVo;
-import com.gin.database.vo.response.ResPage;
 
 import java.time.ZonedDateTime;
 import java.util.HashMap;

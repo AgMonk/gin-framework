@@ -1,11 +1,15 @@
-package controller;
+package com.gin.databasebackup.controller;
 
-import annotation.OpLog;
 import com.gin.common.constant.ApiPath;
-import enums.OperationType;
-import com.gin.database.enums.ServiceStatus;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileNotExistsException;
+import com.gin.common.vo.FileInfo;
+import com.gin.common.vo.response.Res;
+import com.gin.database.enums.ServiceStatus;
+import com.gin.databasebackup.service.DatabaseBackupService;
+import com.gin.operationlog.annotation.OpLog;
+import com.gin.operationlog.controller.OperationLogController;
+import com.gin.operationlog.enums.OperationType;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,9 +26,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import service.DatabaseBackupService;
-import com.gin.common.vo.FileInfo;
-import com.gin.common.vo.response.Res;
 
 import java.io.IOException;
 import java.util.List;
@@ -46,7 +47,7 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 @CacheConfig(cacheManager = REDIS_CACHE_MANAGER, cacheNames = AbstractDatabaseController.CACHE_NAME)
 @RequiredArgsConstructor
 public abstract class AbstractDatabaseController
-        implements controller.OperationLogController {
+        implements OperationLogController {
     public static final String API_PREFIX = "/database";
     /**
      * 缓存名称

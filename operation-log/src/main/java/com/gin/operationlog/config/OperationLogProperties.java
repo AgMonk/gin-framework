@@ -1,4 +1,4 @@
-package config;
+package com.gin.operationlog.config;
 
 import lombok.Getter;
 import lombok.Setter;

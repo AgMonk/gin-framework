@@ -1,10 +1,10 @@
-package dto.param;
+package com.gin.operationlog.dto.param;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gin.database.dto.param.BasePageParam;
 import com.gin.database.dto.param.TimeRange;
-import enums.OperationType;
+import com.gin.operationlog.enums.OperationType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;

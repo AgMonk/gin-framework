@@ -1,9 +1,15 @@
 package com.gin.security.controller;
 
 
-import com.gin.security.Constant.Security;
 import com.gin.common.annotation.MyRestController;
-import annotation.OpLog;
+import com.gin.common.exception.BusinessException;
+import com.gin.common.vo.response.Res;
+import com.gin.operationlog.annotation.OpLog;
+import com.gin.operationlog.controller.OperationLogController;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.subclass.PasswordSubClass;
+import com.gin.route.annotation.MenuItem;
+import com.gin.security.Constant.Security;
 import com.gin.security.bo.SystemUserBo;
 import com.gin.security.dto.form.LoginForm;
 import com.gin.security.dto.form.RegForm;
@@ -11,8 +17,16 @@ import com.gin.security.dto.form.SystemUserInfoForm;
 import com.gin.security.entity.SystemUser;
 import com.gin.security.entity.SystemUserAvatar;
 import com.gin.security.entity.SystemUserInfo;
-import enums.OperationType;
-import com.gin.common.exception.BusinessException;
+import com.gin.security.properties.UserProperties;
+import com.gin.security.service.RolePermissionService;
+import com.gin.security.service.SystemUserAvatarService;
+import com.gin.security.service.SystemUserInfoService;
+import com.gin.security.service.SystemUserService;
+import com.gin.security.utils.MySecurityUtils;
+import com.gin.security.validation.Password;
+import com.gin.security.vo.MyUserDetailsVo;
+import com.gin.security.vo.SystemUserInfoVo;
+import com.gin.security.vo.SystemUserVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -28,19 +42,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import com.gin.security.properties.UserProperties;
-import com.gin.route.annotation.MenuItem;
-import com.gin.security.utils.MySecurityUtils;
-import com.gin.security.vo.MyUserDetailsVo;
-import com.gin.security.service.RolePermissionService;
-import com.gin.security.service.SystemUserAvatarService;
-import com.gin.security.service.SystemUserInfoService;
-import com.gin.security.service.SystemUserService;
-import subclass.PasswordSubClass;
-import com.gin.security.validation.Password;
-import com.gin.security.vo.SystemUserInfoVo;
-import com.gin.security.vo.SystemUserVo;
-import com.gin.common.vo.response.Res;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -60,7 +61,7 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 @Tag(name = "用户接口")
 @Slf4j
 @MenuItem(title = "用户中心", description = "当前用户对自己的信息查询和操作")
-public class SystemUserController implements controller.OperationLogController {
+public class SystemUserController implements OperationLogController {
     /**
      * 接口路径前缀
      */

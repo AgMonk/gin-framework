@@ -1,15 +1,15 @@
-package strategy.database;
+package com.gin.databasebackup.strategy.database;
 
-import annotation.LogStrategy;
-import bo.OperationLogContext;
-import enums.OperationType;
+import com.gin.common.vo.FileInfo;
+import com.gin.databasebackup.service.DatabaseBackupService;
+import com.gin.operationlog.annotation.LogStrategy;
+import com.gin.operationlog.bo.OperationLogContext;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.strategy.DescriptionStrategy;
 import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.stereotype.Component;
-import service.DatabaseBackupService;
-import strategy.DescriptionStrategy;
-import com.gin.common.vo.FileInfo;
 
 /**
  * 数据库备份下载策略

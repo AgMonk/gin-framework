@@ -1,8 +1,9 @@
-package bo;
+package com.gin.operationlog.bo;
 
-import enums.OperationType;
-import jakarta.servlet.http.HttpServletRequest;
+
 import com.gin.common.utils.ParamArg;
+import com.gin.operationlog.enums.OperationType;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
 

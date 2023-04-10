@@ -1,7 +1,7 @@
-package annotation;
+package com.gin.operationlog.annotation;
 
 
-import enums.OperationType;
+import com.gin.operationlog.enums.OperationType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

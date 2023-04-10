@@ -1,15 +1,15 @@
-package strategy.def;
+package com.gin.operationlog.strategy.def;
 
-import annotation.LogStrategy;
-import com.gin.database.base.BaseVo;
-import bo.OperationLogContext;
-import enums.OperationType;
-import io.swagger.v3.oas.annotations.media.Schema;
-import org.springframework.stereotype.Component;
-import strategy.DescriptionStrategy;
 import com.gin.common.utils.TimeUtils;
 import com.gin.common.utils.reflect.ReflectUtils;
 import com.gin.common.vo.response.Res;
+import com.gin.database.base.BaseVo;
+import com.gin.operationlog.annotation.LogStrategy;
+import com.gin.operationlog.bo.OperationLogContext;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.strategy.DescriptionStrategy;
+import io.swagger.v3.oas.annotations.media.Schema;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

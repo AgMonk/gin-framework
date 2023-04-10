@@ -1,7 +1,7 @@
-package strategy;
+package com.gin.operationlog.strategy;
 
 
-import bo.OperationLogContext;
+import com.gin.operationlog.bo.OperationLogContext;
 
 /**
  * 描述生成策略

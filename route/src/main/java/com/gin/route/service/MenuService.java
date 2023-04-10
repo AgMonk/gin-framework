@@ -98,8 +98,7 @@ public class MenuService {
             if (paths != null && paths.length > 0) {
                 // 当前节点
                 HasChildren<EleMenuComponent> node = root;
-                for (int i = 0; i < paths.length; i++) {
-                    final MenuPath menuPath = paths[i];
+                for (final MenuPath menuPath : paths) {
                     if (menuPath.isGroup()) {
                         // 如果是分组，创建分组，跳出循环
                         node = (EleMenuItemGroup) node.findOrDefault(

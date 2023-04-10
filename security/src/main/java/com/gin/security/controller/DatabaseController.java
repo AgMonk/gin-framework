@@ -1,22 +1,23 @@
 package com.gin.security.controller;
 
-import com.gin.security.Constant.Security;
 import com.gin.common.annotation.MyRestController;
-import dto.param.OperationLogPageParam;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileNotExistsException;
+import com.gin.common.vo.FileInfo;
+import com.gin.common.vo.response.Res;
+import com.gin.database.vo.response.ResPage;
+import com.gin.databasebackup.controller.AbstractDatabaseController;
+import com.gin.databasebackup.service.DatabaseBackupService;
+import com.gin.operationlog.dto.param.OperationLogPageParam;
+import com.gin.operationlog.vo.SubClassOption;
+import com.gin.operationlog.vo.SystemOperationLogVo;
+import com.gin.route.annotation.MenuEntry;
+import com.gin.route.annotation.MenuItem;
+import com.gin.security.Constant.Security;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.multipart.MultipartFile;
-import com.gin.route.annotation.MenuEntry;
-import com.gin.route.annotation.MenuItem;
-import service.DatabaseBackupService;
-import com.gin.common.vo.FileInfo;
-import vo.SubClassOption;
-import vo.SystemOperationLogVo;
-import com.gin.common.vo.response.Res;
-import com.gin.database.vo.response.ResPage;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,9 +28,9 @@ import java.util.List;
  * @version : v1.0.0
  * @since : 2023/4/10 15:58
  */
-@MyRestController(controller.AbstractDatabaseController.API_PREFIX)
+@MyRestController(AbstractDatabaseController.API_PREFIX)
 @MenuItem(title = "数据库管理", description = "数据库镜像的查询、备份、还原、下载、上传、删除")
-public class DatabaseController extends controller.AbstractDatabaseController {
+public class DatabaseController extends AbstractDatabaseController {
     public DatabaseController(DatabaseBackupService service) {
         super(service);
     }

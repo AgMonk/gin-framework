@@ -1,6 +1,6 @@
 package com.gin.operationlog.service;
 
-import entity.SystemOperationLogOld;
+import com.gin.operationlog.entity.SystemOperationLogOld;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

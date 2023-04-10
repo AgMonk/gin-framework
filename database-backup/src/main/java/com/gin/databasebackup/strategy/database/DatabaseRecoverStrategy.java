@@ -1,12 +1,13 @@
-package strategy.database;
+package com.gin.databasebackup.strategy.database;
 
-import annotation.LogStrategy;
-import bo.OperationLogContext;
-import enums.OperationType;
+
+import com.gin.common.vo.FileInfo;
+import com.gin.operationlog.annotation.LogStrategy;
+import com.gin.operationlog.bo.OperationLogContext;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.strategy.DescriptionStrategy;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.stereotype.Component;
-import strategy.DescriptionStrategy;
-import com.gin.common.vo.FileInfo;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package init;
+package com.gin.databasebackup.init;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import service.DatabaseBackupService;
+import com.gin.databasebackup.service.DatabaseBackupService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

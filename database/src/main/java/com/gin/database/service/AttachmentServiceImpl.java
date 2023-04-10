@@ -128,7 +128,7 @@ public abstract class AttachmentServiceImpl<M extends BaseMapper<T>, T extends B
      * @param ext      原名的后缀名
      * @return 保存的文件名
      */
-    public String generateFileName(String mainName, String ext) {
+    public String generateFileName(@SuppressWarnings("unused") String mainName, String ext) {
         return StrUtils.uuid().substring(18) + FileUtils.DOT + ext;
     }
 

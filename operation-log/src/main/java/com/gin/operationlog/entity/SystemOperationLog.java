@@ -1,4 +1,4 @@
-package entity;
+package com.gin.operationlog.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import jakarta.persistence.*;
@@ -21,6 +21,6 @@ import lombok.Setter;
         @Index(columnList = "mainClass,mainId,type,subClass,subId,timeCreate"),
         @Index(columnList = "mainClass,subClass,type"),
 })
-public class SystemOperationLog extends entity.BaseOperationLog {
+public class SystemOperationLog extends BaseOperationLog {
     public static final String TABLE_NAME = "t_system_entity_operation_log";
 }

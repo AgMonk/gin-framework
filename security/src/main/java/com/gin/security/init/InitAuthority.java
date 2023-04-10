@@ -25,7 +25,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import service.*;
 import com.gin.common.utils.SpringContextUtils;
 import com.gin.common.utils.reflect.ReflectUtils;
 
@@ -65,7 +64,7 @@ public class InitAuthority implements ApplicationRunner {
      * 任务内容
      */
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         log.info("权限初始化");
 
         initPermissions();

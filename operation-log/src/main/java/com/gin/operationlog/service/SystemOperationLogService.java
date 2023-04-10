@@ -1,6 +1,6 @@
 package com.gin.operationlog.service;
 
-import entity.SystemOperationLog;
+import com.gin.operationlog.entity.SystemOperationLog;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +21,7 @@ public interface SystemOperationLogService extends OperationLogService<SystemOpe
      * @param log 日志
      */
     @Async
+    @SuppressWarnings("UnusedReturnValue")
     default void write(@NotNull Collection<SystemOperationLog> log) {
         if (log.size() == 0) {
             return;

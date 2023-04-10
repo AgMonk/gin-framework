@@ -1,11 +1,11 @@
-package strategy;
+package com.gin.operationlog.strategy;
 
-import bo.OperationLogContext;
-import jakarta.annotation.Nullable;
-import lombok.extern.slf4j.Slf4j;
 import com.gin.common.utils.reflect.FieldDifference;
 import com.gin.common.utils.reflect.FieldValue;
 import com.gin.common.utils.reflect.ReflectUtils;
+import com.gin.operationlog.bo.OperationLogContext;
+import jakarta.annotation.Nullable;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  * @since : 2023/2/22 09:18
  */
 @Slf4j
-public abstract class AbstractUpdateStrategy implements strategy.DescriptionStrategy {
+public abstract class AbstractUpdateStrategy implements DescriptionStrategy {
 
     /**
      * 生成描述(比较修改了哪些字段

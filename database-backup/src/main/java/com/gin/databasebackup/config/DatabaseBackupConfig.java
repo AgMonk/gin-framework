@@ -1,4 +1,4 @@
-package config;
+package com.gin.databasebackup.config;
 
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class DatabaseBackupConfig {
 
     @Bean
-    public config.DatabaseConConfig databaseConConfig(DataSourceProperties dataSourceProperties){
-        return new config.DatabaseConConfig(dataSourceProperties.getUrl());
+    public DatabaseConConfig databaseConConfig(DataSourceProperties dataSourceProperties){
+        return new DatabaseConConfig(dataSourceProperties.getUrl());
     }
 }   

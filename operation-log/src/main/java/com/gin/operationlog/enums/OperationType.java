@@ -1,4 +1,4 @@
-package enums;
+package com.gin.operationlog.enums;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.RequiredArgsConstructor;

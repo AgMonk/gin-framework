@@ -1,11 +1,11 @@
 package com.gin.security.init;
 
 
-import controller.AbstractDatabaseController;
-import jakarta.annotation.Nullable;
-import jakarta.validation.constraints.NotNull;
+import com.gin.databasebackup.controller.AbstractDatabaseController;
 import com.gin.security.entity.SystemRole;
 import com.gin.security.service.RolePermissionService;
+import jakarta.annotation.Nullable;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 

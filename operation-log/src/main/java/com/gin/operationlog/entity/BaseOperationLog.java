@@ -1,13 +1,13 @@
-package entity;
+package com.gin.operationlog.entity;
 
-import com.gin.database.base.BasePo;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.gin.database.base.BasePo;
 import com.gin.database.handler.TypeHandlerClass;
+import com.gin.operationlog.enums.OperationType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import enums.OperationType;
 import org.hibernate.annotations.Comment;
 
 /**

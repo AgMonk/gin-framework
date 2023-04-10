@@ -1,4 +1,4 @@
-package subclass;
+package com.gin.operationlog.subclass;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

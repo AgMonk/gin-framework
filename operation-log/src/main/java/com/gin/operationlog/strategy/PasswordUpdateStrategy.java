@@ -1,10 +1,10 @@
-package strategy;
+package com.gin.operationlog.strategy;
 
-import annotation.LogStrategy;
-import bo.OperationLogContext;
-import enums.OperationType;
+import com.gin.operationlog.annotation.LogStrategy;
+import com.gin.operationlog.bo.OperationLogContext;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.subclass.PasswordSubClass;
 import org.springframework.stereotype.Component;
-import subclass.PasswordSubClass;
 
 /**
  * 修改密码策略
@@ -14,7 +14,7 @@ import subclass.PasswordSubClass;
  */
 @Component
 @LogStrategy(value = PasswordSubClass.class, type = OperationType.UPDATE)
-public class PasswordUpdateStrategy implements strategy.DescriptionStrategy {
+public class PasswordUpdateStrategy implements DescriptionStrategy {
 
     /**
      * 生成描述

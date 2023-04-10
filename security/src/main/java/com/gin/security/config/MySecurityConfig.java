@@ -103,7 +103,6 @@ public class MySecurityConfig {
             MyAuthenticationHandler authenticationHandler,
             MyRememberMeServices rememberMeServices
     ) throws Exception {
-        System.out.println("11111111111111111111");
         //路径配置
         http.authorizeHttpRequests()
                 .requestMatchers(HttpMethod.GET, DOC_WHITE_LIST.toArray(new String[0])).permitAll()

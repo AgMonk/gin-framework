@@ -1,14 +1,20 @@
-package service;
+package com.gin.databasebackup.service;
 
-import config.DatabaseConConfig;
-import properties.DatabaseProperties;
 import com.gin.common.enums.OsType;
-import com.gin.database.enums.ServiceStatus;
 import com.gin.common.exception.BusinessException;
 import com.gin.common.exception.file.DirCreateException;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileExistsException;
 import com.gin.common.exception.file.FileNotExistsException;
+import com.gin.common.properties.FileProperties;
+import com.gin.common.utils.FileUtils;
+import com.gin.common.utils.IoUtils;
+import com.gin.common.utils.ProcessUtils;
+import com.gin.common.utils.TimeUtils;
+import com.gin.common.vo.FileInfo;
+import com.gin.database.enums.ServiceStatus;
+import com.gin.databasebackup.config.DatabaseConConfig;
+import com.gin.databasebackup.properties.DatabaseProperties;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
@@ -25,12 +31,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.multipart.MultipartFile;
-import com.gin.common.properties.FileProperties;
-import com.gin.common.utils.FileUtils;
-import com.gin.common.utils.IoUtils;
-import com.gin.common.utils.ProcessUtils;
-import com.gin.common.utils.TimeUtils;
-import com.gin.common.vo.FileInfo;
 
 import java.io.*;
 import java.net.URLEncoder;

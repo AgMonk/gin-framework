@@ -2,10 +2,11 @@ package com.gin.security.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.gin.database.service.MyService;
+import com.gin.operationlog.service.UserInfoService;
 import com.gin.security.dto.form.SystemUserInfoForm;
 import com.gin.security.entity.SystemUserInfo;
-import org.springframework.transaction.annotation.Transactional;
 import com.gin.security.utils.MySecurityUtils;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -19,7 +20,7 @@ import java.util.List;
  */
 
 @Transactional(rollbackFor = Exception.class)
-public interface SystemUserInfoService extends MyService<SystemUserInfo>, service.UserInfoService {
+public interface SystemUserInfoService extends MyService<SystemUserInfo>, UserInfoService {
     /**
      * 根据用户名查询用户个人信息
      * @param userId 用户id

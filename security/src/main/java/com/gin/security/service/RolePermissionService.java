@@ -10,7 +10,6 @@ import com.gin.security.dto.form.RegForm;
 import com.gin.security.dto.form.RelationUserRoleForm;
 import com.gin.security.entity.*;
 import com.gin.security.interfaze.AuthorityProvider;
-import entity.*;
 import com.gin.common.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -51,6 +50,7 @@ public class RolePermissionService implements AuthorityProvider {
      * @param path      路径
      * @param groupName 分组名称
      */
+    @SuppressWarnings("UnusedReturnValue")
     public List<RelationRolePermission> addRolePermissionWithPath(
             long roleId,
             Collection<String> path,
@@ -184,6 +184,7 @@ public class RolePermissionService implements AuthorityProvider {
      * @param userRole 持有的角色
      * @return 用户
      */
+    @SuppressWarnings("UnusedReturnValue")
     public SystemUser initUser(RegForm regForm, Collection<RelationUserRoleForm> userRole) {
         final SystemUser user = systemUserService.getByUsernameOrReg(regForm);
         if (!CollectionUtils.isEmpty(userRole)) {

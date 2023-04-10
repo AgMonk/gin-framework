@@ -1,6 +1,12 @@
-package controller;
+package com.gin.operationlog.controller;
 
-import dto.param.OperationLogPageParam;
+import com.gin.common.utils.SpringContextUtils;
+import com.gin.common.vo.response.Res;
+import com.gin.database.vo.response.ResPage;
+import com.gin.operationlog.dto.param.OperationLogPageParam;
+import com.gin.operationlog.service.OpLogService;
+import com.gin.operationlog.vo.SubClassOption;
+import com.gin.operationlog.vo.SystemOperationLogVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.annotation.Nullable;
@@ -9,12 +15,6 @@ import jakarta.validation.constraints.NotNull;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import service.OpLogService;
-import com.gin.common.utils.SpringContextUtils;
-import vo.SubClassOption;
-import vo.SystemOperationLogVo;
-import com.gin.common.vo.response.Res;
-import com.gin.database.vo.response.ResPage;
 
 import java.util.List;
 

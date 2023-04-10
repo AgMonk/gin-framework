@@ -1,4 +1,4 @@
-package properties;
+package com.gin.databasebackup.properties;
 
 import lombok.Getter;
 import lombok.Setter;

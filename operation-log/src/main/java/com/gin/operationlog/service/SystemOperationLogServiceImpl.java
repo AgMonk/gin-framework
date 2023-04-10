@@ -1,8 +1,8 @@
 package com.gin.operationlog.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import dao.SystemOperationLogDao;
-import entity.SystemOperationLog;
+import com.gin.operationlog.dao.SystemOperationLogDao;
+import com.gin.operationlog.entity.SystemOperationLog;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

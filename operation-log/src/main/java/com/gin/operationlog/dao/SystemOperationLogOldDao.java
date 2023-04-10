@@ -1,8 +1,8 @@
-package dao;
+package com.gin.operationlog.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.gin.database.config.redis.RedisMybatisCache;
-import entity.SystemOperationLogOld;
+import com.gin.operationlog.entity.SystemOperationLogOld;
 import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
 

@@ -1,14 +1,16 @@
 package com.gin.security.aop;
 
-import entity.SystemOperationLog;
-import enums.OperationType;
+import com.gin.common.utils.WebUtils;
+import com.gin.operationlog.entity.SystemOperationLog;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.service.SystemOperationLogService;
+import com.gin.security.bo.MyUserDetails;
+import com.gin.security.entity.SystemUser;
+import com.gin.security.service.SystemUserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import com.gin.security.entity.SystemUser;
-import com.gin.security.bo.MyUserDetails;
-import com.gin.security.service.SystemUserService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -17,8 +19,6 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
-import service.SystemOperationLogService;
-import com.gin.common.utils.WebUtils;
 
 /**
  * AOP

@@ -1,4 +1,4 @@
-package entity;
+package com.gin.operationlog.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import jakarta.persistence.Entity;
@@ -23,11 +23,11 @@ import org.springframework.beans.BeanUtils;
 @Table(indexes = {
         @Index(columnList = "mainClass,mainId,subClass,subId,timeCreate"),
 })
-public class SystemOperationLogOld extends entity.BaseOperationLog {
+public class SystemOperationLogOld extends BaseOperationLog {
     public static final String TABLE_NAME = "t_system_entity_operation_log_old";
 
 
-    public SystemOperationLogOld(entity.SystemOperationLog systemOperationLog) {
+    public SystemOperationLogOld(SystemOperationLog systemOperationLog) {
         BeanUtils.copyProperties(systemOperationLog, this);
         this.setId(null);
     }

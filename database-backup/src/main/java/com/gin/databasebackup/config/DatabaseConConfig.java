@@ -1,4 +1,4 @@
-package config;
+package com.gin.databasebackup.config;
 
 import lombok.Getter;
 import lombok.Setter;

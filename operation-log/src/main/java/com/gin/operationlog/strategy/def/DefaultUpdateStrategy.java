@@ -1,18 +1,18 @@
-package strategy.def;
+package com.gin.operationlog.strategy.def;
 
-import annotation.LogStrategy;
-import bo.OperationLogContext;
 import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.TableField;
-import enums.OperationType;
+import com.gin.common.utils.TimeUtils;
+import com.gin.common.utils.reflect.FieldDifference;
+import com.gin.operationlog.annotation.LogStrategy;
+import com.gin.operationlog.bo.OperationLogContext;
+import com.gin.operationlog.enums.OperationType;
+import com.gin.operationlog.strategy.AbstractUpdateStrategy;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.annotation.Nullable;
 import org.hibernate.annotations.Comment;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
-import strategy.AbstractUpdateStrategy;
-import com.gin.common.utils.TimeUtils;
-import com.gin.common.utils.reflect.FieldDifference;
 
 import java.lang.reflect.Field;
 import java.util.List;
