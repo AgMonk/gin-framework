@@ -1,6 +1,9 @@
 package controller;
 
+import annotation.MyRestController;
+import annotation.OpLog;
 import constant.ApiPath;
+import enums.OperationType;
 import enums.ServiceStatus;
 import exception.file.FileDeleteException;
 import exception.file.FileNotExistsException;
@@ -14,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,21 +40,22 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
  */
 
 
-//todo @MyRestController(DatabaseController.API_PREFIX)
 //todo @PreAuthorize(Constant.Security.PRE_AUTHORITY_URI_OR_ADMIN)
 //todo @MenuItem(title = "数据库管理", description = "数据库镜像的查询、备份、还原、下载、上传、删除")
-
+@MyRestController(AbstractDatabaseController.API_PREFIX)
 @Tag(name = AbstractDatabaseController.GROUP_NAME)
 @Slf4j
 @CacheConfig(cacheManager = REDIS_CACHE_MANAGER, cacheNames = AbstractDatabaseController.CACHE_NAME)
 @RequiredArgsConstructor
 public abstract class AbstractDatabaseController
-// todo         implements OperationLogController
-{
+        implements OperationLogController {
+
+
     /**
      * 缓存名称
      */
     public static final String CACHE_NAME = "database";
+    public static final String API_PREFIX = "/database";
     /**
      * 接口分组名称
      */
@@ -69,7 +74,7 @@ public abstract class AbstractDatabaseController
 
     @GetMapping(ApiPath.DOWNLOAD)
     @Operation(summary = "下载镜像文件")
-    // todo @OpLog(mainClass = Database.class, mainId = "@databaseBackupService?.getBackupFile(#filename)?.lastModified() / 1000", type = OperationType.DOWNLOAD)
+    @OpLog(mainClass = Database.class, mainId = "@databaseBackupService?.getBackupFile(#filename)?.lastModified() / 1000", type = OperationType.DOWNLOAD)
     public void getDownload(
             @RequestParam @Parameter(description = "文件名") String filename,
             HttpServletResponse response,
@@ -88,7 +93,7 @@ public abstract class AbstractDatabaseController
 
     @PostMapping(ApiPath.BACKUP)
     @Operation(summary = "执行备份", description = "返回备份好的文件信息")
-    // todo   @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.BACKUP)
+    @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.BACKUP)
     @CacheEvict(allEntries = true)
     public Res<FileInfo> postBackup(
             @RequestParam(required = false, defaultValue = "true") @Parameter(description = "是否使用gzip压缩,默认true") Boolean gzip,
@@ -99,7 +104,7 @@ public abstract class AbstractDatabaseController
 
     @PostMapping(ApiPath.DEL)
     @Operation(summary = "删除镜像文件", description = "返回被删除的文件信息")
-    // todo  @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.DEL)
+    @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.DEL)
     @CacheEvict(allEntries = true)
     public Res<FileInfo> postDel(
             @RequestParam @Parameter(description = "文件名") String filename,
@@ -110,7 +115,7 @@ public abstract class AbstractDatabaseController
 
     @PostMapping(ApiPath.RECOVER)
     @Operation(summary = "执行还原", description = "返回被还原的文件信息")
-    // todo    @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.RECOVER)
+    @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.RECOVER)
     @CacheEvict(allEntries = true)
     public Res<FileInfo> postRecover(
             @RequestParam @Parameter(description = "文件名") String filename,
@@ -121,7 +126,7 @@ public abstract class AbstractDatabaseController
 
     @PostMapping(value = ApiPath.UPLOAD, consumes = {MULTIPART_FORM_DATA_VALUE})
     @Operation(summary = "上传镜像文件", description = "文件后缀必须为 sql 或 gz;<br/>返回被上传的文件信息")
-    // todo    @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.UPLOAD)
+    @OpLog(mainClass = Database.class, mainId = "#result?.data?.lastModified", type = OperationType.UPLOAD)
     @CacheEvict(allEntries = true)
     public Res<FileInfo> postUpload(
             MultipartFile file,

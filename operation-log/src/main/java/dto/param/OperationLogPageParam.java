@@ -2,8 +2,7 @@ package dto.param;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.sys.base.BasePageParam;
+import enums.OperationType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,11 +30,9 @@ public class OperationLogPageParam extends BasePageParam {
     List<OperationType> type;
     @Schema(description = "副实体类型,如果选择,应当从'日志选项'接口的返回值中选择")
     String subClassName;
-    @Schema(description = "最晚时间")
-    Long maxTime;
-    @Schema(description = "最早时间")
-    Long minTime;
 
+    @Schema(description = "时间范围")
+    TimeRange range;
 
     /**
      * 向queryWrapper中添加条件
@@ -58,11 +55,7 @@ public class OperationLogPageParam extends BasePageParam {
         if (mainId != null) {
             queryWrapper.eq("main_id", mainId);
         }
-        if (maxTime != null) {
-            queryWrapper.lt("time_create", maxTime);
-        }
-        if (minTime != null) {
-            queryWrapper.ge("time_create", minTime);
-        }
+
+        range.handleQueryWrapper(queryWrapper,"time_create");
     }
 }

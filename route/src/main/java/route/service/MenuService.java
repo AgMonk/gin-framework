@@ -1,21 +1,21 @@
 package route.service;
 
-import com.gin.springboot3template.route.annotation.MenuEntry;
-import com.gin.springboot3template.route.annotation.MenuItem;
-import com.gin.springboot3template.route.annotation.MenuPath;
-import com.gin.springboot3template.route.base.EleMenuComponent;
-import com.gin.springboot3template.route.base.HasChildren;
-import com.gin.springboot3template.route.entity.EleMenuItem;
-import com.gin.springboot3template.route.entity.EleMenuItemGroup;
-import com.gin.springboot3template.route.entity.EleSubMenu;
-import com.gin.springboot3template.route.strategy.AlwaysFalseStrategy;
-import com.gin.springboot3template.route.strategy.VisibleStrategy;
-import com.gin.springboot3template.sys.utils.SpringContextUtils;
-import com.gin.springboot3template.sys.utils.reflect.ReflectUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
+import route.annotation.MenuEntry;
+import route.annotation.MenuItem;
+import route.annotation.MenuPath;
+import route.base.EleMenuComponent;
+import route.base.HasChildren;
+import route.entity.EleMenuItem;
+import route.entity.EleMenuItemGroup;
+import route.entity.EleSubMenu;
+import route.strategy.AlwaysFalseStrategy;
+import route.strategy.VisibleStrategy;
+import utils.SpringContextUtils;
+import utils.reflect.ReflectUtils;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;

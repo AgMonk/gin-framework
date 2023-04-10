@@ -1,10 +1,6 @@
 package route.controller;
 
-import com.gin.springboot3template.route.base.EleMenuComponent;
-import com.gin.springboot3template.route.service.MenuService;
-import com.gin.springboot3template.sys.annotation.MyRestController;
-import com.gin.springboot3template.sys.config.redis.CustomKeyGenerator;
-import com.gin.springboot3template.sys.config.redis.RedisConfig;
+import annotation.MyRestController;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpSession;
@@ -13,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import route.base.EleMenuComponent;
+import route.service.MenuService;
 
 import java.util.List;
 
@@ -27,13 +25,11 @@ import java.util.List;
 @RequiredArgsConstructor
 @Tag(name = RouteMenuController.GROUP_NAME)
 @Slf4j
-@CacheConfig(cacheManager = RedisConfig.REDIS_CACHE_MANAGER, keyGenerator = CustomKeyGenerator.NAME, cacheNames = RouteMenuController.CACHE_NAMES)
 public class RouteMenuController {
     /**
      * 接口路径前缀
      */
     public static final String API_PREFIX = "/route";
-    public static final String CACHE_NAMES = "route";
     public static final String GROUP_NAME = "路由菜单接口";
 
     private final MenuService service;

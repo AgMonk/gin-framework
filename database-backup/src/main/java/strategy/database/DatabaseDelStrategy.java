@@ -1,24 +1,24 @@
 package strategy.database;
 
-import com.gin.springboot3template.operationlog.annotation.LogStrategy;
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.operationlog.strategy.DescriptionStrategy;
-import com.gin.springboot3template.sys.vo.FileInfo;
+import annotation.LogStrategy;
+import bo.OperationLogContext;
+import enums.OperationType;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.stereotype.Component;
+import strategy.DescriptionStrategy;
+import vo.FileInfo;
 
 import java.util.List;
 
 /**
- * 数据库备份上传策略
+ * 数据库备份删除策略
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/2/23 10:26
  */
 @Component
-@LogStrategy(value = Database.class, type = OperationType.UPLOAD)
-public class DatabaseUploadStrategy implements DescriptionStrategy {
+@LogStrategy(value = Database.class, type = OperationType.DEL)
+public class DatabaseDelStrategy implements DescriptionStrategy {
     /**
      * 生成描述
      * @param context 上下文

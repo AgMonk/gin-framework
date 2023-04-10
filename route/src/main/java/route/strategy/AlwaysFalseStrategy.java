@@ -1,7 +1,8 @@
 package route.strategy;
 
-import com.gin.springboot3template.route.annotation.MenuItem;
 import org.springframework.stereotype.Component;
+import route.annotation.MenuItem;
+import route.entity.EleMenuItem;
 
 import java.lang.reflect.Method;
 
@@ -15,7 +16,7 @@ import java.lang.reflect.Method;
 public class AlwaysFalseStrategy implements VisibleStrategy {
 
     /**
-     * 判断{@link  com.gin.springboot3template.route.entity.EleMenuItem} 的disabled字段
+     * 判断{@link  EleMenuItem} 的disabled字段
      * @param menuItem Controller上的注解
      * @param method   请求方法
      * @return 是否disabled

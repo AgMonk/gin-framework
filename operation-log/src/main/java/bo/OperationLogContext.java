@@ -1,8 +1,8 @@
 package bo;
 
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.sys.utils.ParamArg;
+import enums.OperationType;
 import jakarta.servlet.http.HttpServletRequest;
+import utils.ParamArg;
 
 import java.util.List;
 

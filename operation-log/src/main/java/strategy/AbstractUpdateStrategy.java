@@ -1,11 +1,11 @@
 package strategy;
 
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.sys.utils.reflect.FieldDifference;
-import com.gin.springboot3template.sys.utils.reflect.FieldValue;
-import com.gin.springboot3template.sys.utils.reflect.ReflectUtils;
+import bo.OperationLogContext;
 import jakarta.annotation.Nullable;
 import lombok.extern.slf4j.Slf4j;
+import utils.reflect.FieldDifference;
+import utils.reflect.FieldValue;
+import utils.reflect.ReflectUtils;
 
 import java.lang.reflect.Field;
 import java.util.List;

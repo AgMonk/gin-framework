@@ -1,18 +1,18 @@
 package strategy.def;
 
+import annotation.LogStrategy;
+import bo.OperationLogContext;
 import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.gin.springboot3template.operationlog.annotation.LogStrategy;
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.operationlog.strategy.AbstractUpdateStrategy;
-import com.gin.springboot3template.sys.utils.TimeUtils;
-import com.gin.springboot3template.sys.utils.reflect.FieldDifference;
+import enums.OperationType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.annotation.Nullable;
 import org.hibernate.annotations.Comment;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
+import strategy.AbstractUpdateStrategy;
+import utils.TimeUtils;
+import utils.reflect.FieldDifference;
 
 import java.lang.reflect.Field;
 import java.util.List;

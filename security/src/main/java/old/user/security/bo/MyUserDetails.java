@@ -1,7 +1,7 @@
 package old.user.security.bo;
 
-import com.gin.springboot3template.sys.base.BaseBo;
-import com.gin.springboot3template.sys.bo.Constant;
+import base.BaseBo;
+import constant.Constant;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

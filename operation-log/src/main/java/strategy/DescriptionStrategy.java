@@ -1,6 +1,7 @@
 package strategy;
 
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
+
+import bo.OperationLogContext;
 
 /**
  * 描述生成策略

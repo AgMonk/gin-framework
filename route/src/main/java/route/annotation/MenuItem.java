@@ -1,8 +1,10 @@
 package route.annotation;
 
-import com.gin.springboot3template.route.enums.Logic;
-import com.gin.springboot3template.route.strategy.SpringSecurityStrategy;
-import com.gin.springboot3template.route.strategy.VisibleStrategy;
+
+import route.entity.EleMenuItem;
+import route.enums.Logic;
+import route.strategy.AlwaysFalseStrategy;
+import route.strategy.VisibleStrategy;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,7 +12,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 路由, 在Controller类上标注，表示这是一个路由导航项 对应一个 {@link  com.gin.springboot3template.route.entity.EleMenuItem} 组件
+ * 路由, 在Controller类上标注，表示这是一个路由导航项 对应一个 {@link  EleMenuItem} 组件
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/3/25 17:42
@@ -49,13 +51,13 @@ public @interface MenuItem {
     MenuPath[] path() default {};
 
     /**
-     * {@link com.gin.springboot3template.route.annotation.MenuEntry} 有多项时互相的逻辑关系
+     * {@link MenuEntry} 有多项时互相的逻辑关系
      */
     Logic logic() default Logic.any_false;
 
     /**
      * 展示策略，决定 disabled字段值的策略，默认为全显示
      */
-    Class<? extends VisibleStrategy> strategy() default SpringSecurityStrategy.class;
+    Class<? extends VisibleStrategy> strategy() default AlwaysFalseStrategy.class;
 
 }

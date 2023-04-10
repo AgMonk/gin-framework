@@ -1,6 +1,6 @@
 package service;
 
-import com.gin.springboot3template.operationlog.entity.SystemOperationLog;
+import entity.SystemOperationLog;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,10 +1,10 @@
 package strategy.def;
 
-import com.gin.springboot3template.operationlog.annotation.LogStrategy;
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.operationlog.strategy.DescriptionStrategy;
+import annotation.LogStrategy;
+import bo.OperationLogContext;
+import enums.OperationType;
 import org.springframework.stereotype.Component;
+import strategy.DescriptionStrategy;
 
 /**
  * 默认删除策略

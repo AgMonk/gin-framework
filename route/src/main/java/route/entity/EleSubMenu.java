@@ -1,14 +1,14 @@
 package route.entity;
 
-import com.gin.springboot3template.route.annotation.MenuPath;
-import com.gin.springboot3template.route.base.EleMenuComponent;
-import com.gin.springboot3template.route.base.HasChildren;
-import com.gin.springboot3template.route.enums.MenuComponentType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.util.CollectionUtils;
+import route.annotation.MenuPath;
+import route.base.EleMenuComponent;
+import route.base.HasChildren;
+import route.enums.MenuComponentType;
 
 import java.util.List;
 import java.util.UUID;

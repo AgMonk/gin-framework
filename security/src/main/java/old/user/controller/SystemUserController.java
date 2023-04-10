@@ -77,7 +77,7 @@ public class SystemUserController implements OperationLogController {
 
     @PostMapping("changePwd")
     @Operation(summary = "修改密码", description = "修改成功后会自动登出,需要重新登陆")
-    @OpLog(type = OperationType.UPDATE, mainClass = SystemUser.class, mainId = "#userDetail?.id", subClass = PasswordSubClass.class, requestParam = false, responseResult = false)
+    @OpLog(type = OperationType.UPDATE, mainClass = SystemUser.class, mainId = "#currentUserId", subClass = PasswordSubClass.class, requestParam = false, responseResult = false)
     public void changePwd(
             @SuppressWarnings("unused") HttpServletRequest request,
             HttpServletResponse response,
@@ -174,8 +174,8 @@ public class SystemUserController implements OperationLogController {
 
     @PostMapping("userInfoUpdate")
     @Operation(summary = "修改自己的个人信息")
-    @OpLog(type = OperationType.UPDATE, mainClass = SystemUser.class, mainId = "#userDetail?.id", subClass = SystemUserInfo.class
-            , preExp = {"@systemUserInfoServiceImpl.getByUserId(#userDetail.id)", "#form.build(#userDetail.id)"}
+    @OpLog(type = OperationType.UPDATE, mainClass = SystemUser.class, mainId = "#currentUserId", subClass = SystemUserInfo.class
+            , preExp = {"@systemUserInfoServiceImpl.getByUserId(#currentUserId)", "#form.build(#currentUserId)"}
     )
     public Res<SystemUserInfoVo> userInfoUpdate(@RequestBody @Validated SystemUserInfoForm form) {
         final SystemUserInfo info = systemUserInfoService.saveOrUpdate(getUserId(), form);

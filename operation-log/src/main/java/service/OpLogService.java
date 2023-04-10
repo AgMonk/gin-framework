@@ -1,18 +1,18 @@
 package service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import jakarta.validation.constraints.NotNull;
-import lombok.RequiredArgsConstructor;
 import config.OperationLogProperties;
 import dto.param.OperationLogPageParam;
 import entity.BaseOperationLog;
 import entity.SystemOperationLog;
 import entity.SystemOperationLogOld;
-import operationlog.vo.SubClassOption;
-import operationlog.vo.SystemOperationLogVo;
+import jakarta.validation.constraints.NotNull;
+import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import vo.SubClassOption;
+import vo.SystemOperationLogVo;
 import vo.response.ResPage;
 
 import java.time.ZonedDateTime;
@@ -32,7 +32,7 @@ public class OpLogService {
     private final SystemOperationLogService systemOperationLogService;
     private final SystemOperationLogOldService systemOperationLogOldService;
     private final OperationLogProperties operationLogProperties;
-    private final SystemUserInfoService systemUserInfoService;
+    private final UserInfoService userInfoService;
 
     /**
      * 每天凌晨5点进行归档, 将创建时间超过一定天数的日志归档到旧表
@@ -105,7 +105,7 @@ public class OpLogService {
         if (userId.size() == 0) {
             return;
         }
-        final HashMap<Long, String> idNameMap = systemUserInfoService.getIdNameMap(userId);
+        final HashMap<Long, String> idNameMap = userInfoService.getIdNameMap(userId);
         data.forEach(i -> i.setUserNickname(idNameMap.get(i.getUserId())));
     }
 

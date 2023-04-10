@@ -1,8 +1,8 @@
 package dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.gin.springboot3template.operationlog.entity.SystemOperationLog;
-import com.gin.springboot3template.sys.config.redis.RedisMybatisCache;
+import config.redis.RedisMybatisCache;
+import entity.SystemOperationLog;
 import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
 

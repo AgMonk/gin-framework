@@ -1,9 +1,9 @@
 package old.user.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.gin.springboot3template.sys.service.MyService;
-import com.gin.springboot3template.user.dto.form.RegForm;
-import com.gin.springboot3template.user.entity.SystemUser;
+import old.user.dto.form.RegForm;
+import old.user.entity.SystemUser;
+import service.MyService;
 
 /**
  * @author : ginstone

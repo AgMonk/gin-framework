@@ -1,15 +1,15 @@
 package strategy.database;
 
-import com.gin.springboot3template.databsebackup.service.DatabaseBackupService;
-import com.gin.springboot3template.operationlog.annotation.LogStrategy;
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.operationlog.strategy.DescriptionStrategy;
-import com.gin.springboot3template.sys.vo.FileInfo;
+import annotation.LogStrategy;
+import bo.OperationLogContext;
+import enums.OperationType;
 import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.stereotype.Component;
+import service.DatabaseBackupService;
+import strategy.DescriptionStrategy;
+import vo.FileInfo;
 
 /**
  * 数据库备份下载策略

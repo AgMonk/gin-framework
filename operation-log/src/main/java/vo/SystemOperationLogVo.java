@@ -1,6 +1,6 @@
 package vo;
 
-import com.gin.springboot3template.operationlog.entity.BaseOperationLog;
+import entity.BaseOperationLog;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

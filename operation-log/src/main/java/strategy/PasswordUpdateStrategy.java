@@ -1,10 +1,10 @@
 package strategy;
 
-import com.gin.springboot3template.operationlog.annotation.LogStrategy;
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.operationlog.subclass.PasswordSubClass;
+import annotation.LogStrategy;
+import bo.OperationLogContext;
+import enums.OperationType;
 import org.springframework.stereotype.Component;
+import subclass.PasswordSubClass;
 
 /**
  * 修改密码策略

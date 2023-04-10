@@ -1,14 +1,15 @@
-package route.strategy;
+package strategy;
 
-import com.gin.springboot3template.route.annotation.MenuItem;
-import com.gin.springboot3template.route.entity.EleMenuItem;
-import com.gin.springboot3template.sys.bo.Constant;
-import com.gin.springboot3template.user.security.bo.MyUserDetails;
-import com.gin.springboot3template.user.security.utils.MySecurityUtils;
+import constant.Constant;
 import lombok.extern.slf4j.Slf4j;
+import old.user.security.bo.MyUserDetails;
+import old.user.security.utils.MySecurityUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
+import route.annotation.MenuItem;
+import route.entity.EleMenuItem;
+import route.strategy.VisibleStrategy;
 
 import java.lang.reflect.Method;
 

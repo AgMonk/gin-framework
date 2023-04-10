@@ -1,6 +1,6 @@
 package old.user.security.utils;
 
-import com.gin.springboot3template.user.security.bo.MyUserDetails;
+import old.user.security.bo.MyUserDetails;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 /**

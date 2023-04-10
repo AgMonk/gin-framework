@@ -1,24 +1,13 @@
 package config;
 
+import annotation.LogStrategy;
+import annotation.OpLog;
+import bo.OperationLogContext;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.gin.springboot3template.operationlog.annotation.LogStrategy;
-import com.gin.springboot3template.operationlog.annotation.OpLog;
-import com.gin.springboot3template.operationlog.bo.OperationLogContext;
-import com.gin.springboot3template.operationlog.entity.SystemOperationLog;
-import com.gin.springboot3template.operationlog.enums.OperationType;
-import com.gin.springboot3template.operationlog.service.SystemOperationLogService;
-import com.gin.springboot3template.operationlog.strategy.DescriptionStrategy;
-import com.gin.springboot3template.sys.utils.ParamArg;
-import com.gin.springboot3template.sys.utils.SpElUtils;
-import com.gin.springboot3template.sys.utils.SpringContextUtils;
-import com.gin.springboot3template.sys.utils.WebUtils;
-import com.gin.springboot3template.sys.vo.response.Res;
-import com.gin.springboot3template.user.entity.SystemUser;
-import com.gin.springboot3template.user.security.bo.MyUserDetails;
-import com.gin.springboot3template.user.security.utils.MySecurityUtils;
-import com.gin.springboot3template.user.service.SystemUserService;
+import entity.SystemOperationLog;
+import enums.OperationType;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -29,12 +18,16 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
-import org.springframework.security.authentication.ProviderManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
+import service.SystemOperationLogService;
+import service.UserInfoService;
+import strategy.DescriptionStrategy;
+import utils.ParamArg;
+import utils.SpElUtils;
+import utils.SpringContextUtils;
+import utils.WebUtils;
+import vo.response.Res;
 
 import java.util.HashMap;
 import java.util.List;
@@ -51,7 +44,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OperationLogAspectConfig {
     private final SystemOperationLogService logService;
-    private final SystemUserService systemUserService;
+    private final UserInfoService userInfoService;
 
     /**
      * 查找匹配的策略
@@ -128,11 +121,10 @@ public class OperationLogAspectConfig {
     @Around("@annotation(opLog)")
     public Object around(ProceedingJoinPoint pjp, OpLog opLog) throws Throwable {
         final long start = now();
+        final long currentUserId = userInfoService.getCurrentUserId();
         //静态方法获取 HttpServletRequest
         final HttpServletRequest request = WebUtils.getHttpServletRequest();
         final HttpSession session = request != null ? request.getSession() : null;
-        // 权限框架获取 userId
-        final MyUserDetails userDetails = MySecurityUtils.currentUserDetails();
         // 请求参数和参数值
         final List<ParamArg> paramArgs = ParamArg.parse(pjp);
         final Class<?> mainClass = opLog.mainClass();
@@ -142,7 +134,7 @@ public class OperationLogAspectConfig {
         final OperationType type = opLog.type();
 
         final StandardEvaluationContext evaluationContext = SpElUtils.createContext(pjp);
-        evaluationContext.setVariable("userDetail", MySecurityUtils.currentUserDetails());
+        evaluationContext.setVariable("currentUserId", currentUserId);
 
         final List<Object> preExp = SpElUtils.getElValues(evaluationContext, opLog.preExp());
 
@@ -173,7 +165,7 @@ public class OperationLogAspectConfig {
         final SystemOperationLog operationLog = new SystemOperationLog();
         operationLog.setSessionId(session != null ? session.getId() : null);
         operationLog.setType(type);
-        operationLog.setUserId(userDetails.getId());
+        operationLog.setUserId(currentUserId);
         operationLog.setUserIp(WebUtils.getRemoteHost(request));
         operationLog.setMainClass(mainClass);
         operationLog.setMainId(mainId);
@@ -213,83 +205,5 @@ public class OperationLogAspectConfig {
         return result;
     }
 
-    /**
-     * 登陆方法环绕切面
-     * @param pjp pjp
-     * @return 返回
-     */
-    @Around(value = "execution(* org.springframework.security.authentication.AuthenticationManager.authenticate(..)) && args(token)", argNames = "pjp,token")
-    public Object login(ProceedingJoinPoint pjp, UsernamePasswordAuthenticationToken token) throws Throwable {
-        if (ProviderManager.class.equals(pjp.getTarget().getClass())
-                && token.getDetails() instanceof WebAuthenticationDetails details
-        ) {
-            final long start = now();
-            final String userIp = details.getRemoteAddress();
-            try {
-                //登陆成功
-                final Authentication result = (Authentication) pjp.proceed();
-                if (result.isAuthenticated()) {
-                    MyUserDetails principal = (MyUserDetails) result.getPrincipal();
-                    final SystemOperationLog operationLog = new SystemOperationLog();
-                    final Long userId = principal.getId();
-                    operationLog.setMainClass(SystemUser.class);
-                    operationLog.setSessionId(details.getSessionId());
-                    operationLog.setType(OperationType.LOGIN);
-                    operationLog.setUserIp(userIp);
-                    operationLog.setUserId(userId);
-                    operationLog.setMainId(userId);
-                    operationLog.setDescription("登录成功");
-                    operationLog.setTimeCost(now() - start);
-                    logService.write(operationLog);
-                }
-                return result;
-            } catch (Throwable e) {
-                // 登陆失败
-                final SystemUser user = systemUserService.getByUsername((String) token.getPrincipal());
-                final long userId = user != null ? user.getId() : -1;
-                final SystemOperationLog operationLog = new SystemOperationLog();
-                operationLog.setMainClass(SystemUser.class);
-                operationLog.setSessionId(details.getSessionId());
-                operationLog.setType(OperationType.LOGIN_FAILED);
-                operationLog.setUserIp(userIp);
-                operationLog.setUserId(userId);
-                operationLog.setMainId(userId);
-                operationLog.setDescription(e.getLocalizedMessage());
-                operationLog.setTimeCost(now() - start);
-                logService.write(operationLog);
-                throw e;
-            }
-        }
-        return pjp.proceed();
-    }
 
-    @Around(value = "execution(* org.springframework.security.web.authentication.logout.LogoutSuccessHandler.onLogoutSuccess(..)) && args(request,response,token)"
-            , argNames = "pjp,request,response,token")
-    public Object logout(
-            ProceedingJoinPoint pjp,
-            HttpServletRequest request,
-            HttpServletResponse response,
-            UsernamePasswordAuthenticationToken token
-    ) throws Throwable {
-        if (token.getDetails() instanceof WebAuthenticationDetails details) {
-            final long start = now();
-            MyUserDetails principal = (MyUserDetails) token.getPrincipal();
-            final Long userId = principal.getId();
-
-            final Object result = pjp.proceed();
-
-            final SystemOperationLog operationLog = new SystemOperationLog();
-            operationLog.setMainClass(SystemUser.class);
-            operationLog.setSessionId(details.getSessionId());
-            operationLog.setType(OperationType.LOGOUT);
-            operationLog.setUserIp(WebUtils.getRemoteHost(request));
-            operationLog.setUserId(userId);
-            operationLog.setMainId(userId);
-            operationLog.setDescription("登出成功");
-            operationLog.setTimeCost(now() - start);
-            logService.write(operationLog);
-            return result;
-        }
-        return pjp.proceed();
-    }
 }
