@@ -79,8 +79,8 @@ allprojects {
             mavenLocal()
             maven {
                 name 'project'
-                def rUrl = layout.projectDirectory.dir("repo/releases")
-                def sUrl = layout.projectDirectory.dir("repo/snapshots")
+                def rUrl = rootProject.layout.projectDirectory.dir("repo/releases")
+                def sUrl = rootProject.layout.projectDirectory.dir("repo/snapshots")
                 url version.endsWith("SNAPSHOT") ? sUrl : rUrl
             }
         }
