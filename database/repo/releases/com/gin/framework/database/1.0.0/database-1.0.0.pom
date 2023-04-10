@@ -12,6 +12,12 @@
   <packaging>pom</packaging>
   <dependencies>
     <dependency>
+      <groupId>com.gin.framework</groupId>
+      <artifactId>common</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>org.mybatis.spring.boot</groupId>
       <artifactId>mybatis-spring-boot-starter</artifactId>
       <version>3.0.1</version>
@@ -26,19 +32,25 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-redis</artifactId>
+      <version>3.0.4</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-data-redis</artifactId>
       <version>3.0.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.gin.framework</groupId>
-      <artifactId>common</artifactId>
-      <version>1.0.0</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <version>3.0.4</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
-      <version>8.0.31</version>
+      <version>8.0.32</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -53,7 +65,7 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.4</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>

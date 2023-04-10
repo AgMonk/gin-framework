@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "database-backup",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "database-backup-1.0.0-plain.jar",
+          "url": "database-backup-1.0.0-plain.jar",
+          "size": 22540,
+          "sha512": "09205e3fcb9bc16be17a8a5f1b9f66ebce9a85bb596fa54072f5e0e27db40b5618d2a3be533fd69aa038b38edf097c8bbf789e89adf95ac2be5027e40fbe8875",
+          "sha256": "0d38ac9a7624565dcc11b825c30c1f36b33905c67ae47a183cbf4685d2d5ee64",
+          "sha1": "ebcbd395e275f76467ed8be993e22c4ce876221b",
+          "md5": "f309bfc88f2fa9a0efb89279a078b994"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "database-backup-1.0.0-plain.jar",
+          "url": "database-backup-1.0.0-plain.jar",
+          "size": 22540,
+          "sha512": "09205e3fcb9bc16be17a8a5f1b9f66ebce9a85bb596fa54072f5e0e27db40b5618d2a3be533fd69aa038b38edf097c8bbf789e89adf95ac2be5027e40fbe8875",
+          "sha256": "0d38ac9a7624565dcc11b825c30c1f36b33905c67ae47a183cbf4685d2d5ee64",
+          "sha1": "ebcbd395e275f76467ed8be993e22c4ce876221b",
+          "md5": "f309bfc88f2fa9a0efb89279a078b994"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "database-backup-1.0.0-javadoc.jar",
+          "url": "database-backup-1.0.0-javadoc.jar",
+          "size": 144642,
+          "sha512": "fbaf78963d285a207b8d771465a0bd15d22aa11e709313ebeca8116988754d46062bc74431931411df23f0ee040793233e8830943d675b02f535922fff5c25ca",
+          "sha256": "86d0b812a45d8fc70a77485dcb081aac1e405424f313e9b5cc678d56e48d8725",
+          "sha1": "02e68d9e6ef57c2e4c5fed1fc2aed91992b78cf4",
+          "md5": "4baff70f397af6d5ffb363a74cce5286"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "database-backup-1.0.0-sources.jar",
+          "url": "database-backup-1.0.0-sources.jar",
+          "size": 14659,
+          "sha512": "cdae1dc8954633fcedd69a50da7c152c2be1470fd4245e41aee260726541c54d92c65abb9f9254bbbf5ae0427cf8ad66b248fb7ad415b5a2e917d7526ca392c8",
+          "sha256": "06fa38700ee5f52e9793275d529e20bdd3ca05d18303eead2757647ca4bbe0f3",
+          "sha1": "7b09fe866354198b2d39a53af4c8be1bb22d7667",
+          "md5": "f128fe82966d82ebe2f45571b19628bc"
+        }
+      ]
+    }
+  ]
+}

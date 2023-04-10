@@ -28,14 +28,42 @@
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-web",
           "version": {
-            "requires": "3.0.0"
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "6.0.6"
           }
         },
         {
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-validation",
           "version": {
-            "requires": "3.0.0"
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springdoc",
+          "module": "springdoc-openapi-starter-webmvc-ui",
+          "version": {
+            "requires": "2.0.0"
+          }
+        },
+        {
+          "group": "com.github.xiaoymin",
+          "module": "knife4j-springdoc-ui",
+          "version": {
+            "requires": "3.0.3"
           }
         }
       ],
@@ -43,11 +71,11 @@
         {
           "name": "common-1.0.0-plain.jar",
           "url": "common-1.0.0-plain.jar",
-          "size": 4780,
-          "sha512": "b63ef2a94c83b39994a71e71af69f1b061daf03e2142228813b9498e0d2b681303779922ed7520cda378e6f21d64f637cdcf8cb90e59aa914d44ed541c6ce384",
-          "sha256": "414de59cd4bf915867d20505d97bc22bea1d17a8bed674749971b84f884c972a",
-          "sha1": "695278b87ced98a7cae1e3bdbd187ca1baf1204f",
-          "md5": "62342dce167e17950f8335659abe7d0a"
+          "size": 74302,
+          "sha512": "59ed0ed0b87d719063c287f5e0247bcf9896c2abf6e2874329f1c895ef8cb85330ad4a9c1a20f8241f3c9fba7cf6e9bd910f2874b27c897d4854dc578f692287",
+          "sha256": "6b83eae61f67be5abc3380fc4a8b915672df41b6b2b8807e44e7a41da1cf51ad",
+          "sha1": "9ac2a0eac290b4b7a7d8794b0e60eaa91a01502f",
+          "md5": "84ce2209b12c9f43511bc471f7572642"
         }
       ]
     },
@@ -65,28 +93,56 @@
           "group": "org.springframework.boot",
           "module": "spring-boot-configuration-processor",
           "version": {
-            "requires": "3.0.0"
+            "requires": "3.0.4"
           }
         },
         {
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-actuator",
           "version": {
-            "requires": "3.0.0"
+            "requires": "3.0.4"
           }
         },
         {
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-web",
           "version": {
-            "requires": "3.0.0"
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "6.0.6"
           }
         },
         {
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-validation",
           "version": {
-            "requires": "3.0.0"
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springdoc",
+          "module": "springdoc-openapi-starter-webmvc-ui",
+          "version": {
+            "requires": "2.0.0"
+          }
+        },
+        {
+          "group": "com.github.xiaoymin",
+          "module": "knife4j-springdoc-ui",
+          "version": {
+            "requires": "3.0.3"
           }
         }
       ],
@@ -94,11 +150,11 @@
         {
           "name": "common-1.0.0-plain.jar",
           "url": "common-1.0.0-plain.jar",
-          "size": 4780,
-          "sha512": "b63ef2a94c83b39994a71e71af69f1b061daf03e2142228813b9498e0d2b681303779922ed7520cda378e6f21d64f637cdcf8cb90e59aa914d44ed541c6ce384",
-          "sha256": "414de59cd4bf915867d20505d97bc22bea1d17a8bed674749971b84f884c972a",
-          "sha1": "695278b87ced98a7cae1e3bdbd187ca1baf1204f",
-          "md5": "62342dce167e17950f8335659abe7d0a"
+          "size": 74302,
+          "sha512": "59ed0ed0b87d719063c287f5e0247bcf9896c2abf6e2874329f1c895ef8cb85330ad4a9c1a20f8241f3c9fba7cf6e9bd910f2874b27c897d4854dc578f692287",
+          "sha256": "6b83eae61f67be5abc3380fc4a8b915672df41b6b2b8807e44e7a41da1cf51ad",
+          "sha1": "9ac2a0eac290b4b7a7d8794b0e60eaa91a01502f",
+          "md5": "84ce2209b12c9f43511bc471f7572642"
         }
       ]
     },
@@ -114,11 +170,11 @@
         {
           "name": "common-1.0.0-javadoc.jar",
           "url": "common-1.0.0-javadoc.jar",
-          "size": 126588,
-          "sha512": "4e3c40dc001079b4189b3b784b39cb58d04600a9bdaa499194aff72beef7d7f3fbaa4bf97d754977cc24256365fe988b5816a4c97200820ee3ddf1c581c535e5",
-          "sha256": "6ec14c7ed1356ac7890754487ed33784c1516b23299ff2e2ef66c5043b957e11",
-          "sha1": "56281e300e9cff8f5f6a331336a2a011e6a3e3ab",
-          "md5": "709f694bcb56cc573f15099b3d0ecc85"
+          "size": 370687,
+          "sha512": "87eaea534c86812f742a0dd32fbcbd0aa6436652e85fb693c90f0600a2dde8e396473cb52ecd5f1b1370f3b05f1f7bb9c502b2788cf5f1b971fa8a0ba4bf6e56",
+          "sha256": "120a2bfd007b201e7c5b200f7815d225f3138ae8ae15247ef03854b9bcd8a3b2",
+          "sha1": "2eeec0051371d4d2c74465f1ab4d5d1850159b25",
+          "md5": "33f7867c38e39d2266210b41cef5c5af"
         }
       ]
     },
@@ -134,11 +190,11 @@
         {
           "name": "common-1.0.0-sources.jar",
           "url": "common-1.0.0-sources.jar",
-          "size": 3619,
-          "sha512": "3fb7efde0c0c740b5dc01a071bd7983a333b4aedb7d2d6ab543780c374e379aade563a5439654255b90fd73c7bde4daf19e9900e3d4a504e9fa146c482716634",
-          "sha256": "55fcd44879d8901736cfc278bc46efc23b5d0dc643e2de3bb71d31a349ae1a8d",
-          "sha1": "f6606cc6f1bc154ee5d2e1215d585cc251754b9f",
-          "md5": "ac155b56b7333b609021b6bfdc929b1c"
+          "size": 44576,
+          "sha512": "a1620d4e9491c157ed521762fc060948bc00e66b3cf7b04da8c283f94ba0518c3a02ba4f3fe844ae4c6aec293a3e9ce8f6987f5c4db006cdc0d4ad24b3dc08c7",
+          "sha256": "a68e8fcd165a387ebbd8ca830ddc2409adc24ca227f78e183f42a81822593479",
+          "sha1": "59b8d421a6719b1e39810052d18c06ad6537d6bd",
+          "md5": "f272dbf258138de38a6d47c9140f2524"
         }
       ]
     }

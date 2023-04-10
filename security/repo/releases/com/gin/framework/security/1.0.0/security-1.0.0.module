@@ -1,0 +1,202 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "security",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "common",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database-backup",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "route",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security",
+          "version": {
+            "requires": "3.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "security-1.0.0-plain.jar",
+          "url": "security-1.0.0-plain.jar",
+          "size": 134760,
+          "sha512": "4435d8ea3a5f469facda120c44ab41e957e128284fc712b38fffae2824cb3dd9b78a41e837963d58a0a7f848019649d70b2b8cd6bfc6b25a967b0d051342d46a",
+          "sha256": "abd6dc6ecffbe72b31951a9f9c2d57b35f96478adc909dbdd8acfec3c06fb970",
+          "sha1": "df4a05fee8ade0cd5659e9799604c0a2462d629f",
+          "md5": "c1f0c685b12ad552cbc6f639e9d4e8e5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.whvcse",
+          "module": "easy-captcha",
+          "version": {
+            "requires": "1.6.2"
+          }
+        },
+        {
+          "group": "org.openjdk.nashorn",
+          "module": "nashorn-core",
+          "version": {
+            "requires": "15.4"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "common",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database-backup",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "route",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security",
+          "version": {
+            "requires": "3.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "security-1.0.0-plain.jar",
+          "url": "security-1.0.0-plain.jar",
+          "size": 134760,
+          "sha512": "4435d8ea3a5f469facda120c44ab41e957e128284fc712b38fffae2824cb3dd9b78a41e837963d58a0a7f848019649d70b2b8cd6bfc6b25a967b0d051342d46a",
+          "sha256": "abd6dc6ecffbe72b31951a9f9c2d57b35f96478adc909dbdd8acfec3c06fb970",
+          "sha1": "df4a05fee8ade0cd5659e9799604c0a2462d629f",
+          "md5": "c1f0c685b12ad552cbc6f639e9d4e8e5"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "security-1.0.0-javadoc.jar",
+          "url": "security-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "ae90651f4fbc325495dc4c5865bcf2e4b3a1c4947d15ed074ac7c49a990b7789047adfb54f2b4bc1108bd8ec0253b51289a70c48dec4dcdd86fd3a49abc6c792",
+          "sha256": "4eed5a5bc82a2c6a144b9370392ad4814bf15a4ad04e8c043047d30860f9a61f",
+          "sha1": "134087bd711457a221ae7a3dfdbe17fb12ebab70",
+          "md5": "d1cd6d1c6048d883f2bf7ccb30be4f6d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "security-1.0.0-sources.jar",
+          "url": "security-1.0.0-sources.jar",
+          "size": 85139,
+          "sha512": "5c31095d15152cd77ae34ac77d861ff209a86f0c95a21f320f5ee3bcdb4c16baad1944f0890147386f4ab44f4727ae7ce3fdf71022b6ae5afaa4ebc4a5f17969",
+          "sha256": "3c111277dc5b358fb579ff738f9501878069a6144faf1d3d30a20279a759e4c4",
+          "sha1": "5411c171257a5d6b7a578222521a8a6d40185c8f",
+          "md5": "ea138ff948359aaaff04a49ef96339c0"
+        }
+      ]
+    }
+  ]
+}
