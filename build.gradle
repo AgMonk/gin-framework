@@ -9,7 +9,7 @@ plugins {
     id 'maven-publish'
 }
 
-//javadoc.options.encoding = "UTF-8"
+javadoc.options.encoding = "UTF-8"
 
 // 为所有项目配置
 allprojects {
@@ -23,7 +23,7 @@ allprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'maven-publish'
 
-//    javadoc.options.encoding = "UTF-8"
+    javadoc.options.encoding = "UTF-8"
 
     java{
         withJavadocJar()
@@ -46,6 +46,14 @@ allprojects {
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+    // 关闭子项目的 bootJar 任务, 防止报错: Main class name has not been configured and it could not be resolved
+    tasks.bootJar {
+        enabled = false
+    }
+    // 关闭子项目的 javadoc 任务, 防止报错
+    tasks.javadoc{
+        enabled = false
     }
 
     // 发布配置

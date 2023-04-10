@@ -1,7 +1,8 @@
 rootProject.name = 'parent'
 include 'common'
 include 'database'
-include 'operation-log'
 include 'route'
 include 'security'
+include 'database-backup'
+include 'operation-log'
 

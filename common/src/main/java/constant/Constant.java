@@ -86,47 +86,6 @@ public class Constant {
         public static final String UPDATE_SUCCESS = "修改成功";
     }
 
-    /**
-     * api 路径名
-     */
-    public static class Api {
-        /**
-         * 添加接口路径
-         */
-        public static final String ADD = "add";
-        public static final String CONFIG = "config";
-        /**
-         * 删除接口路径
-         */
-        public static final String DEL = "del";
-        public static final String DOWNLOAD = "download";
-        /**
-         * 通过关键字检索对象接口路径
-         */
-        public static final String FILTER = "filter";
-        /**
-         * 分组查询接口路径
-         */
-        public static final String GROUP = "group";
-        public static final String LIST = "list";
-        /**
-         * 查询全部接口路径
-         */
-        public static final String LIST_ALL = "listAll";
-        /**
-         * 查询筛选条件接口路径
-         */
-        public static final String OPTIONS = "options";
-        /**
-         * 分页查询接口路径
-         */
-        public static final String PAGE = "page";
-        public static final String STATUS = "status";
-        /**
-         * 更新接口路径
-         */
-        public static final String UPDATE = "update";
-        public static final String UPLOAD = "upload";
-    }
+
 
 }
