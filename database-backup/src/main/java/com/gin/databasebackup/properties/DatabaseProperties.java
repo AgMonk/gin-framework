@@ -1,12 +1,17 @@
 package com.gin.databasebackup.properties;
 
+import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.Serializable;
 import java.util.List;
+
+import static com.gin.common.constant.Messages.OFF;
+import static com.gin.common.constant.Messages.ON;
 
 /**
  * 数据库相关配置
@@ -18,7 +23,9 @@ import java.util.List;
 @ConfigurationProperties(prefix = "system.database")
 @Getter
 @Setter
+@Slf4j
 public class DatabaseProperties implements Serializable {
+
     /**
      * 自动备份开关
      */
@@ -31,4 +38,9 @@ public class DatabaseProperties implements Serializable {
      * mysql client 安装包地址(避免修改)
      */
     List<String> mysqlClient;
+
+    @PostConstruct
+    public void onCreated(){
+        log.info("自动备份 [{}], 最大镜像数 {} 个", autoBackup? ON : OFF, maxBackup);
+    }
 }

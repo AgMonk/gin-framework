@@ -1,0 +1,26 @@
+system:
+  web:
+    #解析json时是否在遇到未知字段时报错
+    fail-on-unknown-properties: true
+  log:
+    #日志保留天数, 超过时间的将被存入旧日志表
+    days: 1
+    #旧日志表保留天数, 超过时间的将被删除
+    days-old: 180
+  file:
+    #文件根目录,本系统管理的文件将全部放在该目录下
+    home-path:
+  user:
+    #开放注册
+    reg-enable: true
+  database:
+    #自动备份开关
+    auto-backup: true
+    #保留的最大镜像数量, 每天凌晨清理,保留最新的。0或负数表示不限制
+    max-backup: 10
+    # mysql client 安装包地址(避免修改)
+    mysql-client:
+      - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-client-8.0.30-1.el8.x86_64.rpm
+      - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-client-plugins-8.0.30-1.el8.x86_64.rpm
+      - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-common-8.0.30-1.el8.x86_64.rpm
+      - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-libs-8.0.30-1.el8.x86_64.rpm

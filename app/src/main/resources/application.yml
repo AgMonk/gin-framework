@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: database-dev
+  config:
+    import:
+      - application-common.yml
+      - application-database.yml
+      - application-system.yml

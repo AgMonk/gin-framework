@@ -9,4 +9,6 @@ public class Messages {
     public static final String SUCCESS = "操作成功";
     public static final String UPDATE_SUCCESS = "修改成功";
 
+    public static final String ON = "开启";
+    public static final String OFF = "关闭";
 }

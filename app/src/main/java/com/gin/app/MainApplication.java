@@ -1,4 +1,4 @@
-package com.gin.security;
+package com.gin.app;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
