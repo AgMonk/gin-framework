@@ -5,7 +5,7 @@ import com.gin.security.dao.SystemUserAvatarDao;
 import com.gin.security.entity.SystemUserAvatar;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.gin.common.properties.FileProperties;
+import com.gin.spring.properties.FileProperties;
 import com.gin.database.service.AttachmentServiceImpl;
 import com.gin.security.service.SystemUserAvatarService;
 

@@ -1,5 +1,5 @@
 dependencies {
-    api project(":common")
+    api project(":spring")
     // orm
     api "org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.1"
     api "com.baomidou:mybatis-plus-boot-starter:3.5.3.1"

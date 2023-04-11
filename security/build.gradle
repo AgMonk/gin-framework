@@ -1,5 +1,5 @@
 dependencies {
-    api project(":common")
+    api project(":spring")
     api project(":database")
     api project(":database-backup")
     api project(":operation-log")

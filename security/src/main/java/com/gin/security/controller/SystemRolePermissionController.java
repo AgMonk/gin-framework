@@ -2,7 +2,7 @@ package com.gin.security.controller;
 
 
 import com.gin.security.Constant.Security;
-import com.gin.common.annotation.MyRestController;
+import com.gin.spring.annotation.MyRestController;
 import com.gin.common.constant.ApiPath;
 import com.gin.security.dto.form.SystemRolePermissionForm;
 import com.gin.security.entity.SystemPermission;

@@ -6,7 +6,7 @@ import com.gin.common.exception.file.DirCreateException;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileExistsException;
 import com.gin.common.exception.file.FileNotExistsException;
-import com.gin.common.properties.FileProperties;
+import com.gin.spring.properties.FileProperties;
 import com.gin.common.utils.FileUtils;
 import com.gin.common.utils.IoUtils;
 import com.gin.common.utils.ProcessUtils;

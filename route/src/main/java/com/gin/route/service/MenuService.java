@@ -2,6 +2,7 @@ package com.gin.route.service;
 
 import com.gin.route.strategy.AlwaysFalseStrategy;
 import com.gin.route.strategy.VisibleStrategy;
+import com.gin.spring.utils.ApiUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -61,7 +62,7 @@ public class MenuService {
 
             final EleMenuItem eleMenuItem = new EleMenuItem(menuItem);
             // controller 上的url前缀
-            final String ctlPath = ReflectUtils.getApiPath(clazz).stream().findFirst().orElse("");
+            final String ctlPath = ApiUtils.getApiPath(clazz).stream().findFirst().orElse("");
             // 组件的route属性, 留空时从 Controller 的 RequestMapping 注解上获取
             if (ObjectUtils.isEmpty(menuItem.route())) {
                 eleMenuItem.setRoute(ctlPath);
@@ -79,7 +80,7 @@ public class MenuService {
                     // 策略
                     final VisibleStrategy strategy = SpringContextUtils.getContext().getBean(strategyClass);
 
-                    final String apiPath = ReflectUtils.getApiPath(method).get(0);
+                    final String apiPath = ApiUtils.getApiPath(method).get(0);
                     // 请求地址
                     final String requestUrl = (ctlPath + "/" + apiPath).replaceAll("//", "/");
 

@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
-import com.gin.common.validation.Phone;
+import com.gin.spring.validation.Phone;
 
 
 /**

@@ -1,12 +1,7 @@
 package com.gin.common.utils;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.reflect.MethodSignature;
-
-import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 方法的参数和参数值
@@ -31,13 +26,5 @@ public record ParamArg(Parameter parameter, Object arg) {
         return list;
     }
 
-    public static List<ParamArg> parse(ProceedingJoinPoint pjp) {
-        //签名
-        final MethodSignature signature = (MethodSignature) pjp.getSignature();
-        //方法
-        final Method method = signature.getMethod();
-        // 组合
-        return merge(method.getParameters(), pjp.getArgs());
-    }
 
 }

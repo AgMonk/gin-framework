@@ -25,31 +25,17 @@
       },
       "dependencies": [
         {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-web",
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-core",
           "version": {
-            "requires": "3.0.4"
+            "requires": "2.14.2"
           }
         },
         {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-aop",
+          "group": "com.fasterxml.jackson.datatype",
+          "module": "jackson-datatype-jsr310",
           "version": {
-            "requires": "3.0.4"
-          }
-        },
-        {
-          "group": "org.springframework",
-          "module": "spring-tx",
-          "version": {
-            "requires": "6.0.6"
-          }
-        },
-        {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-validation",
-          "version": {
-            "requires": "3.0.4"
+            "requires": "2.14.2"
           }
         },
         {
@@ -71,11 +57,11 @@
         {
           "name": "common-1.0.0-plain.jar",
           "url": "common-1.0.0-plain.jar",
-          "size": 74302,
-          "sha512": "59ed0ed0b87d719063c287f5e0247bcf9896c2abf6e2874329f1c895ef8cb85330ad4a9c1a20f8241f3c9fba7cf6e9bd910f2874b27c897d4854dc578f692287",
-          "sha256": "6b83eae61f67be5abc3380fc4a8b915672df41b6b2b8807e44e7a41da1cf51ad",
-          "sha1": "9ac2a0eac290b4b7a7d8794b0e60eaa91a01502f",
-          "md5": "84ce2209b12c9f43511bc471f7572642"
+          "size": 47011,
+          "sha512": "1e9d32d759eff2eb84da8738f3eef4a5bf3a7b2e0770706fd6b32de9e2fc8485d755510434e34cbb635f5f08e82f5ce8b1ed1116b5e8f96ea665af5770a7e570",
+          "sha256": "82120b70328f859a31de0034326b240491b51b17d42b5fdb4c4f0df77d905220",
+          "sha1": "e64815b66c8d004850028909130f8a8fedb6aea8",
+          "md5": "eb6705fb11f97d7cd5418dbf15da16f2"
         }
       ]
     },
@@ -90,45 +76,17 @@
       },
       "dependencies": [
         {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-configuration-processor",
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-core",
           "version": {
-            "requires": "3.0.4"
+            "requires": "2.14.2"
           }
         },
         {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-actuator",
+          "group": "com.fasterxml.jackson.datatype",
+          "module": "jackson-datatype-jsr310",
           "version": {
-            "requires": "3.0.4"
-          }
-        },
-        {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-web",
-          "version": {
-            "requires": "3.0.4"
-          }
-        },
-        {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-aop",
-          "version": {
-            "requires": "3.0.4"
-          }
-        },
-        {
-          "group": "org.springframework",
-          "module": "spring-tx",
-          "version": {
-            "requires": "6.0.6"
-          }
-        },
-        {
-          "group": "org.springframework.boot",
-          "module": "spring-boot-starter-validation",
-          "version": {
-            "requires": "3.0.4"
+            "requires": "2.14.2"
           }
         },
         {
@@ -150,11 +108,11 @@
         {
           "name": "common-1.0.0-plain.jar",
           "url": "common-1.0.0-plain.jar",
-          "size": 74302,
-          "sha512": "59ed0ed0b87d719063c287f5e0247bcf9896c2abf6e2874329f1c895ef8cb85330ad4a9c1a20f8241f3c9fba7cf6e9bd910f2874b27c897d4854dc578f692287",
-          "sha256": "6b83eae61f67be5abc3380fc4a8b915672df41b6b2b8807e44e7a41da1cf51ad",
-          "sha1": "9ac2a0eac290b4b7a7d8794b0e60eaa91a01502f",
-          "md5": "84ce2209b12c9f43511bc471f7572642"
+          "size": 47011,
+          "sha512": "1e9d32d759eff2eb84da8738f3eef4a5bf3a7b2e0770706fd6b32de9e2fc8485d755510434e34cbb635f5f08e82f5ce8b1ed1116b5e8f96ea665af5770a7e570",
+          "sha256": "82120b70328f859a31de0034326b240491b51b17d42b5fdb4c4f0df77d905220",
+          "sha1": "e64815b66c8d004850028909130f8a8fedb6aea8",
+          "md5": "eb6705fb11f97d7cd5418dbf15da16f2"
         }
       ]
     },
@@ -170,11 +128,11 @@
         {
           "name": "common-1.0.0-javadoc.jar",
           "url": "common-1.0.0-javadoc.jar",
-          "size": 370687,
-          "sha512": "87eaea534c86812f742a0dd32fbcbd0aa6436652e85fb693c90f0600a2dde8e396473cb52ecd5f1b1370f3b05f1f7bb9c502b2788cf5f1b971fa8a0ba4bf6e56",
-          "sha256": "120a2bfd007b201e7c5b200f7815d225f3138ae8ae15247ef03854b9bcd8a3b2",
-          "sha1": "2eeec0051371d4d2c74465f1ab4d5d1850159b25",
-          "md5": "33f7867c38e39d2266210b41cef5c5af"
+          "size": 261,
+          "sha512": "21c101500e34d48b1111680a1bbe8fd902850a9042aea9105dbf3687d6a3df5d42a82dd5c80ff19ea30376ab7a421526a8402f7516312914687198fe8a8f4a92",
+          "sha256": "2ae96a813d38bb86b1ac8d250750c2c1200106c783a3132ea2550b9ec7e8234a",
+          "sha1": "c20c2198a8d3fac8cd69b523b273fa2f74eb2f72",
+          "md5": "14757d34b12fc4ce569b3029f0282f4f"
         }
       ]
     },
@@ -190,11 +148,11 @@
         {
           "name": "common-1.0.0-sources.jar",
           "url": "common-1.0.0-sources.jar",
-          "size": 44576,
-          "sha512": "a1620d4e9491c157ed521762fc060948bc00e66b3cf7b04da8c283f94ba0518c3a02ba4f3fe844ae4c6aec293a3e9ce8f6987f5c4db006cdc0d4ad24b3dc08c7",
-          "sha256": "a68e8fcd165a387ebbd8ca830ddc2409adc24ca227f78e183f42a81822593479",
-          "sha1": "59b8d421a6719b1e39810052d18c06ad6537d6bd",
-          "md5": "f272dbf258138de38a6d47c9140f2524"
+          "size": 26716,
+          "sha512": "9698bba70610027601bbcd78ba27e04cec1d321271baaf0f1d731d1a819097ee8a88a1ed4256b061abec78bdc6a2c2ac5e72e37f918dfde35b5af8735360dbbf",
+          "sha256": "5cb76ec3b971a0b09c1b480c5b35e56abf5e7e6c08e8962fcd2c064c309fd28e",
+          "sha1": "7c4949a58a5a637ceda76dcd03c86d0dbe0b9332",
+          "md5": "e5ff0516e9f2ea7a97e617fe4165946f"
         }
       ]
     }

@@ -1,0 +1,188 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "spring",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "common",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "6.0.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "version": {
+            "requires": "3.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-1.0.0-plain.jar",
+          "url": "spring-1.0.0-plain.jar",
+          "size": 28049,
+          "sha512": "d41160fdb8f90aa87eecaf7d4e8fc4ffb4f508c0d1d89b48de77be905129f25be13657b4c47e389eadb55fd93828802446f02974fc1d2c6120ee077a78c47235",
+          "sha256": "73ef6a7ae1fad91b93e65a2e8f51a570a874b6317aee4a5391daf14bed071664",
+          "sha1": "9e8e2bf7bab010c7eaa6f433dc5e71642343bd4e",
+          "md5": "81b6c7166d3aab896d16d5e3578be26d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-configuration-processor",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-actuator",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "common",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "6.0.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "version": {
+            "requires": "3.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-1.0.0-plain.jar",
+          "url": "spring-1.0.0-plain.jar",
+          "size": 28049,
+          "sha512": "d41160fdb8f90aa87eecaf7d4e8fc4ffb4f508c0d1d89b48de77be905129f25be13657b4c47e389eadb55fd93828802446f02974fc1d2c6120ee077a78c47235",
+          "sha256": "73ef6a7ae1fad91b93e65a2e8f51a570a874b6317aee4a5391daf14bed071664",
+          "sha1": "9e8e2bf7bab010c7eaa6f433dc5e71642343bd4e",
+          "md5": "81b6c7166d3aab896d16d5e3578be26d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-1.0.0-javadoc.jar",
+          "url": "spring-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "1c4a3782605b1561bfc05a539bee976f7b566f73c0298f0d7d4506e259233d4b8eb9522f5abe41e9d6c8ed1fa902ae13396e3de642d5da2484c61b5e70cdf2ae",
+          "sha256": "6ec44dc1ac5b3d02373303793046a9e09fb1baed018329143004620edf7e9a58",
+          "sha1": "305a6a63694ff047334636932c36d10dd7a608b4",
+          "md5": "072d9f9a15500a95ac79ceeb78530908"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-1.0.0-sources.jar",
+          "url": "spring-1.0.0-sources.jar",
+          "size": 18766,
+          "sha512": "a9418283b4018a03e58e0ba8985bc37ecd5ae7c56701cac0eca44ad2fb862448e3c3516a5f1b430c0e85c678f5e5d5cdb99c43b879b39ba46387ec62290e31f1",
+          "sha256": "270720bd02fe1568bde57ec124b19cc7759365780ddf5b2fab7330c9a77f401b",
+          "sha1": "8c0438d7d9e5002a2edd0b03e2f011ff86d3250f",
+          "md5": "0f156881097b5e52b506f6c934fc0368"
+        }
+      ]
+    }
+  ]
+}

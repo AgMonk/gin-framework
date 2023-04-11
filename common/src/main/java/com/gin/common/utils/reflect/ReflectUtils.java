@@ -1,12 +1,7 @@
 package com.gin.common.utils.reflect;
 
-import com.gin.common.annotation.MyRestController;
 import io.swagger.v3.oas.annotations.media.Schema;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,31 +49,6 @@ public class ReflectUtils {
             list.addAll(0, getAllFields(superclass));
         }
         return list;
-    }
-
-    /**
-     * 返回持有4种注解的元素
-     * @param annotatedElement 元素
-     * @return 接口方法
-     */
-    public static List<String> getApiPath(AnnotatedElement annotatedElement) {
-        MyRestController a0 = annotatedElement.getAnnotation(MyRestController.class);
-        if (a0 != null) {
-            return Arrays.asList(a0.value());
-        }
-        RequestMapping a1 = annotatedElement.getAnnotation(RequestMapping.class);
-        if (a1 != null) {
-            return Arrays.asList(a1.value());
-        }
-        PostMapping a2 = annotatedElement.getAnnotation(PostMapping.class);
-        if (a2 != null) {
-            return Arrays.asList(a2.value());
-        }
-        GetMapping a3 = annotatedElement.getAnnotation(GetMapping.class);
-        if (a3 != null) {
-            return Arrays.asList(a3.value());
-        }
-        return new ArrayList<>();
     }
 
     /**

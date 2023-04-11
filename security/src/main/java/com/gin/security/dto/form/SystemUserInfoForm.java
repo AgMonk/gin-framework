@@ -7,7 +7,7 @@ import lombok.Setter;
 import com.gin.security.entity.SystemUserInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.validation.annotation.Validated;
-import com.gin.common.validation.Phone;
+import com.gin.spring.validation.Phone;
 
 /**
  * @author bx002

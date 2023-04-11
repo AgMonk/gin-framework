@@ -26,7 +26,7 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
-          "module": "common",
+          "module": "spring",
           "version": {
             "requires": "1.0.0"
           }
@@ -36,11 +36,11 @@
         {
           "name": "route-1.0.0-plain.jar",
           "url": "route-1.0.0-plain.jar",
-          "size": 19370,
-          "sha512": "1f8e05dfd42d665d762dcfa1fd629f3887b6c06e93ac8ac3b6b7db536347dacfe1019f163a101aa3b6b2869ddef4f83012e9bc2005ba5f942953f93b570e8184",
-          "sha256": "3a46e8c3454b89a6a6b1669d86fe8cd67aa5e54e348a2630b07a1ea0a4ba4004",
-          "sha1": "4cc15cb12ed6d0d56298f66a89abe949db7bcf49",
-          "md5": "dceed5a1b76d2fbd3050ec77055ee092"
+          "size": 19383,
+          "sha512": "8cea3b2ab921727955509ad9276f2939c9b83c07ca768aa28bc9f1038c22a1564eb7a5ab615cd140fcfec753dabd312fa94b9e3564f54a6b1c62323ccad77a1b",
+          "sha256": "99b3778468d8e5abb0f0a6bc6c6f5056b81c54af8c4c2f59f84339ec67ac5948",
+          "sha1": "86bbf3189529ce51d382ce726254fa6435e80fc8",
+          "md5": "7b1f68d3059549d58c8062369a5267e8"
         }
       ]
     },
@@ -56,7 +56,7 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
-          "module": "common",
+          "module": "spring",
           "version": {
             "requires": "1.0.0"
           }
@@ -66,11 +66,11 @@
         {
           "name": "route-1.0.0-plain.jar",
           "url": "route-1.0.0-plain.jar",
-          "size": 19370,
-          "sha512": "1f8e05dfd42d665d762dcfa1fd629f3887b6c06e93ac8ac3b6b7db536347dacfe1019f163a101aa3b6b2869ddef4f83012e9bc2005ba5f942953f93b570e8184",
-          "sha256": "3a46e8c3454b89a6a6b1669d86fe8cd67aa5e54e348a2630b07a1ea0a4ba4004",
-          "sha1": "4cc15cb12ed6d0d56298f66a89abe949db7bcf49",
-          "md5": "dceed5a1b76d2fbd3050ec77055ee092"
+          "size": 19383,
+          "sha512": "8cea3b2ab921727955509ad9276f2939c9b83c07ca768aa28bc9f1038c22a1564eb7a5ab615cd140fcfec753dabd312fa94b9e3564f54a6b1c62323ccad77a1b",
+          "sha256": "99b3778468d8e5abb0f0a6bc6c6f5056b81c54af8c4c2f59f84339ec67ac5948",
+          "sha1": "86bbf3189529ce51d382ce726254fa6435e80fc8",
+          "md5": "7b1f68d3059549d58c8062369a5267e8"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "name": "route-1.0.0-javadoc.jar",
           "url": "route-1.0.0-javadoc.jar",
           "size": 261,
-          "sha512": "fb85a6ee1e7402943d9943b0cedd916279e9a26af22c4068d92bb05f5b5178461f90749bb64df1a95413ad56d68b191f68c33d07091387f3c01b427612fbd92d",
-          "sha256": "f5369fd9166b6758e178d4ca76f6e7c6ee3b8c4cea6e15669a1ee1b121b37fd4",
-          "sha1": "78741e91ac0563670ad2f2ac2e7bb55228305192",
-          "md5": "31bb72830048773cba5dddc8c9b26939"
+          "sha512": "1c4a3782605b1561bfc05a539bee976f7b566f73c0298f0d7d4506e259233d4b8eb9522f5abe41e9d6c8ed1fa902ae13396e3de642d5da2484c61b5e70cdf2ae",
+          "sha256": "6ec44dc1ac5b3d02373303793046a9e09fb1baed018329143004620edf7e9a58",
+          "sha1": "305a6a63694ff047334636932c36d10dd7a608b4",
+          "md5": "072d9f9a15500a95ac79ceeb78530908"
         }
       ]
     },
@@ -106,11 +106,11 @@
         {
           "name": "route-1.0.0-sources.jar",
           "url": "route-1.0.0-sources.jar",
-          "size": 13587,
-          "sha512": "9d6c0f84a7ed8a2a518ecfd00b8e754b41b8cd8b5ec6f0d63c990796c09091fee81842e01b2bcce6d47a732824d557c6bbf27fe16e38ca936a88c67859bc6f41",
-          "sha256": "5388fbad79017509d12e9f07e8f05db37258cd8b5dd3896a145ec37f18606163",
-          "sha1": "5749186bdb285149638ba84dedcdb19b036f4ce0",
-          "md5": "49c73a0e21182211cc2f8c0281f49836"
+          "size": 13595,
+          "sha512": "0dd4b304c0dee1ea9f9efe70c63a9edcac9438f4624bad9ce8a37a1355c8817ccbb9a67471946d7b17b8138830ceaa7e6764a5dc90c406197f6696cc810713ea",
+          "sha256": "c60d23dabf312719b79205a7875ff9d0465e5a2b5c82dfd4f42154166e2acd6c",
+          "sha1": "639b2ff5d355588665276ec32f3a3f2bc48cf6e1",
+          "md5": "64d73508f0607c2d81f871d600fb9d9e"
         }
       ]
     }

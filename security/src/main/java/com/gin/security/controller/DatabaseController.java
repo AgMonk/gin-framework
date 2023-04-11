@@ -1,6 +1,6 @@
 package com.gin.security.controller;
 
-import com.gin.common.annotation.MyRestController;
+import com.gin.spring.annotation.MyRestController;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileNotExistsException;
 import com.gin.common.vo.FileInfo;

@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 17,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -28,10 +28,10 @@
           "name": "parent-1.0.0-plain.jar",
           "url": "parent-1.0.0-plain.jar",
           "size": 261,
-          "sha512": "4acdd5a2ca6223e1685341df2a0fc38cad16e111f449fe3314f06feb14868e0ce3f1e5c832e50d3f20437f8f41b3ffa216d248133e177f6c45ef5c070b39fe2d",
-          "sha256": "7abb617b193b14e8173982c54e2e21ab504a73742052ec4655ef80b9532dbce4",
-          "sha1": "4af72e6b27d28ee645b85625c8469082f5032330",
-          "md5": "d7f5e0e4810cbf972cc7ab3076f9c130"
+          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
+          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
+          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
+          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
         }
       ]
     },
@@ -40,7 +40,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 17,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -49,10 +49,10 @@
           "name": "parent-1.0.0-plain.jar",
           "url": "parent-1.0.0-plain.jar",
           "size": 261,
-          "sha512": "4acdd5a2ca6223e1685341df2a0fc38cad16e111f449fe3314f06feb14868e0ce3f1e5c832e50d3f20437f8f41b3ffa216d248133e177f6c45ef5c070b39fe2d",
-          "sha256": "7abb617b193b14e8173982c54e2e21ab504a73742052ec4655ef80b9532dbce4",
-          "sha1": "4af72e6b27d28ee645b85625c8469082f5032330",
-          "md5": "d7f5e0e4810cbf972cc7ab3076f9c130"
+          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
+          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
+          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
+          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
         }
       ]
     },
@@ -69,10 +69,10 @@
           "name": "parent-1.0.0-javadoc.jar",
           "url": "parent-1.0.0-javadoc.jar",
           "size": 261,
-          "sha512": "9ae39a583eeedc3d3bd985c408d573ede5ffcdf37700bf855a353fc51c85fbf4eb7046fe04f9a7d83f16f92b5c602239a34e5514bf14a9f200afa4384fab324b",
-          "sha256": "f97bf7d1169e2dad3bb39dea2abfc0d28150ad11c0addd98d285734987086b45",
-          "sha1": "223315a90cb8f7d6a1a25d8076354195adc349c3",
-          "md5": "32a4c31e4e0071f33b6e10fc95c28adc"
+          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
+          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
+          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
+          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
         }
       ]
     },
@@ -89,10 +89,10 @@
           "name": "parent-1.0.0-sources.jar",
           "url": "parent-1.0.0-sources.jar",
           "size": 261,
-          "sha512": "9ae39a583eeedc3d3bd985c408d573ede5ffcdf37700bf855a353fc51c85fbf4eb7046fe04f9a7d83f16f92b5c602239a34e5514bf14a9f200afa4384fab324b",
-          "sha256": "f97bf7d1169e2dad3bb39dea2abfc0d28150ad11c0addd98d285734987086b45",
-          "sha1": "223315a90cb8f7d6a1a25d8076354195adc349c3",
-          "md5": "32a4c31e4e0071f33b6e10fc95c28adc"
+          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
+          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
+          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
+          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
         }
       ]
     }

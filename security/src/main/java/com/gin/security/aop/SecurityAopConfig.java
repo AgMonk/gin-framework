@@ -1,6 +1,6 @@
 package com.gin.security.aop;
 
-import com.gin.common.utils.WebUtils;
+import com.gin.spring.utils.WebUtils;
 import com.gin.operationlog.entity.SystemOperationLog;
 import com.gin.operationlog.enums.OperationType;
 import com.gin.operationlog.service.SystemOperationLogService;

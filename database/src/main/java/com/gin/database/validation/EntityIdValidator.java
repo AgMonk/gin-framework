@@ -2,7 +2,7 @@ package com.gin.database.validation;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.gin.common.exception.BusinessException;
-import com.gin.common.validation.ValidatorUtils;
+import com.gin.spring.validation.ValidatorUtils;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import lombok.extern.slf4j.Slf4j;

@@ -6,4 +6,5 @@ include 'security'
 include 'database-backup'
 include 'operation-log'
 include 'app'
+include 'spring'
 

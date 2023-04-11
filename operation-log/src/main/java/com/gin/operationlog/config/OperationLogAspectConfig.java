@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gin.common.utils.ParamArg;
-import com.gin.common.utils.SpElUtils;
+import com.gin.spring.utils.SpElUtils;
 import com.gin.common.utils.SpringContextUtils;
-import com.gin.common.utils.WebUtils;
+import com.gin.spring.utils.WebUtils;
 import com.gin.common.vo.response.Res;
 import com.gin.operationlog.annotation.LogStrategy;
 import com.gin.operationlog.annotation.OpLog;
@@ -24,11 +24,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 
@@ -126,7 +128,7 @@ public class OperationLogAspectConfig {
         final HttpServletRequest request = WebUtils.getHttpServletRequest();
         final HttpSession session = request != null ? request.getSession() : null;
         // 请求参数和参数值
-        final List<ParamArg> paramArgs = ParamArg.parse(pjp);
+        final List<ParamArg> paramArgs = parse(pjp);
         final Class<?> mainClass = opLog.mainClass();
         // 副类型如果为 object 置为null
         final Class<?> subClass = !Object.class.equals(opLog.subClass()) ? opLog.subClass() : null;
@@ -204,6 +206,12 @@ public class OperationLogAspectConfig {
         logService.write(operationLog);
         return result;
     }
-
-
+    public static List<ParamArg> parse(ProceedingJoinPoint pjp) {
+        //签名
+        final MethodSignature signature = (MethodSignature) pjp.getSignature();
+        //方法
+        final Method method = signature.getMethod();
+        // 组合
+        return ParamArg.merge(method.getParameters(), pjp.getArgs());
+    }
 }

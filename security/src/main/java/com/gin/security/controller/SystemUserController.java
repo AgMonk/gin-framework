@@ -1,7 +1,7 @@
 package com.gin.security.controller;
 
 
-import com.gin.common.annotation.MyRestController;
+import com.gin.spring.annotation.MyRestController;
 import com.gin.common.exception.BusinessException;
 import com.gin.common.vo.response.Res;
 import com.gin.operationlog.annotation.OpLog;

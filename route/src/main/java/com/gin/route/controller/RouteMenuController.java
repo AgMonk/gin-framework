@@ -1,6 +1,6 @@
 package com.gin.route.controller;
 
-import com.gin.common.annotation.MyRestController;
+import com.gin.spring.annotation.MyRestController;
 import com.gin.route.service.MenuService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

@@ -13,6 +13,7 @@ import com.gin.security.entity.RelationRolePermission;
 import com.gin.security.entity.SystemPermission;
 import com.gin.security.entity.SystemRole;
 import com.gin.security.service.*;
+import com.gin.spring.utils.ApiUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Getter;
@@ -26,7 +27,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.gin.common.utils.SpringContextUtils;
-import com.gin.common.utils.reflect.ReflectUtils;
 
 import java.util.*;
 import java.util.stream.Stream;
@@ -103,11 +103,11 @@ public class InitAuthority implements ApplicationRunner {
                 return Stream.ofNullable(null);
             }
             //接口路径前缀
-            final List<String> prePaths = ReflectUtils.getApiPath(controllerClass);
+            final List<String> prePaths = ApiUtils.getApiPath(controllerClass);
             final Tag tag = controllerClass.getAnnotation(Tag.class);
 
             return Arrays.stream(controllerClass.getDeclaredMethods()).flatMap(method -> {
-                final List<String> apiPaths = ReflectUtils.getApiPath(method);
+                final List<String> apiPaths = ApiUtils.getApiPath(method);
                 final ArrayList<SystemPermission> list = new ArrayList<>();
                 final Operation operation = method.getAnnotation(Operation.class);
                 final PreAuthorize preAuthorize = method.getAnnotation(PreAuthorize.class);

@@ -2,7 +2,7 @@ package com.gin.security.validation;
 
 
 import com.gin.security.Constant.Security;
-import com.gin.common.validation.ValidatorUtils;
+import com.gin.spring.validation.ValidatorUtils;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

@@ -26,7 +26,7 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
-          "module": "common",
+          "module": "spring",
           "version": {
             "requires": "1.0.0"
           },
@@ -107,11 +107,11 @@
         {
           "name": "database-1.0.0-plain.jar",
           "url": "database-1.0.0-plain.jar",
-          "size": 46260,
-          "sha512": "4a550c59f7285a97d93937bec96ac3a106b44400e004bcb61171722dc8650c891cad20dfe615361d80df1c96647dea68c3fb789c20291111458341c2981fdf5d",
-          "sha256": "7c4ba24abe9db0aaa57b80fc426ae8fa692f47d6d1bc89763ca55be83a1168f4",
-          "sha1": "65d0478a2c4519646c68e162818536c0e89cc255",
-          "md5": "64879d82f3b6c8b88d1cc66568db01a1"
+          "size": 46264,
+          "sha512": "98a5e2247328f6daa3f7f6165b4766f6376e4f388d671f345fac15bcfbaa4de2a71e7b3105c1edda270f821618640da334c6c7b15626a05e3f16cebcb10343cc",
+          "sha256": "b99be93202c45ba479568343c55fd012749c0293e78eeed160c31034111027db",
+          "sha1": "f5820339114622b3bd545aea338809e48f521456",
+          "md5": "a00a5c7f89d91c30b85eea16ff5cf89d"
         }
       ]
     },
@@ -153,7 +153,7 @@
         },
         {
           "group": "com.gin.framework",
-          "module": "common",
+          "module": "spring",
           "version": {
             "requires": "1.0.0"
           },
@@ -234,11 +234,11 @@
         {
           "name": "database-1.0.0-plain.jar",
           "url": "database-1.0.0-plain.jar",
-          "size": 46260,
-          "sha512": "4a550c59f7285a97d93937bec96ac3a106b44400e004bcb61171722dc8650c891cad20dfe615361d80df1c96647dea68c3fb789c20291111458341c2981fdf5d",
-          "sha256": "7c4ba24abe9db0aaa57b80fc426ae8fa692f47d6d1bc89763ca55be83a1168f4",
-          "sha1": "65d0478a2c4519646c68e162818536c0e89cc255",
-          "md5": "64879d82f3b6c8b88d1cc66568db01a1"
+          "size": 46264,
+          "sha512": "98a5e2247328f6daa3f7f6165b4766f6376e4f388d671f345fac15bcfbaa4de2a71e7b3105c1edda270f821618640da334c6c7b15626a05e3f16cebcb10343cc",
+          "sha256": "b99be93202c45ba479568343c55fd012749c0293e78eeed160c31034111027db",
+          "sha1": "f5820339114622b3bd545aea338809e48f521456",
+          "md5": "a00a5c7f89d91c30b85eea16ff5cf89d"
         }
       ]
     },
@@ -254,11 +254,11 @@
         {
           "name": "database-1.0.0-javadoc.jar",
           "url": "database-1.0.0-javadoc.jar",
-          "size": 109208,
-          "sha512": "3dacbccd20f5c0fe86e7d03491b14d75aed3c3e445c7a07c6234f54175ab3b029bed1a2993993c036c664fa6d800122b7e563dbbe41205edb1c9aaacf449567d",
-          "sha256": "a032d659d9332080c5224831b311aaee99e0bdb0e381811a16cbb32b8873513a",
-          "sha1": "ea1d10ed059c49097cccb4ce931a6f3a79ffc55a",
-          "md5": "3b5a372ab3e108823e731e4690b6e66e"
+          "size": 261,
+          "sha512": "21c101500e34d48b1111680a1bbe8fd902850a9042aea9105dbf3687d6a3df5d42a82dd5c80ff19ea30376ab7a421526a8402f7516312914687198fe8a8f4a92",
+          "sha256": "2ae96a813d38bb86b1ac8d250750c2c1200106c783a3132ea2550b9ec7e8234a",
+          "sha1": "c20c2198a8d3fac8cd69b523b273fa2f74eb2f72",
+          "md5": "14757d34b12fc4ce569b3029f0282f4f"
         }
       ]
     },
@@ -274,11 +274,11 @@
         {
           "name": "database-1.0.0-sources.jar",
           "url": "database-1.0.0-sources.jar",
-          "size": 27153,
-          "sha512": "2953eb31934d5c485c8e9b5740866d9b8bd04c003155484e6b769500fc5205e676c4c79c5c6b975f359ff1ddae6f8cbccbd450c36565b9d905d5a579457ca75e",
-          "sha256": "1087e8b1fa83237707922c4ca5cd092082ff5875f975056fb1f9214fbc1fb0bd",
-          "sha1": "8750638d9f69ada04780c7ab05b62afe9fa831f3",
-          "md5": "698328a6143f469b013fa886847b91d6"
+          "size": 27156,
+          "sha512": "5c4210b787fc603fb1eb66e2e75cd7aa968989c06ad0d72094bba5c26c58f6bf28d45144de470855f0fbd6f3bf6df4c5ee56511c5bec5c319fca9bcfd5b7b4f3",
+          "sha256": "e42d04ca75ff1892b3b6f6f87921511009ac0eafb9d297b6291b22df32f6d02d",
+          "sha1": "598e893a1019c45894a2903dfbd51ca31b599b56",
+          "md5": "6946b3df348d1511c59155ed3ce1016c"
         }
       ]
     }
