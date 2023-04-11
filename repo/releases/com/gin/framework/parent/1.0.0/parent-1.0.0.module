@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 8,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -28,10 +28,10 @@
           "name": "parent-1.0.0-plain.jar",
           "url": "parent-1.0.0-plain.jar",
           "size": 261,
-          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
-          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
-          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
-          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
+          "sha512": "b35d2030f59eb43789c83ebb41f1657264a9356048068fe02ba10d9fad3a6ca2d9608bef010c0bf18169931736596e8da3899b54b53ce9ff110e7d5a6474213a",
+          "sha256": "f291a3598a16f35227f52974fff313722c601a70cccc634df5442b0aa33e4761",
+          "sha1": "575224076133505168a8f7c757ba495518356268",
+          "md5": "92cd3002b62bfa205ed7e6978ebf117c"
         }
       ]
     },
@@ -40,7 +40,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 8,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -49,10 +49,10 @@
           "name": "parent-1.0.0-plain.jar",
           "url": "parent-1.0.0-plain.jar",
           "size": 261,
-          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
-          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
-          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
-          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
+          "sha512": "b35d2030f59eb43789c83ebb41f1657264a9356048068fe02ba10d9fad3a6ca2d9608bef010c0bf18169931736596e8da3899b54b53ce9ff110e7d5a6474213a",
+          "sha256": "f291a3598a16f35227f52974fff313722c601a70cccc634df5442b0aa33e4761",
+          "sha1": "575224076133505168a8f7c757ba495518356268",
+          "md5": "92cd3002b62bfa205ed7e6978ebf117c"
         }
       ]
     },
@@ -69,10 +69,10 @@
           "name": "parent-1.0.0-javadoc.jar",
           "url": "parent-1.0.0-javadoc.jar",
           "size": 261,
-          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
-          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
-          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
-          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
+          "sha512": "6f7b6da4b653a9573d99afe08397acc3f1d36469419958eba153091f6f7e44c47aa8dad62bc5a1d79d439d4ad6e136cb6ebd9f2bffdb54f4e9ae22f9fff65de0",
+          "sha256": "870a2f4d5be30441584c928d597202b527d20b9554d61fde0d1b8444cad2c16e",
+          "sha1": "e0c540cf076b073d4f1663e56a74503b4312d6cd",
+          "md5": "7e07081240c4c14617fd1d143715f236"
         }
       ]
     },
@@ -89,10 +89,10 @@
           "name": "parent-1.0.0-sources.jar",
           "url": "parent-1.0.0-sources.jar",
           "size": 261,
-          "sha512": "a0de32128706b271480f4b92622dbbd581581e8d3b8c58298d4fde08c29d31513cd161aa427709e61f6c29521b2169e47e84d1e5fe7c75e037be5dc03b689712",
-          "sha256": "ddfd05663a7e6d04de3e58ff56be9123ffb97af0f32fff10749ba902142d062e",
-          "sha1": "8e52c2eef53101e05665f85aa95003ffeab88075",
-          "md5": "a702bb225fc0200916fd7eeeb907e7c1"
+          "sha512": "6f7b6da4b653a9573d99afe08397acc3f1d36469419958eba153091f6f7e44c47aa8dad62bc5a1d79d439d4ad6e136cb6ebd9f2bffdb54f4e9ae22f9fff65de0",
+          "sha256": "870a2f4d5be30441584c928d597202b527d20b9554d61fde0d1b8444cad2c16e",
+          "sha1": "e0c540cf076b073d4f1663e56a74503b4312d6cd",
+          "md5": "7e07081240c4c14617fd1d143715f236"
         }
       ]
     }

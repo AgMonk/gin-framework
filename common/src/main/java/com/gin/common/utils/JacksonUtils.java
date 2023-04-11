@@ -2,11 +2,14 @@ package com.gin.common.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+
+import java.util.HashMap;
 
 /**
  * json工具类
@@ -41,6 +44,20 @@ public class JacksonUtils {
             System.out.println(MAPPER.writeValueAsString(obj));
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * 把对象转换为HashMap
+     * @param obj 对象 推荐使用HashMap ，传入null的字段会传递空串
+     * @return HashMap
+     */
+    public static HashMap<String, Object> jsonToMap(Object obj) {
+        try {
+            return MAPPER.readValue(MAPPER.writeValueAsString(obj), new TypeReference<HashMap<String, Object>>() {
+            });
+        } catch (JsonProcessingException e) {
+            return new HashMap<>(0);
         }
     }
 }   
