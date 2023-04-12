@@ -5,6 +5,7 @@ import org.springframework.cglib.beans.BeanMap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 /**
  * 字符串工具类
@@ -13,6 +14,16 @@ import java.util.UUID;
  * @since : 2022/12/23 09:56
  */
 public class StrUtils {
+    public static final Pattern NUMBER_PATTERN= Pattern.compile("^\\d+$");
+
+    /**
+     * 字符串是否为纯数字
+     * @param s 字符串
+     * @return 是否为纯数字
+     */
+    public static boolean isNumber(String s){
+        return NUMBER_PATTERN.matcher(s).find();
+    }
 
     /**
      * 将对象中的字段按照模板生成格式化文本，使用 {字段名} 占位
