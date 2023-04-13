@@ -46,15 +46,15 @@ public class JacksonUtils {
      */
     public static HashMap<String, Object> jsonToMap(Object obj) {
         try {
-            return parseObj(obj);
+            return MAPPER.readValue(MAPPER.writeValueAsString(obj), new TypeReference<>() {
+            });
         } catch (JsonProcessingException e) {
             return new HashMap<>(0);
         }
     }
 
-    public static <T> T parseObj(Object obj) throws JsonProcessingException {
-        return MAPPER.readValue(MAPPER.writeValueAsString(obj), new TypeReference<>() {
-        });
+    public static <T> T parseObj(Object obj,Class<T> clazz) throws JsonProcessingException {
+        return MAPPER.readValue(MAPPER.writeValueAsString(obj),clazz);
     }
 
     public static void printPretty(Object obj) {
