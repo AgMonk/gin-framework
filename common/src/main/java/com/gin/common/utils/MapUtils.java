@@ -16,6 +16,17 @@ import java.util.function.Function;
  */
 public class MapUtils {
     /**
+     * 创建单个成员的hashmap
+     * @param key key
+     * @param value value
+     * @return map
+     */
+    public static <K,V> HashMap<K, V> singleEntry(K key,V value){
+        final HashMap<K, V> map = new HashMap<>(1);
+        map.put(key, value);
+        return map;
+    }
+    /**
      * 将集合转换为Map , 以 id 字段为key
      * @param collection 集合
      * @return Map
