@@ -39,14 +39,6 @@ public class JacksonUtils {
                 .build();
     }
 
-    public static void printPretty(Object obj) {
-        try {
-            System.out.println(MAPPER.writeValueAsString(obj));
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     /**
      * 把对象转换为HashMap
      * @param obj 对象 推荐使用HashMap ，传入null的字段会传递空串
@@ -54,10 +46,22 @@ public class JacksonUtils {
      */
     public static HashMap<String, Object> jsonToMap(Object obj) {
         try {
-            return MAPPER.readValue(MAPPER.writeValueAsString(obj), new TypeReference<HashMap<String, Object>>() {
-            });
+            return parseObj(obj);
         } catch (JsonProcessingException e) {
             return new HashMap<>(0);
+        }
+    }
+
+    public static <T> T parseObj(Object obj) throws JsonProcessingException {
+        return MAPPER.readValue(MAPPER.writeValueAsString(obj), new TypeReference<>() {
+        });
+    }
+
+    public static void printPretty(Object obj) {
+        try {
+            System.out.println(MAPPER.writeValueAsString(obj));
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         }
     }
 }   
