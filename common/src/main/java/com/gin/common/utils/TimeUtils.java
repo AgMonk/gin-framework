@@ -15,7 +15,9 @@ import static java.util.concurrent.TimeUnit.*;
 public class TimeUtils {
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    public static final DateTimeFormatter DATE_TIME_FORMATTER_2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     public static final ZoneId DEFAULT_ZONE_ID = ZoneId.systemDefault();
+    public static final ZoneId CHINESE_ZONE_ID = ZoneId.of("Asia/Shanghai");
     public static final DateTimeFormatter FULL_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
     public static final DateTimeFormatter MONTH_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM");
     /**
@@ -109,6 +111,7 @@ public class TimeUtils {
         try {
             LocalDateTime.parse(value, pattern);
             return true;
+
         } catch (Exception ignored) {
         }
         try {
@@ -141,6 +144,11 @@ public class TimeUtils {
         }
         try {
             final LocalDateTime parse = LocalDateTime.parse(string, DATE_TIME_FORMATTER);
+            return ZonedDateTime.ofLocal(parse, zoneId, null);
+        } catch (Exception ignored) {
+        }
+         try {
+            final LocalDateTime parse = LocalDateTime.parse(string, DATE_TIME_FORMATTER_2);
             return ZonedDateTime.ofLocal(parse, zoneId, null);
         } catch (Exception ignored) {
         }
