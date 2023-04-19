@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * 整数序列化方法,用逗号连接
+ * 整数列表序列化方法,用逗号连接
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/4/12 10:02
