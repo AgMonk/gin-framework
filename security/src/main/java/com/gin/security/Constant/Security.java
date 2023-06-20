@@ -13,11 +13,11 @@ public class Security {
     /**
      * 密码最大位数
      */
-    public static final int PASSWORD_MAX_LENGTH = 20;
+    public static final int PASSWORD_MAX_LENGTH = 16;
     /**
      * 密码最小位数
      */
-    public static final int PASSWORD_MIN_LENGTH = 6;
+    public static final int PASSWORD_MIN_LENGTH = 8;
     /**
      * preAuthority注解的内容,含义为:需要访问当前接口uri的权限,或者是admin角色
      */
