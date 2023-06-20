@@ -1,6 +1,10 @@
 package com.gin.security.controller;
 
 
+import com.gin.operationlog.controller.OperationLogController;
+import com.gin.operationlog.dto.param.OperationLogPageParam;
+import com.gin.operationlog.vo.SubClassOption;
+import com.gin.operationlog.vo.SystemOperationLogVo;
 import com.gin.security.Constant.Security;
 import com.gin.spring.annotation.MyRestController;
 import com.gin.common.constant.ApiPath;
@@ -13,7 +17,9 @@ import com.gin.security.entity.SystemUserInfo;
 import com.gin.common.exception.BusinessException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.annotation.Nullable;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
@@ -38,6 +44,7 @@ import com.gin.security.vo.SystemUserVo;
 import com.gin.common.vo.response.Res;
 import com.gin.database.vo.response.ResPage;
 
+import java.util.List;
 import java.util.UUID;
 
 import static com.gin.security.Constant.Security.NOT_CONFIG_ADMIN;
@@ -54,7 +61,7 @@ import static com.gin.security.Constant.Security.NOT_CONFIG_ADMIN;
 @Tag(name = SystemUserAdminController.GROUP_NAME)
 @Slf4j
 @MenuItem(title = "用户管理", description = "用户的管理, 管理用户持有的角色", order = 10, path = @MenuPath(title = "用户和权限", order = 1))
-public class SystemUserAdminController {
+public class SystemUserAdminController  implements OperationLogController {
     /**
      * 接口路径前缀
      */
@@ -141,4 +148,53 @@ public class SystemUserAdminController {
         return Res.of(new SystemUserInfoVo(userInfo), "修改成功");
     }
 
+    /**
+     * 主实体类型
+     *
+     * @return 主实体类型
+     */
+    @Override
+    public @NotNull Class<?> mainClass() {
+        return null;
+    }
+
+    /**
+     * 主实体ID
+     *
+     * @param mainId 用户传入的主实体Id
+     * @return 主实体ID
+     */
+    @Nullable
+    @Override
+    public Long mainId(Long mainId) {
+        return mainId;
+    }
+
+    /**
+     * 列出该主实体类型(和主实体ID)下, 所有的副实体类型,及每个副实体类型下的操作类型
+     *
+     * @param old     是否查询旧日志
+     * @param mainId  主实体Id ， 是否由用户指定由接口决定
+     * @param request 请求
+     * @return 所有的副实体类型, 及每个副实体类型下的操作类型
+     */
+    @Override
+    @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    public Res<List<SubClassOption>> getLogOptions(Boolean old, Long mainId, HttpServletRequest request) {
+        return OperationLogController.super.getLogOptions(old, mainId, request);
+    }
+
+    /**
+     * 日志分页查询
+     *
+     * @param old     是否查询旧日志
+     * @param param   查询参数
+     * @param request 请求
+     * @return 日志
+     */
+    @Override
+    @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    public ResPage<SystemOperationLogVo> getLogPage(Boolean old, OperationLogPageParam param, HttpServletRequest request) {
+        return OperationLogController.super.getLogPage(old, param, request);
+    }
 }

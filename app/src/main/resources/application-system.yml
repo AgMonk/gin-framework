@@ -4,7 +4,7 @@ system:
     fail-on-unknown-properties: true
   log:
     #日志保留天数, 超过时间的将被存入旧日志表
-    days: 1
+    days: 7
     #旧日志表保留天数, 超过时间的将被删除
     days-old: 180
   file:
