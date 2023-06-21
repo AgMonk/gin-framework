@@ -1,4 +1,4 @@
-package com.gin.common.serializer;
+package com.gin.jackson.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
  * @version : v1.0.0
  * @since : 2023/4/12 10:02
  */
-public class ListLongSerializer extends JsonSerializer<List<Long>> {
+public class ListIntSerializer extends JsonSerializer<List<Integer>> {
     @Override
-    public void serialize(List<Long> ids, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+    public void serialize(List<Integer> ids, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
         jsonGenerator.writeString(ids.stream().map(String::valueOf).collect(Collectors.joining(",")));
     }
 }

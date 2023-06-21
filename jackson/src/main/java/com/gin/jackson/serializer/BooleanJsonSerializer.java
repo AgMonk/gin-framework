@@ -1,4 +1,4 @@
-package com.gin.common.serializer;
+package com.gin.jackson.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

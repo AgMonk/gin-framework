@@ -1,7 +1,5 @@
 dependencies {
-    api "com.fasterxml.jackson.core:jackson-core:2.14.2"
-    api "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2"
-
+    api project(":jackson")
     // spring doc
     api "org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.0"
     api 'com.github.xiaoymin:knife4j-springdoc-ui:3.0.3'

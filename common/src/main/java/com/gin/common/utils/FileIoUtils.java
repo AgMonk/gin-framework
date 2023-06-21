@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static com.gin.common.utils.JacksonUtils.MAPPER;
+import static com.gin.jackson.utils.JacksonUtils.MAPPER;
 
 
 /**

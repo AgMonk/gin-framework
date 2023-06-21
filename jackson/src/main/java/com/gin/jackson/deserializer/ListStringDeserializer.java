@@ -1,4 +1,4 @@
-package com.gin.common.deserializer;
+package com.gin.jackson.deserializer;
 
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -18,6 +19,6 @@ import java.util.List;
 public class ListStringDeserializer extends JsonDeserializer<List<String>> {
     @Override
     public List<String> deserialize(JsonParser p, DeserializationContext deserializationContext) throws IOException, JacksonException {
-        return new ArrayList<>(List.of(p.getValueAsString().split(",")));
+        return new ArrayList<>(Arrays.asList(p.getValueAsString().split(",")));
     }
 }

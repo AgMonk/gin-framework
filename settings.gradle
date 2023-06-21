@@ -7,4 +7,5 @@ include 'database-backup'
 include 'operation-log'
 include 'app'
 include 'spring'
+include 'jackson'
 

@@ -1,10 +1,10 @@
-package com.gin.common.deserializer;
+package com.gin.jackson.deserializer;
 
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
-import org.springframework.util.ObjectUtils;
+import com.gin.jackson.utils.ObjectUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
