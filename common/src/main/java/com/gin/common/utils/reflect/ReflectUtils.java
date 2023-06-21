@@ -1,11 +1,10 @@
 package com.gin.common.utils.reflect;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 反射工具类
@@ -15,15 +14,6 @@ import java.util.List;
  */
 public class ReflectUtils {
 
-    /**
-     * 获取类的别名
-     * @param clazz 类对象
-     * @return 别名
-     */
-    public static String getAliasName(Class<?> clazz) {
-        final Schema schema = clazz.getAnnotation(Schema.class);
-        return schema != null ? schema.description() : clazz.getSimpleName();
-    }
 
     /**
      * 返回一个对象所有的字段和字段值(含父类)
@@ -34,7 +24,7 @@ public class ReflectUtils {
         return getAllFields(obj.getClass()).stream().map(field -> {
             final Object value = getFieldValue(field, obj);
             return new FieldValue(field, value);
-        }).toList();
+        }).collect(Collectors.toList());
     }
 
     /**
@@ -43,7 +33,7 @@ public class ReflectUtils {
      * @return 字段
      */
     public static List<Field> getAllFields(Class<?> clazz) {
-        List<Field> list = new ArrayList<>(List.of(clazz.getDeclaredFields()));
+        List<Field> list = new ArrayList<>(Arrays.asList(clazz.getDeclaredFields()));
         final Class<?> superclass = clazz.getSuperclass();
         if (superclass != null) {
             list.addAll(0, getAllFields(superclass));
@@ -88,6 +78,6 @@ public class ReflectUtils {
         return Arrays.stream(obj.getClass().getDeclaredFields()).map(field -> {
             final Object value = getFieldValue(field, obj);
             return new FieldValue(field, value);
-        }).toList();
+        }).collect(Collectors.toList());
     }
 }   

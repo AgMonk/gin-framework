@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.cache.Cache;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 
 import java.util.Set;
 import java.util.concurrent.TimeUnit;

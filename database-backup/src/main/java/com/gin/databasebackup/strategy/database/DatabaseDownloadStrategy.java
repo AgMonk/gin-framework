@@ -1,6 +1,6 @@
 package com.gin.databasebackup.strategy.database;
 
-import com.gin.common.vo.FileInfo;
+import com.gin.spring.vo.FileInfo;
 import com.gin.databasebackup.service.DatabaseBackupService;
 import com.gin.operationlog.annotation.LogStrategy;
 import com.gin.operationlog.bo.OperationLogContext;
@@ -27,9 +27,9 @@ public class DatabaseDownloadStrategy implements DescriptionStrategy {
     @Nullable
     public static String getFilename(OperationLogContext context) {
         return context.paramArgs().stream()
-                .filter(pa -> FILENAME.equals(pa.parameter().getName()))
-                .filter(pa -> String.class.equals(pa.parameter().getType()))
-                .map(pa -> (String) pa.arg()).findFirst().orElse(null);
+                .filter(pa -> FILENAME.equals(pa.getParameter().getName()))
+                .filter(pa -> String.class.equals(pa.getParameter().getType()))
+                .map(pa -> (String) pa.getArg()).findFirst().orElse(null);
     }
 
     /**

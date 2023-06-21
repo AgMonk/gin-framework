@@ -1,6 +1,6 @@
 package com.gin.security.exception;
 
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import org.springframework.http.HttpStatus;
 
 import java.util.Collections;

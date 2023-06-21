@@ -1,6 +1,6 @@
+sourceCompatibility JavaVersion.VERSION_1_8
+targetCompatibility JavaVersion.VERSION_1_8
+
 dependencies {
     api project(":jackson")
-    // spring doc
-    api "org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.0"
-    api 'com.github.xiaoymin:knife4j-springdoc-ui:3.0.3'
 }

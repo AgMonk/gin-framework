@@ -2,7 +2,7 @@ package com.gin.operationlog.strategy.def;
 
 import com.gin.common.utils.TimeUtils;
 import com.gin.common.utils.reflect.ReflectUtils;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 import com.gin.database.base.BaseVo;
 import com.gin.operationlog.annotation.LogStrategy;
 import com.gin.operationlog.bo.OperationLogContext;
@@ -34,14 +34,14 @@ public class DefaultAddStrategy implements DescriptionStrategy {
         // 如果 data 是 vo 类型， 使用 vo 的注解生成描述
         if (context.result() instanceof Res<?> res && res.getData() != null && res.getData() instanceof BaseVo vo) {
             List<String> des = new ArrayList<>();
-            ReflectUtils.getAllFieldValues(vo).stream().filter(f -> f.value() != null).forEach(fieldValue -> {
-                final Field field = fieldValue.field();
+            ReflectUtils.getAllFieldValues(vo).stream().filter(f -> f.getValue() != null).forEach(fieldValue -> {
+                final Field field = fieldValue.getField();
                 final Schema schema = field.getAnnotation(Schema.class);
                 // 字段标题
                 final String label = schema != null ? schema.description() : field.getName();
                 // 字段值
-                final String value = field.getName().contains("time") && field.getType().equals(Long.class) ? TimeUtils.format(((Long) fieldValue.value())) : String.valueOf(
-                        fieldValue.value());
+                final String value = field.getName().contains("time") && field.getType().equals(Long.class) ? TimeUtils.format(((Long) fieldValue.getValue())) : String.valueOf(
+                        fieldValue.getValue());
                 des.add(String.format("%s: %s", label, value));
             });
             return String.join(", ", des);

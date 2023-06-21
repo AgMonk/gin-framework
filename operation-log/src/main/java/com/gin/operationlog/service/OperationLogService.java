@@ -1,11 +1,11 @@
 package com.gin.operationlog.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.gin.common.utils.reflect.ReflectUtils;
-import com.gin.common.vo.PageOption;
+import com.gin.spring.vo.PageOption;
 import com.gin.database.service.MyService;
 import com.gin.operationlog.entity.BaseOperationLog;
 import com.gin.operationlog.vo.SubClassOption;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.ArrayList;
@@ -44,7 +44,8 @@ public interface OperationLogService<T extends BaseOperationLog> extends MyServi
                 option.setLabel("本对象");
                 option.setValue(mainClass.getName());
             } else {
-                option.setLabel(ReflectUtils.getAliasName(subClass));
+                final Schema schema = subClass.getAnnotation(Schema.class);
+                option.setLabel(schema != null ? schema.description() : subClass.getSimpleName());
                 option.setValue(subClass.getName());
             }
             option.setTypes(PageOption.of(logs, i -> new PageOption(i.getCount(), i.getType().getName(), i.getType().name())));

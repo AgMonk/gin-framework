@@ -2,7 +2,7 @@ package com.gin.security.dto.param;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.gin.database.dto.param.BasePageParam;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +11,7 @@ import com.gin.security.service.RelationUserRoleService;
 import com.gin.security.service.SystemUserInfoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.ObjectUtils;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 
 import java.util.Collections;
 import java.util.List;

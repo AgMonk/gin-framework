@@ -1,4 +1,4 @@
-package com.gin.common.exception;
+package com.gin.spring.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,7 @@
 package com.gin.database.utils;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 import org.springframework.context.ApplicationContext;
 
 /**

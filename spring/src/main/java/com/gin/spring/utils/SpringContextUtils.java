@@ -1,4 +1,4 @@
-package com.gin.common.utils;
+package com.gin.spring.utils;
 
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.BeansException;

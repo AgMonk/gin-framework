@@ -1,4 +1,4 @@
-package com.gin.common.utils;
+package com.gin.spring.utils;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 

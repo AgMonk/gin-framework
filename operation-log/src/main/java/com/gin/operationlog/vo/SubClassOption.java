@@ -1,6 +1,6 @@
 package com.gin.operationlog.vo;
 
-import com.gin.common.vo.PageOption;
+import com.gin.spring.vo.PageOption;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

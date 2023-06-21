@@ -1,8 +1,8 @@
 package com.gin.spring.advice;
 
-import com.gin.common.exception.BusinessException;
-import com.gin.common.exception.MyFieldError;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.exception.BusinessException;
+import com.gin.spring.exception.MyFieldError;
+import com.gin.spring.vo.response.Res;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 import jakarta.validation.ConstraintViolationException;

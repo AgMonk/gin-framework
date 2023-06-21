@@ -61,13 +61,13 @@ public class CustomKeyGenerator implements KeyGenerator {
         }
         // 组合成参数+参数值列表
         final List<ParamArg> paramArgs = ParamArg.merge(method.getParameters(), params).stream()
-                .filter(f -> !EXCLUDED_CLASSES.contains(f.parameter().getType())).toList();
+                .filter(f -> !EXCLUDED_CLASSES.contains(f.getParameter().getType())).toList();
         if (CollectionUtils.isEmpty(paramArgs)) {
             return simpleKey;
         }
         // 有参数
         return simpleKey + SPLIT + paramArgs.stream()
-                .map(paramArg -> paramArg.parameter().getName() + "=" + valueOf(paramArg.arg()))
+                .map(paramArg -> paramArg.getParameter().getName() + "=" + valueOf(paramArg.getArg()))
                 .collect(Collectors.joining(";"));
     }
 }

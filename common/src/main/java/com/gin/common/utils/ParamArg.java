@@ -1,17 +1,31 @@
 package com.gin.common.utils;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 
 /**
  * 方法的参数和参数值
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/2/20 12:31
  */
-public record ParamArg(Parameter parameter, Object arg) {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class ParamArg {
+    Parameter parameter;
+    Object arg;
+
     /**
      * 将参数和参数值组合为列表
+     *
      * @param parameters 参数
      * @param args       参数值
      * @return 参数+参数值列表

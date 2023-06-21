@@ -1,6 +1,6 @@
 package com.gin.database.handler;
 
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;

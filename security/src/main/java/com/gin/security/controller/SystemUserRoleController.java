@@ -25,7 +25,7 @@ import com.gin.security.service.RolePermissionService;
 import com.gin.security.service.SystemRoleService;
 import com.gin.security.service.impl.SystemUserServiceImpl;
 import com.gin.database.validation.EntityId;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 
 import java.util.Collections;
 import java.util.List;

@@ -4,7 +4,7 @@ import com.gin.spring.annotation.RestWrapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;

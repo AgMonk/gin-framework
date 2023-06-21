@@ -14,7 +14,7 @@ import com.gin.security.dto.form.SystemUserInfoForm;
 import com.gin.security.dto.param.SystemUserPageParam;
 import com.gin.security.entity.SystemUser;
 import com.gin.security.entity.SystemUserInfo;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Nullable;
@@ -41,7 +41,7 @@ import com.gin.security.service.impl.SystemUserServiceImpl;
 import com.gin.database.validation.EntityId;
 import com.gin.security.vo.SystemUserInfoVo;
 import com.gin.security.vo.SystemUserVo;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 import com.gin.database.vo.response.ResPage;
 
 import java.util.List;

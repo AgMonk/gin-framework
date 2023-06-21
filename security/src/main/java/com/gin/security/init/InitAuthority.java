@@ -26,7 +26,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 
 import java.util.*;
 import java.util.stream.Stream;

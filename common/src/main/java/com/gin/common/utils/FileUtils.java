@@ -1,14 +1,12 @@
 package com.gin.common.utils;
 
 import com.gin.common.exception.file.*;
-import jakarta.validation.constraints.NotNull;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * 文件工具类
@@ -16,7 +14,6 @@ import java.util.List;
  * @version : v1.0.0
  * @since : 2022/12/22 17:16
  */
-@Slf4j
 public class FileUtils {
 
     public static final String DOT = ".";
@@ -27,7 +24,7 @@ public class FileUtils {
      * @param file 文件
      * @throws FileNotExistsException 异常
      */
-    public static void assertExists(@NotNull File file) throws FileNotExistsException {
+    public static void assertExists( File file) throws FileNotExistsException {
         assertNotNull(file);
         if (!file.exists()) {
             throw new FileNotExistsException(file);
@@ -39,7 +36,7 @@ public class FileUtils {
      * @param file 文件
      * @throws FileExistsException 异常
      */
-    public static void assertNotExists(@NotNull File file) throws FileExistsException {
+    public static void assertNotExists( File file) throws FileExistsException {
         assertNotNull(file);
         if (!file.exists()) {
             throw new FileExistsException(file);
@@ -60,7 +57,7 @@ public class FileUtils {
      * 移除文件名中的非法字符
      * @param filename 文件名
      */
-    public static String cleanInvalid(@NotNull String filename) {
+    public static String cleanInvalid( String filename) {
         return replaceInvalid(filename, "");
     }
 
@@ -70,7 +67,7 @@ public class FileUtils {
      * @param dest 目标文件
      * @throws IOException 异常
      */
-    public static void copyFile(@NotNull File src, @NotNull File dest) throws IOException {
+    public static void copyFile( File src,  File dest) throws IOException {
         copyFile(src, dest, CopyMethod.CHANNEL);
     }
 
@@ -81,13 +78,19 @@ public class FileUtils {
      * @param copyMethod 复制方法 默认为  CHANNEL
      * @throws IOException 异常
      */
-    public static void copyFile(@NotNull File src, @NotNull File dest, @NotNull CopyMethod copyMethod) throws IOException {
+    public static void copyFile( File src,  File dest,  CopyMethod copyMethod) throws IOException {
         assertExists(src);
         assertNotExists(dest);
         switch (copyMethod) {
-            case JAVA7 -> copyFileUsingJava7Files(src, dest);
-            case STREAM -> copyFileUsingFileStreams(src, dest);
-            default -> copyFileUsingFileChannels(src, dest);
+            case JAVA7:
+                copyFileUsingJava7Files(src, dest);
+                break;
+            case STREAM:
+                copyFileUsingFileStreams(src, dest);
+                break;
+            default:
+                copyFileUsingFileChannels(src, dest);
+                break;
         }
     }
 
@@ -96,7 +99,7 @@ public class FileUtils {
      * @param file 目录或文件
      * @throws IOException 异常
      */
-    public static void delete(@NotNull File file) throws IOException {
+    public static void delete( File file) throws IOException {
         assertExists(file);
         if (file.isDirectory()) {
             deleteDir(file);
@@ -110,7 +113,7 @@ public class FileUtils {
      * @param dir 目录
      * @throws IOException 异常
      */
-    public static void deleteDir(@NotNull File dir) throws IOException {
+    public static void deleteDir( File dir) throws IOException {
         final ArrayList<File> files = listAllFiles(dir);
         for (int i = files.size() - 1; i >= 0; i--) {
             final File item = files.get(i);
@@ -124,12 +127,11 @@ public class FileUtils {
      * @throws FileNotExistsException 文件不存在异常
      * @throws FileDeleteException 文件删除异常
      */
-    public static void deleteFile(@NotNull File file) throws FileNotExistsException, FileDeleteException {
+    public static void deleteFile( File file) throws FileNotExistsException, FileDeleteException {
         assertExists(file);
         if (!file.delete()) {
             throw new FileDeleteException(file);
         }
-        log.info("已删除文件:" + file.getPath());
     }
 
     /**
@@ -137,8 +139,8 @@ public class FileUtils {
      * @param filename 文件名
      * @return 后缀名(小写)
      */
-    @NotNull
-    public static String getFileExtName(@NotNull String filename) {
+
+    public static String getFileExtName( String filename) {
         if (!filename.contains(DOT)) {
             return "";
         }
@@ -150,8 +152,8 @@ public class FileUtils {
      * @param filename 文件名
      * @return 主文件名
      */
-    @NotNull
-    public static String getFileMainName(@NotNull String filename) {
+
+    public static String getFileMainName( String filename) {
         return filename.substring(0, filename.lastIndexOf(DOT) + 1);
     }
 
@@ -161,8 +163,8 @@ public class FileUtils {
      * @return 文件列表
      * @throws IOException 异常
      */
-    @NotNull
-    public static ArrayList<File> listAllFiles(@NotNull File dir) throws IOException {
+
+    public static ArrayList<File> listAllFiles( File dir) throws IOException {
         return listAllFiles(dir, false);
     }
 
@@ -173,8 +175,8 @@ public class FileUtils {
      * @return 文件列表
      * @throws IOException 异常
      */
-    @NotNull
-    public static ArrayList<File> listAllFiles(@NotNull File dir, boolean includeDir) throws IOException {
+
+    public static ArrayList<File> listAllFiles( File dir, boolean includeDir) throws IOException {
         final ArrayList<File> files = listFiles(dir);
         final ArrayList<File> all = new ArrayList<>();
         for (File file : files) {
@@ -198,8 +200,8 @@ public class FileUtils {
      * @return 文件列表
      * @throws IOException 异常
      */
-    @NotNull
-    public static ArrayList<File> listFiles(@NotNull File dir) throws IOException {
+
+    public static ArrayList<File> listFiles( File dir) throws IOException {
         assertExists(dir);
         if (!dir.isDirectory()) {
             throw new IOException("该文件不是目录:" + dir.getPath());
@@ -208,7 +210,7 @@ public class FileUtils {
         if (files == null) {
             return new ArrayList<>();
         }
-        return new ArrayList<>(List.of(files));
+        return new ArrayList<>(Arrays.asList(files));
     }
 
     /**
@@ -217,15 +219,13 @@ public class FileUtils {
      * @throws DirCreateException 异常
      * @throws FileExistsException 异常
      */
-    public static void mkdir(@NotNull File dir) throws DirCreateException, FileExistsException {
+    public static void mkdir( File dir) throws DirCreateException, FileExistsException {
         if (dir.exists() && !dir.isDirectory()) {
             throw new FileExistsException(dir);
         }
         if (!dir.exists()) {
             if (!dir.mkdirs()) {
                 throw new DirCreateException(dir);
-            } else {
-                log.info("创建目录:" + dir.getPath());
             }
         }
     }
@@ -240,8 +240,8 @@ public class FileUtils {
      * @throws DirCreateException 异常
      */
     public static void move(
-            @NotNull File src,
-            @NotNull File dest
+             File src,
+             File dest
     ) throws FileMoveException, FileNotExistsException, FileExistsException, DirCreateException {
         assertExists(src);
         assertNotExists(dest);
@@ -249,7 +249,6 @@ public class FileUtils {
         if (!src.renameTo(dest)) {
             throw new FileMoveException(src, dest);
         }
-        log.info("已移动文件 {} -> {}", src.getPath(), dest.getPath());
     }
 
     /**
@@ -262,8 +261,8 @@ public class FileUtils {
      * @throws DirCreateException 异常
      */
     public static void move2Dir(
-            @NotNull File src,
-            @NotNull File dir
+             File src,
+             File dir
     ) throws FileNotExistsException, DirCreateException, FileMoveException, FileExistsException {
         move(src, new File(dir.getPath() + PATH_DELIMITER + src.getName()));
     }
@@ -286,9 +285,13 @@ public class FileUtils {
      * @param dest 目标文件
      * @throws IOException 异常
      */
-    private static void copyFileUsingFileChannels(@NotNull File src, @NotNull File dest) throws IOException {
-        try (FileChannel inputChannel = new FileInputStream(src).getChannel(); FileChannel outputChannel = new FileOutputStream(dest).getChannel()) {
-            outputChannel.transferFrom(inputChannel, 0, inputChannel.size());
+    private static void copyFileUsingFileChannels( File src,  File dest) throws IOException {
+        try (FileInputStream inputStream = new FileInputStream(src)) {
+            FileChannel inputChannel = inputStream.getChannel();
+            try (FileOutputStream outputStream = new FileOutputStream(dest)) {
+                FileChannel outputChannel = outputStream.getChannel();
+                outputChannel.transferFrom(inputChannel, 0, inputChannel.size());
+            }
         }
     }
 
@@ -297,12 +300,14 @@ public class FileUtils {
      * @param src  源文件
      * @param dest 目标文件
      */
-    private static void copyFileUsingFileStreams(@NotNull File src, @NotNull File dest) throws IOException {
-        try (InputStream input = new FileInputStream(src); OutputStream output = new FileOutputStream(dest)) {
-            byte[] buf = new byte[1024];
-            int bytesRead;
-            while ((bytesRead = input.read(buf)) > 0) {
-                output.write(buf, 0, bytesRead);
+    private static void copyFileUsingFileStreams( File src,  File dest) throws IOException {
+        try (InputStream input = Files.newInputStream(src.toPath())) {
+            try (OutputStream output = Files.newOutputStream(dest.toPath())) {
+                byte[] buf = new byte[1024];
+                int bytesRead;
+                while ((bytesRead = input.read(buf)) > 0) {
+                    output.write(buf, 0, bytesRead);
+                }
             }
         }
     }
@@ -312,7 +317,7 @@ public class FileUtils {
      * @param source 源文件
      * @param dest   目标文件
      */
-    private static void copyFileUsingJava7Files(@NotNull File source, @NotNull File dest) throws IOException {
+    private static void copyFileUsingJava7Files( File source,  File dest) throws IOException {
         Files.copy(source.toPath(), dest.toPath());
     }
 

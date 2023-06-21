@@ -48,13 +48,13 @@ public abstract class AbstractUpdateStrategy implements DescriptionStrategy {
         return filteredDifferences.size() == 0 ? "未做修改" : filteredDifferences.stream()
                 // 字段差异格式化
                 .map(dif -> {
-                    final String fieldName = formatField(dif.field());
-                    final String beforeValue = formatValue(dif.field(), dif.beforeValue());
-                    final String updateValue = formatValue(dif.field(), dif.updateValue());
+                    final String fieldName = formatField(dif.getField());
+                    final String beforeValue = formatValue(dif.getField(), dif.getBeforeValue());
+                    final String updateValue = formatValue(dif.getField(), dif.getUpdateValue());
                     return new FieldDifference<>(fieldName, beforeValue, updateValue);
                 })
                 // 连接成字符串
-                .map(d -> String.format("[%s] 从 '%s' 更新为 '%s'", d.field(), d.beforeValue(), d.updateValue()))
+                .map(d -> String.format("[%s] 从 '%s' 更新为 '%s'", d.getField(), d.getBeforeValue(), d.getUpdateValue()))
                 .collect(Collectors.joining(", "));
     }
 

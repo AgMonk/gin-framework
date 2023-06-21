@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import com.gin.security.bo.MyUserDetails;
 import com.gin.security.interfaze.AuthorityProvider;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 
 import java.util.Collection;
 

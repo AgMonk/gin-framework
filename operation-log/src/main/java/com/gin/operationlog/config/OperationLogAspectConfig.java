@@ -5,9 +5,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gin.common.utils.ParamArg;
 import com.gin.spring.utils.SpElUtils;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 import com.gin.spring.utils.WebUtils;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 import com.gin.operationlog.annotation.LogStrategy;
 import com.gin.operationlog.annotation.OpLog;
 import com.gin.operationlog.bo.OperationLogContext;
@@ -86,8 +86,8 @@ public class OperationLogAspectConfig {
 
         HashMap<String, Object> map = new HashMap<>();
 
-        context.paramArgs().stream().filter(f -> !classes.contains(f.parameter().getType())).forEach(paramArg -> map.put(paramArg.parameter().getName(),
-                                                                                                                         paramArg.arg()));
+        context.paramArgs().stream().filter(f -> !classes.contains(f.getParameter().getType())).forEach(paramArg -> map.put(paramArg.getParameter().getName(),
+                                                                                                                         paramArg.getArg()));
         try {
             return mapper.writeValueAsString(map);
         } catch (JsonProcessingException e) {

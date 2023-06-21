@@ -1,9 +1,5 @@
 package com.gin.common.utils;
 
-import org.springframework.cglib.beans.BeanMap;
-
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -23,31 +19,6 @@ public class StrUtils {
      */
     public static boolean isNumber(String s){
         return NUMBER_PATTERN.matcher(s).find();
-    }
-
-    /**
-     * 将对象中的字段按照模板生成格式化文本，使用 {字段名} 占位
-     * @param template 模板
-     * @param obj      需要输出的对象
-     * @return 格式化文本
-     */
-    public static String format(String template, Object obj) {
-        final BeanMap beanMap = BeanMap.create(obj);
-        final HashMap<String, String> map = new HashMap<>();
-
-        //noinspection unchecked
-        beanMap.forEach((o, o2) -> {
-            if (o instanceof String s) {
-                map.put(s, String.valueOf(o2));
-            }
-        });
-
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            String k = entry.getKey();
-            String v = entry.getValue();
-            template = template.replace(String.format("{%s}", k), v);
-        }
-        return template;
     }
 
     /**

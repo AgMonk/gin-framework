@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import com.gin.security.bo.MyUserDetails;
 import com.gin.security.interfaze.ClassAuthorityEvaluator;
 import com.gin.security.interfaze.TypeNameAuthorityEvaluator;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 
 import java.io.Serializable;
 import java.util.Collection;

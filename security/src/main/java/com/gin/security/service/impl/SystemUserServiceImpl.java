@@ -5,7 +5,7 @@ import com.gin.security.dao.SystemUserDao;
 import com.gin.security.dto.form.RegForm;
 import com.gin.security.entity.SystemUser;
 import com.gin.security.entity.SystemUserInfo;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;

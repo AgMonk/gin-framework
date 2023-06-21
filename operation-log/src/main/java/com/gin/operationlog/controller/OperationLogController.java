@@ -1,7 +1,7 @@
 package com.gin.operationlog.controller;
 
-import com.gin.common.utils.SpringContextUtils;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.utils.SpringContextUtils;
+import com.gin.spring.vo.response.Res;
 import com.gin.database.vo.response.ResPage;
 import com.gin.operationlog.dto.param.OperationLogPageParam;
 import com.gin.operationlog.service.OpLogService;

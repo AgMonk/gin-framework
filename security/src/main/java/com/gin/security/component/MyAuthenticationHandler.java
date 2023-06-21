@@ -24,7 +24,7 @@ import org.springframework.security.web.server.csrf.CsrfException;
 import org.springframework.security.web.session.SessionInformationExpiredEvent;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 import org.springframework.stereotype.Component;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 
 import java.io.IOException;
 

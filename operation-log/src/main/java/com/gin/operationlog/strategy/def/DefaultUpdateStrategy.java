@@ -37,9 +37,9 @@ public class DefaultUpdateStrategy extends AbstractUpdateStrategy {
     public List<FieldDifference<Field, Object>> filter(List<FieldDifference<Field, Object>> differences) {
         return differences.stream().filter(dif -> {
             // 字段
-            final Field field = dif.field();
+            final Field field = dif.getField();
             // 修改字段值
-            final Object updateValue = dif.updateValue();
+            final Object updateValue = dif.getUpdateValue();
 
             final TableField tableField = field.getAnnotation(TableField.class);
             if (tableField == null || tableField.updateStrategy() == FieldStrategy.DEFAULT || tableField.updateStrategy() == FieldStrategy.NOT_NULL) {

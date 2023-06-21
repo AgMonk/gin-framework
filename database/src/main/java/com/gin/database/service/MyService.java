@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.gin.database.dto.param.BasePageParam;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.cglib.beans.BeanMap;
 import org.springframework.http.HttpStatus;

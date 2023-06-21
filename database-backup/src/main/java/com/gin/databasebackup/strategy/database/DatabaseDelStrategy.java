@@ -1,6 +1,6 @@
 package com.gin.databasebackup.strategy.database;
 
-import com.gin.common.vo.FileInfo;
+import com.gin.spring.vo.FileInfo;
 import com.gin.operationlog.annotation.LogStrategy;
 import com.gin.operationlog.bo.OperationLogContext;
 import com.gin.operationlog.enums.OperationType;

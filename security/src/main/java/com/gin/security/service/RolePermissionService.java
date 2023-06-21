@@ -10,7 +10,7 @@ import com.gin.security.dto.form.RegForm;
 import com.gin.security.dto.form.RelationUserRoleForm;
 import com.gin.security.entity.*;
 import com.gin.security.interfaze.AuthorityProvider;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

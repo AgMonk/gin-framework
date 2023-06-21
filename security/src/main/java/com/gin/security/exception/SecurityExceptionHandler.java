@@ -14,7 +14,7 @@ import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.gin.security.service.SystemPermissionService;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 
 /**
  * 安全相关的 统一异常处理

@@ -6,7 +6,7 @@ import com.gin.security.Constant.Security;
 import com.gin.security.Constant.User;
 import com.gin.security.dto.form.SystemRoleForm;
 import com.gin.security.entity.SystemRole;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;

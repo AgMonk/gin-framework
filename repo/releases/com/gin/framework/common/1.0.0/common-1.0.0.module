@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -30,31 +30,17 @@
           "version": {
             "requires": "1.0.0"
           }
-        },
-        {
-          "group": "org.springdoc",
-          "module": "springdoc-openapi-starter-webmvc-ui",
-          "version": {
-            "requires": "2.0.0"
-          }
-        },
-        {
-          "group": "com.github.xiaoymin",
-          "module": "knife4j-springdoc-ui",
-          "version": {
-            "requires": "3.0.3"
-          }
         }
       ],
       "files": [
         {
           "name": "common-1.0.0-plain.jar",
           "url": "common-1.0.0-plain.jar",
-          "size": 46977,
-          "sha512": "2285b5a63d89bdd78524543921697561c9884cffb9f70fc187ca8cd3bf17c5a2a870136b029e97ee3fc5fbc97907687409cbb699a405ea6127aaeff76626daad",
-          "sha256": "611f81d9a1eac8feb6e722dc7de897b7618de3744dfd5180b70f50ed5bcba219",
-          "sha1": "bec90d4f6a46fd9acfba6dd62dd3b0ac695c9e3c",
-          "md5": "b77fe1aab953716424cb7d9817575efb"
+          "size": 34768,
+          "sha512": "55c044c7b48f000d19dd28a4a99795e9723cc7d571724e9d1cd427a8ebd39314e1405d38d01556785d60242a9b7e39634155fb4174e6cdd1bf018c64d355a46b",
+          "sha256": "242409d46cd06e5603a99fcc14949588d66e2b503473a9f6497ee5f619a26275",
+          "sha1": "b6fdd8284e96757bbf89be078aa994437f92369f",
+          "md5": "a0c240d7814d9762eb74b41dbdb63050"
         }
       ]
     },
@@ -63,7 +49,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 8,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -74,31 +60,17 @@
           "version": {
             "requires": "1.0.0"
           }
-        },
-        {
-          "group": "org.springdoc",
-          "module": "springdoc-openapi-starter-webmvc-ui",
-          "version": {
-            "requires": "2.0.0"
-          }
-        },
-        {
-          "group": "com.github.xiaoymin",
-          "module": "knife4j-springdoc-ui",
-          "version": {
-            "requires": "3.0.3"
-          }
         }
       ],
       "files": [
         {
           "name": "common-1.0.0-plain.jar",
           "url": "common-1.0.0-plain.jar",
-          "size": 46977,
-          "sha512": "2285b5a63d89bdd78524543921697561c9884cffb9f70fc187ca8cd3bf17c5a2a870136b029e97ee3fc5fbc97907687409cbb699a405ea6127aaeff76626daad",
-          "sha256": "611f81d9a1eac8feb6e722dc7de897b7618de3744dfd5180b70f50ed5bcba219",
-          "sha1": "bec90d4f6a46fd9acfba6dd62dd3b0ac695c9e3c",
-          "md5": "b77fe1aab953716424cb7d9817575efb"
+          "size": 34768,
+          "sha512": "55c044c7b48f000d19dd28a4a99795e9723cc7d571724e9d1cd427a8ebd39314e1405d38d01556785d60242a9b7e39634155fb4174e6cdd1bf018c64d355a46b",
+          "sha256": "242409d46cd06e5603a99fcc14949588d66e2b503473a9f6497ee5f619a26275",
+          "sha1": "b6fdd8284e96757bbf89be078aa994437f92369f",
+          "md5": "a0c240d7814d9762eb74b41dbdb63050"
         }
       ]
     },
@@ -134,11 +106,11 @@
         {
           "name": "common-1.0.0-sources.jar",
           "url": "common-1.0.0-sources.jar",
-          "size": 26514,
-          "sha512": "17281ad1b2349c0c56e52a07c193b508827f3e071265ad3d158ff5fd4d84ab47324586dcf47ac86612bd95942dc81f2de120e729cc75d1c7e98a90f00fd51934",
-          "sha256": "655ffea689d7cbd4895c0b0862c1c3ed8592a2be10d0d4b06e4c57e053006c54",
-          "sha1": "99af1090e80c579270811aaa1d4ad65cebd09100",
-          "md5": "0833dd0109a680367c37bda61ea3037b"
+          "size": 20285,
+          "sha512": "698f82ab951df1d417e05ba84d8ca0514ad95d6bcac808b56a1ce1203436488581eb93d4f2d1a2c4e1e235542eafbc716d0d898dcf1d3e5ff49cd9a7ea5b6baf",
+          "sha256": "d7bec4313ac1dd2f17bf2d93529a95bd26db91c5faadd505da436ea28819ce49",
+          "sha1": "6b36ca231ea79182614293b80b63860519763686",
+          "md5": "7d20d5cb76cd217d1a7c9d571d83aec2"
         }
       ]
     }

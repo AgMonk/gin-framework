@@ -1,4 +1,4 @@
-package com.gin.common.vo.response;
+package com.gin.spring.vo.response;
 
 import com.gin.common.constant.Messages;
 import io.swagger.v3.oas.annotations.media.Schema;

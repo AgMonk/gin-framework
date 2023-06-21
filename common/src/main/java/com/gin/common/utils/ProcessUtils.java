@@ -1,7 +1,5 @@
 package com.gin.common.utils;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -11,7 +9,6 @@ import java.io.IOException;
  * @version : v1.0.0
  * @since : 2023/1/11 15:37
  */
-@Slf4j
 public class ProcessUtils {
 
     public static Process downloadWithCurl(String url, File dir) throws IOException {

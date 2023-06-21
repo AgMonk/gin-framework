@@ -1,11 +1,8 @@
 package com.gin.common.utils;
 
 import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedHashMap;
-
-import static com.gin.common.utils.TimeUtils.simpleDuration;
 
 
 /**
@@ -15,7 +12,6 @@ import static com.gin.common.utils.TimeUtils.simpleDuration;
  * @since : 2022/12/23 11:02
  */
 @Getter
-@Slf4j
 public class Stopwatch {
     private static final String TEMPLATE = "[{}] 标记计时点 [{}] 距离上一个计时点: {} 总耗时: {}";
     /**
@@ -41,7 +37,6 @@ public class Stopwatch {
         this.start = now;
         this.last = now;
 
-        log.info("[{}] 开始计时", taskName);
     }
 
     private static long now() {
@@ -62,9 +57,6 @@ public class Stopwatch {
      */
     public void tag(String tag, boolean printLog) {
         final long now = now();
-        if (printLog) {
-            log.info(TEMPLATE, taskName, tag, simpleDuration(last, now), simpleDuration(start, now));
-        }
         this.last = now;
         process.put(tag, now);
     }

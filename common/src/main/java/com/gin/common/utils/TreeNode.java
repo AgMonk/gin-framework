@@ -1,8 +1,7 @@
 package com.gin.common.utils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.ObjectUtils;
+import com.gin.jackson.utils.ObjectUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -23,10 +22,10 @@ public interface TreeNode<T> {
      */
     static <T extends TreeNode<T>> List<T> collate(List<T> list) {
         final ArrayList<T> data = new ArrayList<>();
-        if (CollectionUtils.isEmpty(list)) {
+        if (ObjectUtils.isEmpty(list)) {
             return data;
         }
-        HashMap<Serializable, T> map = MapUtils.coll2Map(list, TreeNode::getNodeId);
+        HashMap<Serializable, T> map = MapUtils.coll2Map(list, TreeNode::getNodeId,t->t);
         list.forEach(item -> {
             final Serializable parentNodeId = item.getParentNodeId();
             if (ObjectUtils.isEmpty(parentNodeId)) {
@@ -36,7 +35,7 @@ public interface TreeNode<T> {
                 // 找到父节点,放入它的子节点列表
                 final T parent = map.get(parentNodeId);
                 List<T> children = parent.getChildrenNodeList();
-                children = CollectionUtils.isEmpty(children) ? new ArrayList<>() : children;
+                children = ObjectUtils.isEmpty(children) ? new ArrayList<>() : children;
                 children.add(item);
                 parent.setChildrenNodeList(children);
             }

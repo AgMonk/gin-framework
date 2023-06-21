@@ -2,7 +2,7 @@ package com.gin.database.vo.response;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.gin.common.constant.Messages;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

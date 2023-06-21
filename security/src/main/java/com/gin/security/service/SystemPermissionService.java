@@ -4,7 +4,7 @@ import com.gin.database.base.BaseFields;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.gin.database.service.MyService;
 import com.gin.security.entity.SystemPermission;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -3,7 +3,6 @@ package com.gin.common.utils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
-import jakarta.validation.constraints.NotNull;
 
 import java.io.*;
 import java.util.function.Function;
@@ -25,7 +24,7 @@ public class FileIoUtils {
      * @param file 文件
      * @return BufferedInputStream
      */
-    @NotNull
+
     public static BufferedInputStream getInputStream(File file) throws FileNotFoundException {
         return new BufferedInputStream(new FileInputStream(file));
     }
@@ -36,7 +35,7 @@ public class FileIoUtils {
      * @param append 追加模式
      * @return BufferedOutputStream
      */
-    @NotNull
+
     public static BufferedOutputStream getOutputStream(File file, boolean append) throws FileNotFoundException {
         return new BufferedOutputStream(new FileOutputStream(file, append));
     }
@@ -46,7 +45,7 @@ public class FileIoUtils {
      * @param file 文件
      * @return BufferedReader
      */
-    @NotNull
+
     public static BufferedReader getReader(File file) throws FileNotFoundException {
         return new BufferedReader(new FileReader(file));
     }
@@ -57,8 +56,8 @@ public class FileIoUtils {
      * @param append 追加模式
      * @return PrintWriter
      */
-    @NotNull
-    public static PrintWriter getWriter(@NotNull File file, boolean append) throws IOException {
+
+    public static PrintWriter getWriter( File file, boolean append) throws IOException {
         FileUtils.mkdir(file.getParentFile());
         return new PrintWriter(new FileWriter(file, append));
     }
@@ -109,7 +108,7 @@ public class FileIoUtils {
      * @param <T>  T
      * @return 指定类对象
      */
-    public static <T> T readObj(File file, @NotNull Function<TypeFactory, JavaType> func) throws IOException {
+    public static <T> T readObj(File file,  Function<TypeFactory, JavaType> func) throws IOException {
         return readObj(file, func.apply(MAPPER.getTypeFactory()));
     }
 

@@ -1,7 +1,7 @@
 package com.gin.databasebackup.service;
 
 import com.gin.common.enums.OsType;
-import com.gin.common.exception.BusinessException;
+import com.gin.spring.exception.BusinessException;
 import com.gin.common.exception.file.DirCreateException;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileExistsException;
@@ -11,7 +11,7 @@ import com.gin.common.utils.FileUtils;
 import com.gin.common.utils.IoUtils;
 import com.gin.common.utils.ProcessUtils;
 import com.gin.common.utils.TimeUtils;
-import com.gin.common.vo.FileInfo;
+import com.gin.spring.vo.FileInfo;
 import com.gin.database.enums.ServiceStatus;
 import com.gin.databasebackup.config.DatabaseConConfig;
 import com.gin.databasebackup.properties.DatabaseProperties;

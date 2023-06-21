@@ -15,7 +15,7 @@ import com.gin.route.base.HasChildren;
 import com.gin.route.entity.EleMenuItem;
 import com.gin.route.entity.EleMenuItemGroup;
 import com.gin.route.entity.EleSubMenu;
-import com.gin.common.utils.SpringContextUtils;
+import com.gin.spring.utils.SpringContextUtils;
 import com.gin.common.utils.reflect.ReflectUtils;
 
 import java.lang.reflect.Method;

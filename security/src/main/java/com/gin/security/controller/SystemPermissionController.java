@@ -19,7 +19,7 @@ import com.gin.route.annotation.MenuItem;
 import com.gin.route.annotation.MenuPath;
 import com.gin.security.service.SystemPermissionService;
 import com.gin.security.vo.PermissionGroup;
-import com.gin.common.vo.response.Res;
+import com.gin.spring.vo.response.Res;
 import com.gin.database.vo.response.ResPage;
 
 import java.util.Comparator;

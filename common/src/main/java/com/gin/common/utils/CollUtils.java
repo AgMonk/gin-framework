@@ -1,6 +1,5 @@
 package com.gin.common.utils;
 
-import jakarta.validation.constraints.NotNull;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -32,7 +31,7 @@ public class CollUtils {
      * @param list 列表
      * @return 重复出现的元素
      */
-    public static <T> Set<T> distinct(@NotNull List<T> list) {
+    public static <T> Set<T> distinct( List<T> list) {
         final HashSet<T> set = new HashSet<>();
         final HashSet<T> duplicate = new HashSet<>();
         list.forEach(item -> {
