@@ -47,7 +47,7 @@ public class SecurityAopConfig {
                 && token.getDetails() instanceof WebAuthenticationDetails details
         ) {
             final long start = now();
-            final String userIp = details.getRemoteAddress();
+            final String userIp = WebUtils.getRemoteHost();
             try {
                 //登陆成功
                 final Authentication result = (Authentication) pjp.proceed();
