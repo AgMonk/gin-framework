@@ -6,6 +6,7 @@ import com.gin.security.entity.SystemPermission;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -24,6 +25,7 @@ import com.gin.spring.vo.response.Res;
  */
 @Slf4j
 @RestControllerAdvice
+@Order(1)
 @RequiredArgsConstructor
 public class SecurityExceptionHandler {
     private final SystemPermissionService systemPermissionService;
