@@ -43,11 +43,11 @@
         {
           "name": "jackson-1.0.0-plain.jar",
           "url": "jackson-1.0.0-plain.jar",
-          "size": 14165,
-          "sha512": "4ccec0e0c33114adde4957999c88b9b76931b0795b08af6549c0e8b8bd441dbcbcd1c22185cd51647b25d86a3ad1111decc8122221c27f08cdf46b2e32382742",
-          "sha256": "63e7a76fb6c67b8088be46ede963a65c144c40ba47883a2b5a63204f5743b816",
-          "sha1": "2475ed1a22d51d648f86c379841c41e9da5d6408",
-          "md5": "cb067ccd9ca06958cb7ecf41211bf997"
+          "size": 15060,
+          "sha512": "3d874b0fdc8bab4db3a0472ba6a47eb8fa54ab71c165e0669790748d1c88a95774628b149cfb95df1420f10ad1dc2fe093ad1481df91eee79a1c3267fe1408ca",
+          "sha256": "4d84fc432ba559ad82eb3aa5dedd5abdd3400d9dcf6e49f661162a38387460a8",
+          "sha1": "ef8fe3caee1b8cfee8b9453e9755323f6be612d2",
+          "md5": "275efd57b263f9aa81d08540746aa14a"
         }
       ]
     },
@@ -80,11 +80,11 @@
         {
           "name": "jackson-1.0.0-plain.jar",
           "url": "jackson-1.0.0-plain.jar",
-          "size": 14165,
-          "sha512": "4ccec0e0c33114adde4957999c88b9b76931b0795b08af6549c0e8b8bd441dbcbcd1c22185cd51647b25d86a3ad1111decc8122221c27f08cdf46b2e32382742",
-          "sha256": "63e7a76fb6c67b8088be46ede963a65c144c40ba47883a2b5a63204f5743b816",
-          "sha1": "2475ed1a22d51d648f86c379841c41e9da5d6408",
-          "md5": "cb067ccd9ca06958cb7ecf41211bf997"
+          "size": 15060,
+          "sha512": "3d874b0fdc8bab4db3a0472ba6a47eb8fa54ab71c165e0669790748d1c88a95774628b149cfb95df1420f10ad1dc2fe093ad1481df91eee79a1c3267fe1408ca",
+          "sha256": "4d84fc432ba559ad82eb3aa5dedd5abdd3400d9dcf6e49f661162a38387460a8",
+          "sha1": "ef8fe3caee1b8cfee8b9453e9755323f6be612d2",
+          "md5": "275efd57b263f9aa81d08540746aa14a"
         }
       ]
     },
@@ -101,10 +101,10 @@
           "name": "jackson-1.0.0-javadoc.jar",
           "url": "jackson-1.0.0-javadoc.jar",
           "size": 261,
-          "sha512": "0785e30487bf0f972115fc2da646a428c5e97248a43f06bc1cf1b7714dd0d6f4fd2b5a7408685e722c96a496a5dd07aeb279aae57c719d3fac42f6718207436f",
-          "sha256": "72cff99ca59335ee6ec178c298a3478851fe1ec4ac97b15fe2feedb77fe9df0d",
-          "sha1": "c01a9260b2316734ccc0d1437da8b490f8a3355f",
-          "md5": "71a0bd5cc8f6df00d6a8639ffa9c9d34"
+          "sha512": "de1788d78db1751701fb3735fb675483a55b7ce0936967bd1d4cbd7b88b24d59e770b77e96516987d37310f2e34d396b952c4023d5db9b8495667333357b9735",
+          "sha256": "7525b7f1bf6169d09a9dcb79d578a21ea10bb2274b4ad9f4cf77db33dc5aaeb6",
+          "sha1": "6c6a41f487d814f55f77a24f763b9aa3ba2b5ca4",
+          "md5": "cc657b915d5743580ce8839ecd979638"
         }
       ]
     },
@@ -120,11 +120,11 @@
         {
           "name": "jackson-1.0.0-sources.jar",
           "url": "jackson-1.0.0-sources.jar",
-          "size": 8573,
-          "sha512": "933b41e0e4ef43a25bfa0129c271b0bf15cbf62f227a55814432742f82203472c073de3b99e3a69cc926bb1524067072efda499f0485b9667309787b812d75e1",
-          "sha256": "35a3c9f204699f776e1db68dfb8c0787dab873902bf196d1bf6a55763217d7f0",
-          "sha1": "067ac12da4e53c271922be5c7fc5b18e5630f607",
-          "md5": "f924f889d8e09b04c7d6739915d18515"
+          "size": 9156,
+          "sha512": "48a5c7a5665ca74cf47d025b7a91431a2dccf74c7fa2395bc2690cb1bc99998ed402c6bad1b3d251955c168b425c257e9853aafb7a8ff7afdebe7509eace1f68",
+          "sha256": "213073dd4e1b8570f7557778b88061202f38c17e71da3f2d5ac78eb9123c1ab9",
+          "sha1": "6aea985d131986c11cca51096780674ec34341d1",
+          "md5": "29c3140c7cfbf372c2d3645680f4a292"
         }
       ]
     }

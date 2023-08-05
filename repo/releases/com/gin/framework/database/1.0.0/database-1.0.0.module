@@ -108,10 +108,10 @@
           "name": "database-1.0.0-plain.jar",
           "url": "database-1.0.0-plain.jar",
           "size": 46250,
-          "sha512": "32e4fd0a175cb4cd90aa484ac841195abdd1e917e08823871bcae0cce1e261e68ddc637af8c7f9aa88186eb9b96e3107ff6d915273ad376797736da2585ce451",
-          "sha256": "bd56e7665e8995d1c415dde078a5a31071ea63f102720bb09a17cfd899ca3867",
-          "sha1": "b27dac3c3c0335f2e38332b78c5cffac1a01443b",
-          "md5": "daef8e517826c7ff9b14d4e4b0c5c8ee"
+          "sha512": "1bc1daa10da7a3e9d8db0f387269f985d963ba87c5963ff99f204d829ab84e887cf1df2296ed74006c2ad7322cb732976b559ad770f64ac67fc1272f28888eab",
+          "sha256": "82a933fec6b73188029de284dddb198ab1e471ab30a5dd879fed08b9adfa3e40",
+          "sha1": "9d4c1b0261c835596158bc753e54aaf58edbdd61",
+          "md5": "a37d8a8f383065806ec8a15ecedddfa3"
         }
       ]
     },
@@ -235,10 +235,10 @@
           "name": "database-1.0.0-plain.jar",
           "url": "database-1.0.0-plain.jar",
           "size": 46250,
-          "sha512": "32e4fd0a175cb4cd90aa484ac841195abdd1e917e08823871bcae0cce1e261e68ddc637af8c7f9aa88186eb9b96e3107ff6d915273ad376797736da2585ce451",
-          "sha256": "bd56e7665e8995d1c415dde078a5a31071ea63f102720bb09a17cfd899ca3867",
-          "sha1": "b27dac3c3c0335f2e38332b78c5cffac1a01443b",
-          "md5": "daef8e517826c7ff9b14d4e4b0c5c8ee"
+          "sha512": "1bc1daa10da7a3e9d8db0f387269f985d963ba87c5963ff99f204d829ab84e887cf1df2296ed74006c2ad7322cb732976b559ad770f64ac67fc1272f28888eab",
+          "sha256": "82a933fec6b73188029de284dddb198ab1e471ab30a5dd879fed08b9adfa3e40",
+          "sha1": "9d4c1b0261c835596158bc753e54aaf58edbdd61",
+          "md5": "a37d8a8f383065806ec8a15ecedddfa3"
         }
       ]
     },
@@ -255,10 +255,10 @@
           "name": "database-1.0.0-javadoc.jar",
           "url": "database-1.0.0-javadoc.jar",
           "size": 261,
-          "sha512": "84dc5dcae22d60a22e946d267d3f53070d093e9866b0bc91e4e260349a795d73ec1a67957a1e5bdeb2d80c0af5ffeebf34b8c2f7d638169a02c11fc721e49ae2",
-          "sha256": "2b227e5111fb188357013a171096314acc72cfe93822dc20b0bf6c9e5e55f8b3",
-          "sha1": "782c5d688260a4eacf0a2b92b41c216f967954e1",
-          "md5": "aa223e32f9fa65cedf8205fcf4f275ba"
+          "sha512": "4248ce0e50489f88a5013601bf27d83a498546f60bf857605db5c52cfb9a90514d4f4a8f00280b43245115a23c27ff86ab322a43408e2e04d42d796034dcdd1b",
+          "sha256": "26c713380a109782779ffe3d8501f831f6e82aa5af08bfee7a5f61fd1699135e",
+          "sha1": "037255c3cc627defdeb87dc75a69827247ab56f0",
+          "md5": "bd5a4522a3ebaf031a7bcd0c3796210d"
         }
       ]
     },
@@ -275,10 +275,10 @@
           "name": "database-1.0.0-sources.jar",
           "url": "database-1.0.0-sources.jar",
           "size": 27138,
-          "sha512": "d630480c29cebb91a9f6f8a278599add5018d86024ae84edae9e7b37f9d1dad0f6ea57bcf8d48dcabcb39f9677d6313a10d183aaf91e19132ff497b850839c8c",
-          "sha256": "2f89963f1a93cf4718c984018282351bca0b0110011fc4cdf43f8acbb06aae8e",
-          "sha1": "1f265fdd860813e2c95fd646608ef6f9356fac76",
-          "md5": "e00aca060f6d48986d476c3bbe5f11cb"
+          "sha512": "66f6e8cec898724a829c224636afa8cc1c10580e0aa963782ea4fc1c53ec32b0007a25f2f86c7b7fa9be4387e65988bcf091dd95fc5f4a57ef15d2fe17b31f9a",
+          "sha256": "dfcaac157e534ef291d8607bf4cb4037a52222c3acc188777b180351232ec0fe",
+          "sha1": "09329ff3740aed1e07b52d4e47e9849599246891",
+          "md5": "7c01208f10da42cb59c054c84c13637e"
         }
       ]
     }

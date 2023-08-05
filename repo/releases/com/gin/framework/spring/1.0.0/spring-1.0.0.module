@@ -79,10 +79,10 @@
           "name": "spring-1.0.0-plain.jar",
           "url": "spring-1.0.0-plain.jar",
           "size": 37093,
-          "sha512": "cf4a5202654340af07d21c68837596ceed6e7519a252b3db40cded89597f02e2459a9519ffd14e808dc10d1eff509b4f525bfde52e8f4dc8ff0a192e54e03b53",
-          "sha256": "4cbfd70e7c5d93f5bab21aa4b1de732e2b59ff6964722764b9dab52e759f06b5",
-          "sha1": "121de64b5f10cfffc81c74986408c2b651db66a9",
-          "md5": "0a08b1232908fd347a0df65966eec7b4"
+          "sha512": "548523558ecff3846cb0bb1cbdce7b09818af672b357e2974b5442ff5d7491341acaca45b3a6fbf396ae1dd9c5fb44da743b02d6e7efe051cc8d63dd8f85ea0a",
+          "sha256": "8f50859fa768466435ec187fac99e30dc22e75a5a2aa4469939cb898fef2b8a6",
+          "sha1": "128bbbcdc3f443550a7fabb8d751d87919698a08",
+          "md5": "283f06b571f953e34a07419a705ba9c0"
         }
       ]
     },
@@ -165,10 +165,10 @@
           "name": "spring-1.0.0-plain.jar",
           "url": "spring-1.0.0-plain.jar",
           "size": 37093,
-          "sha512": "cf4a5202654340af07d21c68837596ceed6e7519a252b3db40cded89597f02e2459a9519ffd14e808dc10d1eff509b4f525bfde52e8f4dc8ff0a192e54e03b53",
-          "sha256": "4cbfd70e7c5d93f5bab21aa4b1de732e2b59ff6964722764b9dab52e759f06b5",
-          "sha1": "121de64b5f10cfffc81c74986408c2b651db66a9",
-          "md5": "0a08b1232908fd347a0df65966eec7b4"
+          "sha512": "548523558ecff3846cb0bb1cbdce7b09818af672b357e2974b5442ff5d7491341acaca45b3a6fbf396ae1dd9c5fb44da743b02d6e7efe051cc8d63dd8f85ea0a",
+          "sha256": "8f50859fa768466435ec187fac99e30dc22e75a5a2aa4469939cb898fef2b8a6",
+          "sha1": "128bbbcdc3f443550a7fabb8d751d87919698a08",
+          "md5": "283f06b571f953e34a07419a705ba9c0"
         }
       ]
     },
@@ -185,10 +185,10 @@
           "name": "spring-1.0.0-javadoc.jar",
           "url": "spring-1.0.0-javadoc.jar",
           "size": 261,
-          "sha512": "7b7a3be588d898d29f4135ed7b5981279a0b518b17d92f313a5369367561c70f95e666c2e91b9aa361a4cc625a928fb8c6ae5d3e45383db794aa2e092532b69e",
-          "sha256": "ad56729b478af841239e575baade443b9ba419320284afe291ab521a279646db",
-          "sha1": "851cdeea6617510a3445358fb3f187b11cab83c6",
-          "md5": "542397d5212f45a776bc298ee54e7f34"
+          "sha512": "37edece4f4b0b3b3b0d79cc054450132edd2745d3a7f3040c3ed3f0ab6c62f1e7553ea553e6e5b0e5b4c3ab55f350592d00dd9a84989bf2d8abe97d7511f1094",
+          "sha256": "f13f7bd62d86a1e561da83f664c10610164a4c412ed9d23f6aecbdf1e49c94a5",
+          "sha1": "7f6aab7fffa8037745640788f66c7bdeda417f14",
+          "md5": "74e2c6663e9ffadd028c7b83b604562b"
         }
       ]
     },
@@ -205,10 +205,10 @@
           "name": "spring-1.0.0-sources.jar",
           "url": "spring-1.0.0-sources.jar",
           "size": 24369,
-          "sha512": "9d7eb36f9ffc3d6547436e854ce53c5b5fa495632af4fc71b8936847387164ce2a4d141cc612b2044be7551a8d1ad6d5b938863c2d3126db6b5ad3246f4c20dc",
-          "sha256": "c3095c3e3ae7c1d23de56792a45d82b50dcc11276dbd5229101d56d5445f9ea2",
-          "sha1": "0d7a4d5b2fc034484ff8fbde8af66464263b5edf",
-          "md5": "2d78a01b883da32fc7782dc50a4ad505"
+          "sha512": "b4a4396be72926b299452c1aee94c24b8cbf7eab6c576dc515b4eb842a4aa74ad25cdf3556a95ad96a6d04f587af9bdf2fe17f206ca578986a7251d203cd6bf8",
+          "sha256": "3f69e349c3c03ff01a378943d7ead141c6e4b9497378be13ec9c4c15a52b0c3f",
+          "sha1": "d827a1b81da1a18067889f42cc76bf85457c31dc",
+          "md5": "a8ece27a84e057e2751d0f7da4ad29e6"
         }
       ]
     }
