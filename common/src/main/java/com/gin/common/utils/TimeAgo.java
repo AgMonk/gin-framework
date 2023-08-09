@@ -3,6 +3,7 @@ package com.gin.common.utils;
 import com.gin.jackson.utils.ObjectUtils;
 import lombok.RequiredArgsConstructor;
 
+import java.time.Instant;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +23,14 @@ public class TimeAgo {
     public static final List<Condition> DEFAULT_CONDITIONS = new ArrayList<>();
 
     static {
-        DEFAULT_CONDITIONS.add(new Condition(1, TimeUnit.MINUTES, d -> "刚刚"));
-        DEFAULT_CONDITIONS.add(new Condition(1, TimeUnit.HOURS, d -> TimeUnit.SECONDS.toMinutes(d) + "分钟前"));
-        DEFAULT_CONDITIONS.add(new Condition(2, TimeUnit.DAYS, d -> TimeUnit.SECONDS.toHours(d) + "小时前"));
-        DEFAULT_CONDITIONS.add(new Condition(30, TimeUnit.DAYS, d -> TimeUnit.SECONDS.toDays(d) + "天前"));
+        DEFAULT_CONDITIONS.add(new Condition(1, TimeUnit.MINUTES, (d,t) -> "刚刚"));
+        DEFAULT_CONDITIONS.add(new Condition(1, TimeUnit.HOURS, (d,t) -> TimeUnit.SECONDS.toMinutes(d) + "分钟前"));
+        DEFAULT_CONDITIONS.add(new Condition(2, TimeUnit.DAYS, (d,t) -> TimeUnit.SECONDS.toHours(d) + "小时前"));
+        DEFAULT_CONDITIONS.add(new Condition(30, TimeUnit.DAYS, (d,t) -> TimeUnit.SECONDS.toDays(d) + "天前"));
+        DEFAULT_CONDITIONS.add(new Condition(60, TimeUnit.DAYS, (d,t) -> {
+            final ZonedDateTime zdt = ZonedDateTime.ofInstant(Instant.ofEpochSecond(t), TimeUtils.CHINESE_ZONE_ID);
+            return TimeUtils.format(zdt,TimeUtils.SHORT_FORMATTER);
+        }));
     }
 
     /**
@@ -52,10 +57,10 @@ public class TimeAgo {
         final long duration = System.currentTimeMillis() / 1000 - timestamp;
         for (Condition condition : conditions) {
             if (duration < condition.unit.toSeconds(condition.time)) {
-                return condition.formatter.format(duration);
+                return condition.formatter.format(duration, timestamp);
             }
         }
-        return conditions.get(conditions.size() - 1).formatter.format(duration);
+        return conditions.get(conditions.size() - 1).formatter.format(duration, timestamp);
     }
 
     /**
@@ -93,9 +98,10 @@ public class TimeAgo {
         /**
          * 将间隔(秒)转换成指定格式
          *
-         * @param duration 间隔(秒)
+         * @param duration  间隔(秒)
+         * @param timestamp
          * @return 时长表述
          */
-        String format(long duration);
+        String format(long duration, long timestamp);
     }
 }
