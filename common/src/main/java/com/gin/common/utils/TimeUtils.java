@@ -15,6 +15,7 @@ import static java.util.concurrent.TimeUnit.*;
 public class TimeUtils {
     public static final DateTimeFormatter FULL_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
     public static final DateTimeFormatter SHORT_FORMATTER = DateTimeFormatter.ofPattern("yy-MM-dd HH:mm");
+    public static final DateTimeFormatter SHORT_FORMATTER_2 = DateTimeFormatter.ofPattern("yy-MM-dd HH:mm:ss");
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     public static final DateTimeFormatter DATE_TIME_FORMATTER_2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
