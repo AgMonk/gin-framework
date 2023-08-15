@@ -52,7 +52,18 @@ public class TimeUtils {
      * @return 日期时间
      */
     public static String format(ZonedDateTime zdt, DateTimeFormatter formatter) {
-        return formatter.format(zdt);
+        return format(zdt,formatter,DEFAULT_ZONE_ID);
+    }
+
+    /**
+     * 按格式输出一个日期时间
+     * @param formatter 格式
+     * @param zdt       ZonedDateTime
+     * @param zoneId 区域
+     * @return 日期时间
+     */
+    public static String format(ZonedDateTime zdt, DateTimeFormatter formatter,ZoneId zoneId) {
+        return formatter.format(zdt.withZoneSameInstant(zoneId));
     }
 
     /**
