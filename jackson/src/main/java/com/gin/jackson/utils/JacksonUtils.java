@@ -52,9 +52,25 @@ public class JacksonUtils {
         return MAPPER.readValue(MAPPER.writeValueAsString(obj), clazz);
     }
 
+    /**
+     * 美化输出
+     * @param obj 对象
+     */
     public static void printPretty(Object obj) {
         try {
             System.out.println(MAPPER.writeValueAsString(obj));
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * 单行输出
+     * @param obj 对象
+     */
+    public static void print(Object obj){
+        try {
+            System.out.println(getMapper().disable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(obj));
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
