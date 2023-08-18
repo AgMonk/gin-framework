@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 /**
@@ -18,6 +19,8 @@ import java.util.HashMap;
  * @since : 2022/12/23 15:44
  */
 public class JacksonUtils {
+    public static final  DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
     public final static ObjectMapper MAPPER = getMapper();
 
     public static ObjectMapper getMapper() {
