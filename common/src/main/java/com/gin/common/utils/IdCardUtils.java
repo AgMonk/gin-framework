@@ -139,9 +139,9 @@ public class IdCardUtils {
     }
 
     public static class Result {
-        final int code;
-        final boolean legal;
-        final String message;
+        public final int code;
+        public final boolean legal;
+        public final String message;
 
         public Result(int code, boolean legal, String message) {
             this.code = code;
