@@ -95,6 +95,26 @@ public class FileUtils {
     }
 
     /**
+     * 使用流来复制文件
+     * @param is 输入流
+     * @param os 输出流
+     * @param bufferSize 缓冲区大小 一般1024以上
+     * @throws IOException 异常
+     */
+    public static void copy(InputStream is,OutputStream os,int bufferSize) throws IOException {
+        try (BufferedInputStream bis = new BufferedInputStream(is)) {
+            BufferedOutputStream bos = new BufferedOutputStream(os);
+            int bytesRead;
+            byte[] buffer = new byte[bufferSize];
+            while ((bytesRead = bis.read(buffer)) != -1) {
+                bos.write(buffer, 0, bytesRead);
+            }
+            bos.flush();
+            bos.close();
+        }
+    }
+
+    /**
      * 根据file是目录还是文件调用不同的删除方法
      * @param file 目录或文件
      * @throws IOException 异常

@@ -1,0 +1,202 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "security",
+    "version": "1.0.1-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database-backup",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "route",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security",
+          "version": {
+            "requires": "3.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "security-1.0.1-beta-plain.jar",
+          "url": "security-1.0.1-beta-plain.jar",
+          "size": 135237,
+          "sha512": "8e47aad6f33d22cd8af91f39d4e9d912ef26e13a86d393728b6277ec794d558ab7bbd1074b2a9f8c9bd036084221ae6647656d1126caa028cd30ba910acff963",
+          "sha256": "41653366924d2517e7b98703ca86414664ff517dd664428fb609699950085750",
+          "sha1": "e0bada57cb128ff9b0487eb99274825afc12dfe2",
+          "md5": "598840f2b8b136c1490d3215523b3af0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.whvcse",
+          "module": "easy-captcha",
+          "version": {
+            "requires": "1.6.2"
+          }
+        },
+        {
+          "group": "org.openjdk.nashorn",
+          "module": "nashorn-core",
+          "version": {
+            "requires": "15.4"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database-backup",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "route",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security",
+          "version": {
+            "requires": "3.0.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "security-1.0.1-beta-plain.jar",
+          "url": "security-1.0.1-beta-plain.jar",
+          "size": 135237,
+          "sha512": "8e47aad6f33d22cd8af91f39d4e9d912ef26e13a86d393728b6277ec794d558ab7bbd1074b2a9f8c9bd036084221ae6647656d1126caa028cd30ba910acff963",
+          "sha256": "41653366924d2517e7b98703ca86414664ff517dd664428fb609699950085750",
+          "sha1": "e0bada57cb128ff9b0487eb99274825afc12dfe2",
+          "md5": "598840f2b8b136c1490d3215523b3af0"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "security-1.0.1-beta-javadoc.jar",
+          "url": "security-1.0.1-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "93227a383e04cb255ca15ec170581c30b53e69f1ff7c56ece7ad3b623017b59ad99f27c1b1a4a641afdd5c398ed8ef38f8aae343a8b736f933059845542ec073",
+          "sha256": "cd32e2c421851325b541ab0d6d394e2cc75b3cfc90069ac086dd70812299acde",
+          "sha1": "370b0345cf2e8f2ea67960736cf6e87afe5e9d93",
+          "md5": "27eaabdad7491d5efd5af1182c90f9b4"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "security-1.0.1-beta-sources.jar",
+          "url": "security-1.0.1-beta-sources.jar",
+          "size": 85684,
+          "sha512": "244b3edc3b5a2aea0b58bc0170662a4fd2a7069ad98dff6ee1cdc3444211883b8e9b563e96dc01d3b1315d040d468457dd1140e9eeb8daf55d04ee388e552ba9",
+          "sha256": "ab0d46ad20e5b9bfde94c003def3a8163a2deda767b2ab468d99aa14dedd1e5a",
+          "sha1": "d152e752339f7e6429c3f334efbdb20bf8ab5647",
+          "md5": "9d85a433631db6f287ffdbb9922b254f"
+        }
+      ]
+    }
+  ]
+}

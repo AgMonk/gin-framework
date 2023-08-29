@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "route",
+    "version": "1.0.1-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "route-1.0.1-beta-plain.jar",
+          "url": "route-1.0.1-beta-plain.jar",
+          "size": 19381,
+          "sha512": "f2e7236125e0512f27731a0405807c72ff98d91daf79f4848aec93c6feccee813fbf8f30aa99741dbb0aecb8c58c7f30e93ed12147eac17f0cb2076a51b3e708",
+          "sha256": "27a2788a117b89b4e33db104c85d71964cfd824666a29f741cba900a9bdee25b",
+          "sha1": "6da141bdb0fe3690da9d5d8096fd91e5eb5e4eae",
+          "md5": "d78dd082b09f6ddaf3158bac0193de6c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 18,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "route-1.0.1-beta-plain.jar",
+          "url": "route-1.0.1-beta-plain.jar",
+          "size": 19381,
+          "sha512": "f2e7236125e0512f27731a0405807c72ff98d91daf79f4848aec93c6feccee813fbf8f30aa99741dbb0aecb8c58c7f30e93ed12147eac17f0cb2076a51b3e708",
+          "sha256": "27a2788a117b89b4e33db104c85d71964cfd824666a29f741cba900a9bdee25b",
+          "sha1": "6da141bdb0fe3690da9d5d8096fd91e5eb5e4eae",
+          "md5": "d78dd082b09f6ddaf3158bac0193de6c"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "route-1.0.1-beta-javadoc.jar",
+          "url": "route-1.0.1-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "3af5837f2c0e278ec6d5d0b4714f9d7d529617ff1cb29c83d7e5313e3a6e41359d4f55ddfe743a714763ffbf1c5a7922713851878fba73c7f94f9860ce4d6390",
+          "sha256": "e40fc4a4ae956ec2fa815026a0046b79fe66791feab00938877fc6ac53151271",
+          "sha1": "276c9d893d3ba58153eac50babf2daf68e029150",
+          "md5": "3897a430768fc8179b6113ed7ae01aeb"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "route-1.0.1-beta-sources.jar",
+          "url": "route-1.0.1-beta-sources.jar",
+          "size": 13593,
+          "sha512": "e66e1cb8d66ea8d217438fa0e258dc85ff92711aa0e8c7c7b48052f5470ec86a4d19bbe9ef0763839383a0282644801b40f9772fae6322dcb1982a514b1659e2",
+          "sha256": "52c9b5c7caea8e1ec656e0ab5e5f5f08b00d6fa64975fa9019ca02fc795986e4",
+          "sha1": "e71bad9cc71ad9fbbedf19aea327c5e958e4e0e6",
+          "md5": "3bff985b64d430379d5aed6bd4ded0dd"
+        }
+      ]
+    }
+  ]
+}
