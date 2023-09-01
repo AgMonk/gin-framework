@@ -28,6 +28,10 @@ public enum Language {
     ko("1100-11FF", "3130-318F", "AC00-D7AF"),
 //    其他
     other(),
+    /**
+     * CJK 符号和标点
+     */
+    CJK_symbols_and_punctuation("3000-303F"),
     ;
     public final String[] range;
 
