@@ -32,6 +32,14 @@ public enum Language {
      * CJK 符号和标点
      */
     CJK_symbols_and_punctuation("3000-303F"),
+    /**
+     * 半型及全型形式(半角、全角符号)
+     */
+    HALF_WIDTH_AND_FULLWIDTH_FORM("FF00-FFEF"),
+    /**
+     * 常用标点
+     */
+    GENERAL_PUNCTUATION("2000-206F"),
     ;
     public final String[] range;
 
