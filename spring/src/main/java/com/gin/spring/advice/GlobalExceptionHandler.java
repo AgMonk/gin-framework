@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -20,6 +21,8 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -33,6 +36,11 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class GlobalExceptionHandler {
     /**
+     * 唯一约束异常的描述正则
+     */
+    public static final Pattern DUPLICATE_KEY_PATTERN =Pattern.compile("Duplicate entry '(.+?)' for key");
+
+    /**
      * 兜底异常处理
      * @param e 其他异常
      * @return 处理
@@ -42,6 +50,26 @@ public class GlobalExceptionHandler {
         e.printStackTrace();
         return new ResponseEntity<>(Res.of(null, "服务器错误 请通知管理员"), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    /**
+     * 触发唯一约束异常
+     * @param e 唯一约束异常
+     * @return
+     */
+    @ExceptionHandler({DuplicateKeyException.class})
+    public ResponseEntity<Res<?>> exceptionHandler(DuplicateKeyException e) {
+        final String message = e.getMessage();
+        final Matcher matcher = DUPLICATE_KEY_PATTERN.matcher(message);
+        if (matcher.find()){
+            final String msg = String.format("'%s' 已存在", matcher.group(1));
+            return new ResponseEntity<>(Res.of(null, msg), HttpStatus.BAD_REQUEST);
+        }else{
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(Res.of(e.getMessage(), "唯一约束异常"), HttpStatus.BAD_REQUEST);
+    }
+
+
 
     @ExceptionHandler({HttpMessageNotReadableException.class})
     public ResponseEntity<Res<?>> exceptionHandler(HttpMessageNotReadableException e) {
