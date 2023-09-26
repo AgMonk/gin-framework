@@ -5,6 +5,7 @@ import com.gin.operationlog.dao.SystemOperationLogDao;
 import com.gin.operationlog.entity.SystemOperationLog;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,5 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional(rollbackFor = Exception.class)
 @RequiredArgsConstructor
+@Primary
 public class SystemOperationLogServiceImpl extends ServiceImpl<SystemOperationLogDao, SystemOperationLog> implements SystemOperationLogService {
 }
