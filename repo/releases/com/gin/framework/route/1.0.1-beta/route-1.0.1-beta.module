@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -36,11 +36,11 @@
         {
           "name": "route-1.0.1-beta-plain.jar",
           "url": "route-1.0.1-beta-plain.jar",
-          "size": 19381,
-          "sha512": "f2e7236125e0512f27731a0405807c72ff98d91daf79f4848aec93c6feccee813fbf8f30aa99741dbb0aecb8c58c7f30e93ed12147eac17f0cb2076a51b3e708",
-          "sha256": "27a2788a117b89b4e33db104c85d71964cfd824666a29f741cba900a9bdee25b",
-          "sha1": "6da141bdb0fe3690da9d5d8096fd91e5eb5e4eae",
-          "md5": "d78dd082b09f6ddaf3158bac0193de6c"
+          "size": 19379,
+          "sha512": "0e64e5400f4a3637655d07d237a00ab01c57fa9d61bb5762199277c41285226c5e340313211384e5915a220c45646f7dbf05474c78548880bed06847b7d2009b",
+          "sha256": "ff4517b1f526b10d2efb762c9bffbdaac6703ad1a6711b64e26af57cada8b288",
+          "sha1": "012954fd6756f012826d349d08ee941dbd5e8bc4",
+          "md5": "8ba94f4be762b3cf251b9e10d4c3e18e"
         }
       ]
     },
@@ -49,7 +49,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -66,11 +66,11 @@
         {
           "name": "route-1.0.1-beta-plain.jar",
           "url": "route-1.0.1-beta-plain.jar",
-          "size": 19381,
-          "sha512": "f2e7236125e0512f27731a0405807c72ff98d91daf79f4848aec93c6feccee813fbf8f30aa99741dbb0aecb8c58c7f30e93ed12147eac17f0cb2076a51b3e708",
-          "sha256": "27a2788a117b89b4e33db104c85d71964cfd824666a29f741cba900a9bdee25b",
-          "sha1": "6da141bdb0fe3690da9d5d8096fd91e5eb5e4eae",
-          "md5": "d78dd082b09f6ddaf3158bac0193de6c"
+          "size": 19379,
+          "sha512": "0e64e5400f4a3637655d07d237a00ab01c57fa9d61bb5762199277c41285226c5e340313211384e5915a220c45646f7dbf05474c78548880bed06847b7d2009b",
+          "sha256": "ff4517b1f526b10d2efb762c9bffbdaac6703ad1a6711b64e26af57cada8b288",
+          "sha1": "012954fd6756f012826d349d08ee941dbd5e8bc4",
+          "md5": "8ba94f4be762b3cf251b9e10d4c3e18e"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "name": "route-1.0.1-beta-javadoc.jar",
           "url": "route-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "3af5837f2c0e278ec6d5d0b4714f9d7d529617ff1cb29c83d7e5313e3a6e41359d4f55ddfe743a714763ffbf1c5a7922713851878fba73c7f94f9860ce4d6390",
-          "sha256": "e40fc4a4ae956ec2fa815026a0046b79fe66791feab00938877fc6ac53151271",
-          "sha1": "276c9d893d3ba58153eac50babf2daf68e029150",
-          "md5": "3897a430768fc8179b6113ed7ae01aeb"
+          "sha512": "7ca640ef0cd1e493242ceb97ba0133bc687d68bd40dec7ca27eada9dceff15a68c6e58da574d14d5e069c05dec6003d68bab000f08437028926d5fc8404d6e26",
+          "sha256": "df6df0939115a679dcfe2a018715f6116ebef6bb42987d3034c7f8227acf828c",
+          "sha1": "14a607bd8c18c8021e01c47122a5dad0f163a762",
+          "md5": "0f9ebeabb8c453d5be4c4c455341fdbf"
         }
       ]
     },
@@ -107,10 +107,10 @@
           "name": "route-1.0.1-beta-sources.jar",
           "url": "route-1.0.1-beta-sources.jar",
           "size": 13593,
-          "sha512": "e66e1cb8d66ea8d217438fa0e258dc85ff92711aa0e8c7c7b48052f5470ec86a4d19bbe9ef0763839383a0282644801b40f9772fae6322dcb1982a514b1659e2",
-          "sha256": "52c9b5c7caea8e1ec656e0ab5e5f5f08b00d6fa64975fa9019ca02fc795986e4",
-          "sha1": "e71bad9cc71ad9fbbedf19aea327c5e958e4e0e6",
-          "md5": "3bff985b64d430379d5aed6bd4ded0dd"
+          "sha512": "af81dc487272e87c4c4af858e8efe2576553f30cda8a08fb654a943922f3f953c73a87ab8423eccb7405b301dea23ca3d14fdf2061ac64709e497708d3839acd",
+          "sha256": "2cb3ca9fa8daf68f0dc3def3f949cf21f5d4354bb0f5229041b0e46af73e0d2f",
+          "sha1": "fbd39add307c44b0f2e1c3fe1d7f67beb4971568",
+          "md5": "079342ad16d8207a83bac8d728143bb6"
         }
       ]
     }

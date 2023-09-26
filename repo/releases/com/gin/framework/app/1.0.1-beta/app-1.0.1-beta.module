@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -37,10 +37,10 @@
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
           "size": 3745,
-          "sha512": "dc1e95e98636115640c10fcde25aa584a3c85b6beb00579a2302cc3eafb5c17dd1815336a43e72f2ef55b7529ee982e8a7a381a2f44539d781599ef770b59918",
-          "sha256": "ca1758f6dfaa2c1f9769f42f4b3e1475ae4e3107045f17b27ee319ba0012e035",
-          "sha1": "e21785b08500cb7f14f199f462ca301249c3da92",
-          "md5": "7fa0651b074932f234e0348ddab12468"
+          "sha512": "127cd5dabf73000eab7e92fd5ed3106dedc3da052d270a250affc59268725eff4a7ec55adac68358afe74076159b36b7f8d1057f8fc4a379556c2e2a308c2679",
+          "sha256": "eb8b96f26db0cf2ade3f1d207556d9648aa32f26e188aa6b05a044e3af082a30",
+          "sha1": "93f15f9cc9744404ba1f275304631d1a485b3bc4",
+          "md5": "591464f82f485f0f7c77572291d0ded3"
         }
       ]
     },
@@ -49,7 +49,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -67,10 +67,10 @@
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
           "size": 3745,
-          "sha512": "dc1e95e98636115640c10fcde25aa584a3c85b6beb00579a2302cc3eafb5c17dd1815336a43e72f2ef55b7529ee982e8a7a381a2f44539d781599ef770b59918",
-          "sha256": "ca1758f6dfaa2c1f9769f42f4b3e1475ae4e3107045f17b27ee319ba0012e035",
-          "sha1": "e21785b08500cb7f14f199f462ca301249c3da92",
-          "md5": "7fa0651b074932f234e0348ddab12468"
+          "sha512": "127cd5dabf73000eab7e92fd5ed3106dedc3da052d270a250affc59268725eff4a7ec55adac68358afe74076159b36b7f8d1057f8fc4a379556c2e2a308c2679",
+          "sha256": "eb8b96f26db0cf2ade3f1d207556d9648aa32f26e188aa6b05a044e3af082a30",
+          "sha1": "93f15f9cc9744404ba1f275304631d1a485b3bc4",
+          "md5": "591464f82f485f0f7c77572291d0ded3"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "name": "app-1.0.1-beta-javadoc.jar",
           "url": "app-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "624826e5ec3e0981b6690c4f6d2a235890ae0c19683c4ca34583a01bea8827780758b0f216464674d2e3d31f17a4f3a9e0fd99abf9e6de0e2df0b33af0be5cfb",
-          "sha256": "dd22ac69d7688e8952af801f4e3421d1eecbada247d166386330780f6e7068c2",
-          "sha1": "1c9973fc85d2de73b7ce7f99947753b724543ba5",
-          "md5": "74c1dc4b42bdfc45e0a59149a3ca5ea1"
+          "sha512": "06096a774cabb840fa8dc581eeec21bda372c7df748ec42475ec8e758a0d31779c2cbea45d4818c33fdf6299736d6fa8424bfbe948606f3ffe80665371e01bc8",
+          "sha256": "aceab66e5b204fabaa4dcc6ace432a339770c7142f69ed86246477162062f1bd",
+          "sha1": "97cf48c0a8b89db3ad52e1e55b0c4adede61ccb5",
+          "md5": "e23fb731ca9dbdb23ac4eefea4f81f34"
         }
       ]
     },
@@ -107,10 +107,10 @@
           "name": "app-1.0.1-beta-sources.jar",
           "url": "app-1.0.1-beta-sources.jar",
           "size": 3540,
-          "sha512": "6e7bca2af7b11169a26b5882538a00bc31a39aa80c5ef48ae00089fd595ec2c3560d8850bff55b78b9996378527bf1cbdff0b3b86eb8e71682c9da30b6868536",
-          "sha256": "4a373f3c542f139e010832ede66033508b347de9b54a005695f81dbc48631671",
-          "sha1": "f0a5dbd01629344751ce308bbba9671123b1f683",
-          "md5": "0d0afc84684ffcdc6a6323d2cfa7c1b9"
+          "sha512": "4874eb47cbf251945c7e285a5215d33249859fbd6ddba23f9fff07085eac1021f6529902e16a7e56702bbc07d1cb7d027587afb18cacbec9c5f621ed1dd1ef97",
+          "sha256": "1dcf86c8684ae89292838292ae5e26b3bddfd0ffea3147253c785d6ec81fb283",
+          "sha1": "93a15aaf11b6df0f954b10485c1669e931875dfc",
+          "md5": "160757de7271fa5baf5311ba203037da"
         }
       ]
     }

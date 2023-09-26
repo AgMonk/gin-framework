@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -78,11 +78,11 @@
         {
           "name": "spring-1.0.1-beta-plain.jar",
           "url": "spring-1.0.1-beta-plain.jar",
-          "size": 37093,
-          "sha512": "5c10be38b39a5dcd473baf3b460b6a921793b6d5917e5ac7cd6885d622045f86f0673a66c765656d281c7d755654ae9a927423f8ba7d81041012fdc2e89338e5",
-          "sha256": "f2c80b61d5aaf0910d8f049b7ef041637b58f37decfec466039a342796959b2c",
-          "sha1": "dc869b1644f65edb2640aa7c939e4449ae32ece2",
-          "md5": "c68a0db3cc796320c9d341fbabe1bce2"
+          "size": 37101,
+          "sha512": "a784464273bd848fe48777655c742c803e047c2866475fae9367c6bac3c0cc3173cae4a22f79af3bb7447cfd41c90321a17cea49bfa20cf500a3bc5021dcbc0e",
+          "sha256": "464a37863b39be92840f5fdc2162cc045e515a25643607d198325b53cd651c9f",
+          "sha1": "fdba0c67b6a44af6c39dd4526f06963eb177e629",
+          "md5": "2f9615ebd0a1052a9dbe18b0ccca7ee7"
         }
       ]
     },
@@ -91,7 +91,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 18,
+        "org.gradle.jvm.version": 17,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -164,11 +164,11 @@
         {
           "name": "spring-1.0.1-beta-plain.jar",
           "url": "spring-1.0.1-beta-plain.jar",
-          "size": 37093,
-          "sha512": "5c10be38b39a5dcd473baf3b460b6a921793b6d5917e5ac7cd6885d622045f86f0673a66c765656d281c7d755654ae9a927423f8ba7d81041012fdc2e89338e5",
-          "sha256": "f2c80b61d5aaf0910d8f049b7ef041637b58f37decfec466039a342796959b2c",
-          "sha1": "dc869b1644f65edb2640aa7c939e4449ae32ece2",
-          "md5": "c68a0db3cc796320c9d341fbabe1bce2"
+          "size": 37101,
+          "sha512": "a784464273bd848fe48777655c742c803e047c2866475fae9367c6bac3c0cc3173cae4a22f79af3bb7447cfd41c90321a17cea49bfa20cf500a3bc5021dcbc0e",
+          "sha256": "464a37863b39be92840f5fdc2162cc045e515a25643607d198325b53cd651c9f",
+          "sha1": "fdba0c67b6a44af6c39dd4526f06963eb177e629",
+          "md5": "2f9615ebd0a1052a9dbe18b0ccca7ee7"
         }
       ]
     },
@@ -185,10 +185,10 @@
           "name": "spring-1.0.1-beta-javadoc.jar",
           "url": "spring-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "93227a383e04cb255ca15ec170581c30b53e69f1ff7c56ece7ad3b623017b59ad99f27c1b1a4a641afdd5c398ed8ef38f8aae343a8b736f933059845542ec073",
-          "sha256": "cd32e2c421851325b541ab0d6d394e2cc75b3cfc90069ac086dd70812299acde",
-          "sha1": "370b0345cf2e8f2ea67960736cf6e87afe5e9d93",
-          "md5": "27eaabdad7491d5efd5af1182c90f9b4"
+          "sha512": "4abf51106c4777f16de1e6673ecd4a09a2f018543eaf1035ec677732e6159316c947849fa7fe8ed72e831e8f12f1c4c19327851241586ab1134d3ca4e1b93547",
+          "sha256": "49352d480582141e980212f9f088163b1a824a1e7936c5bef8172534e61465f2",
+          "sha1": "686da51826e35c31457e0869961d52cb17300471",
+          "md5": "27faab1bc02038748d6fa75b471d478b"
         }
       ]
     },
@@ -205,10 +205,10 @@
           "name": "spring-1.0.1-beta-sources.jar",
           "url": "spring-1.0.1-beta-sources.jar",
           "size": 24369,
-          "sha512": "0d9b336948a82406d4ea31fdd8cb09769ba19b3bfaec9557012d379d921edab5c9f9311a1b933b47d33e89a194035c3e43f7ac6d9a03530402dce259710df956",
-          "sha256": "cfc62abc113446f367b4a84ece874c46ebaf90685c2f11f9a04cdd78d0c68e01",
-          "sha1": "9b734d9b096bc04ad1f6dc7b9a2c1139abda5556",
-          "md5": "5139de1dbfff147304d504954c069d7a"
+          "sha512": "691a95c7f3baca043d8c301e6e6c8ad76137fdb25d7e206b7584f8a8197f065103303d25f730a68ccab9c9b1065a0c0a1ea4e643fe66ce359a72b938ee2c53cb",
+          "sha256": "71058296bc1e8a9540f2ead252c6a66a9315577569bfa3d72d0f1dda0283cb1b",
+          "sha1": "50f8f01ad9014d89602277286056130cef55bffb",
+          "md5": "7454867d6a309c8d1e260faa2e3c64be"
         }
       ]
     }

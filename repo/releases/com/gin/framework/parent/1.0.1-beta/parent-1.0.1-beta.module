@@ -28,10 +28,10 @@
           "name": "parent-1.0.1-beta-plain.jar",
           "url": "parent-1.0.1-beta-plain.jar",
           "size": 261,
-          "sha512": "c9d0f88f1840590e0d7564963bae15c74a87accc1d5fdcc9753b2e64289f2a40967520453a9d6a294b8ac7cfb4e2c687c1280ed3b75daa239d0482dbb949ac7b",
-          "sha256": "1734f16547e3808e679e7225da8f4c41d052314abb21b75170c39a6849802fe0",
-          "sha1": "aa1001058d7c9ef992286a3218d148a3df91b29a",
-          "md5": "088140b60c81d365bdcff9b2d83ac57a"
+          "sha512": "99f1ee1b95cda079bbfad0b9ec9c563f414430c34dd0b9a3302d2be7380ed981f3391547b5dacabea472e7350f2af155244ec2331209a2e48a41e41762f26d7a",
+          "sha256": "5560ac785abe05ed5e2ea05bbbb9113f2db1945763a470c535817f9c626fa19f",
+          "sha1": "6c8607594a523c127134c45bcc12e3612e7f8c2b",
+          "md5": "c8a40336e895404c94c3f360d14257dd"
         }
       ]
     },
@@ -49,10 +49,10 @@
           "name": "parent-1.0.1-beta-plain.jar",
           "url": "parent-1.0.1-beta-plain.jar",
           "size": 261,
-          "sha512": "c9d0f88f1840590e0d7564963bae15c74a87accc1d5fdcc9753b2e64289f2a40967520453a9d6a294b8ac7cfb4e2c687c1280ed3b75daa239d0482dbb949ac7b",
-          "sha256": "1734f16547e3808e679e7225da8f4c41d052314abb21b75170c39a6849802fe0",
-          "sha1": "aa1001058d7c9ef992286a3218d148a3df91b29a",
-          "md5": "088140b60c81d365bdcff9b2d83ac57a"
+          "sha512": "99f1ee1b95cda079bbfad0b9ec9c563f414430c34dd0b9a3302d2be7380ed981f3391547b5dacabea472e7350f2af155244ec2331209a2e48a41e41762f26d7a",
+          "sha256": "5560ac785abe05ed5e2ea05bbbb9113f2db1945763a470c535817f9c626fa19f",
+          "sha1": "6c8607594a523c127134c45bcc12e3612e7f8c2b",
+          "md5": "c8a40336e895404c94c3f360d14257dd"
         }
       ]
     },
@@ -69,10 +69,10 @@
           "name": "parent-1.0.1-beta-javadoc.jar",
           "url": "parent-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "27ab8cc5a6e32ddb753b3e6af0e98df4744b5abccd201bcd5116dbc19283c457e971cb6b280664e469ba5eebd20ddd400f6abef4f9e8e7e4035994468919aca2",
-          "sha256": "e316773ecc43ee21f8def0ae854f4a53b973c4f4160c1be5e7005a14041e9a13",
-          "sha1": "54293fe6e915841d2b89fe194202277133ab4a75",
-          "md5": "a81b7299f38ebe09e3c48526b2f6defe"
+          "sha512": "99f1ee1b95cda079bbfad0b9ec9c563f414430c34dd0b9a3302d2be7380ed981f3391547b5dacabea472e7350f2af155244ec2331209a2e48a41e41762f26d7a",
+          "sha256": "5560ac785abe05ed5e2ea05bbbb9113f2db1945763a470c535817f9c626fa19f",
+          "sha1": "6c8607594a523c127134c45bcc12e3612e7f8c2b",
+          "md5": "c8a40336e895404c94c3f360d14257dd"
         }
       ]
     },
@@ -89,10 +89,10 @@
           "name": "parent-1.0.1-beta-sources.jar",
           "url": "parent-1.0.1-beta-sources.jar",
           "size": 261,
-          "sha512": "27ab8cc5a6e32ddb753b3e6af0e98df4744b5abccd201bcd5116dbc19283c457e971cb6b280664e469ba5eebd20ddd400f6abef4f9e8e7e4035994468919aca2",
-          "sha256": "e316773ecc43ee21f8def0ae854f4a53b973c4f4160c1be5e7005a14041e9a13",
-          "sha1": "54293fe6e915841d2b89fe194202277133ab4a75",
-          "md5": "a81b7299f38ebe09e3c48526b2f6defe"
+          "sha512": "99f1ee1b95cda079bbfad0b9ec9c563f414430c34dd0b9a3302d2be7380ed981f3391547b5dacabea472e7350f2af155244ec2331209a2e48a41e41762f26d7a",
+          "sha256": "5560ac785abe05ed5e2ea05bbbb9113f2db1945763a470c535817f9c626fa19f",
+          "sha1": "6c8607594a523c127134c45bcc12e3612e7f8c2b",
+          "md5": "c8a40336e895404c94c3f360d14257dd"
         }
       ]
     }
