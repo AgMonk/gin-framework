@@ -106,11 +106,11 @@
         {
           "name": "operation-log-1.0.1-beta-sources.jar",
           "url": "operation-log-1.0.1-beta-sources.jar",
-          "size": 27826,
-          "sha512": "f02ea623f57f4cf1e06b8c239b64c4dab07f4db34807bef713d8212fd33dd4ffff341ef4f0d01e96f3096d1f7a45e6fa5a7112256bb5181db59879f7f98f25c7",
-          "sha256": "24ebc93ff36a860736434311efa1acf09565bb57610595f8b4e6544a535ad93d",
-          "sha1": "fdfe64bb05fa0a90ca069142a54d45bbc9cee02b",
-          "md5": "1e937972c2f9df96641b95eac8c417fc"
+          "size": 27825,
+          "sha512": "b64221739285a32a73bc855f1525e8f0bb28e4293596ac78a7b285e6fc9eea6cd16e4c7ec3893c7e9b2a78c9bfa3c956e70ef049cca7fa375fe26cb4a6aad97e",
+          "sha256": "2cb38f387a0db28745de25ea0d2bb342c461f21f394cf0003a55404fd5241055",
+          "sha1": "4738a6460b89bb5c07606adf97521a31f722d3d9",
+          "md5": "9ef528a32948b458803e0d70c534119a"
         }
       ]
     }

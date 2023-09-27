@@ -39,6 +39,14 @@ public class Res<T> implements Serializable {
         return of(data, data == null ? Messages.DATA_NOT_FOUND : "ok");
     }
 
+    public static Res<Void> success() {
+        return success(Messages.SUCCESS);
+    }
+
+    public static Res<Void> success(String message) {
+        return new Res<>(message, null);
+    }
+
     public static <T> Res<T> of(T data, String message) {
         return new Res<>(message, data);
     }

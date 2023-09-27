@@ -22,4 +22,5 @@ public interface UserInfoService {
      * @return dic
      */
     HashMap<Long, String> getIdNameMap(Collection<Long> userId);
-}   
+
+}

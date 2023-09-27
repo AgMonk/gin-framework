@@ -39,9 +39,7 @@ public interface SystemUserInfoService extends MyService<SystemUserInfo>, UserIn
      */
     @Override
     default HashMap<Long, String> getIdNameMap(Collection<Long> userId) {
-        final QueryWrapper<SystemUserInfo> qw = new QueryWrapper<>();
-        qw.select("user_id", "nickname").in("user_id", userId);
-        final List<SystemUserInfo> list = list(qw);
+        final List<SystemUserInfo> list = listByUserId(userId);
         final HashMap<Long, String> map = new HashMap<>(list.size());
         list.forEach(i -> map.put(i.getUserId(), i.getNickname()));
         return map;
@@ -74,5 +72,16 @@ public interface SystemUserInfoService extends MyService<SystemUserInfo>, UserIn
             updateById(build);
         }
         return build;
+    }
+
+    /**
+     * 根据用户id查询用户个人信息
+     * @param userId 用户id
+     * @return 用户个人信息
+     */
+    default List<SystemUserInfo> listByUserId(Collection<Long> userId) {
+        final QueryWrapper<SystemUserInfo> qw = new QueryWrapper<>();
+        qw.in("user_id", userId);
+        return list(qw);
     }
 }
