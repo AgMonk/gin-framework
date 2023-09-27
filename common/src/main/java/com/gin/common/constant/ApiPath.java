@@ -9,12 +9,18 @@ public class ApiPath {
      * 添加接口路径
      */
     public static final String ADD = "add";
+    /**
+     * 备份接口路径
+     */
     public static final String BACKUP = "backup";
     public static final String CONFIG = "com/gin/common";
     /**
      * 删除接口路径
      */
     public static final String DEL = "del";
+    /**
+     * 下载接口路径
+     */
     public static final String DOWNLOAD = "download";
     /**
      * 通过关键字检索对象接口路径
@@ -37,11 +43,24 @@ public class ApiPath {
      * 分页查询接口路径
      */
     public static final String PAGE = "page";
+    /**
+     * 还原接口路径
+     */
     public static final String RECOVER = "recover";
+    /**
+     * 状态查询接口路径
+     */
     public static final String STATUS = "status";
     /**
      * 更新接口路径
      */
     public static final String UPDATE = "update";
+    /**
+     * 上传接口路径
+     */
     public static final String UPLOAD = "upload";
+    /**
+     * 移动接口路径
+     */
+    public static final String MOVE = "move";
 }
