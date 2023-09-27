@@ -47,7 +47,7 @@ public abstract class AttachmentServiceImpl<M extends BaseMapper<T>, T extends B
     @Override
     public final void configOwnerId(long ownerId, Set<Long> attachId) {
         final UpdateWrapper<T> uw = new UpdateWrapper<>();
-        uw.set(OWNER_ID, ownerId).in("id", attachId);
+        uw.set(OWNER_ID, ownerId).isNull(OWNER_ID).in("id", attachId);
         update(uw);
     }
 

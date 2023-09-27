@@ -42,12 +42,9 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 
 
-@Tag(name = AbstractDatabaseController.GROUP_NAME)
 @Slf4j
-@CacheConfig(cacheManager = REDIS_CACHE_MANAGER, cacheNames = AbstractDatabaseController.CACHE_NAME)
 @RequiredArgsConstructor
-public abstract class AbstractDatabaseController
-        implements OperationLogController {
+public abstract class AbstractDatabaseController implements OperationLogController {
     public static final String API_PREFIX = "/database";
     /**
      * 缓存名称

@@ -14,13 +14,17 @@ import com.gin.operationlog.vo.SystemOperationLogVo;
 import com.gin.route.annotation.MenuEntry;
 import com.gin.route.annotation.MenuItem;
 import com.gin.security.Constant.Security;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+
+import static com.gin.database.config.redis.RedisConfig.REDIS_CACHE_MANAGER;
 
 /**
  * 数据库管理接口
@@ -28,7 +32,9 @@ import java.util.List;
  * @version : v1.0.0
  * @since : 2023/4/10 15:58
  */
+@Tag(name = AbstractDatabaseController.GROUP_NAME)
 @MyRestController(AbstractDatabaseController.API_PREFIX)
+@CacheConfig(cacheManager = REDIS_CACHE_MANAGER, cacheNames = AbstractDatabaseController.CACHE_NAME)
 @MenuItem(title = "数据库管理", description = "数据库镜像的查询、备份、还原、下载、上传、删除")
 public class DatabaseController extends AbstractDatabaseController {
     public DatabaseController(DatabaseBackupService service) {
