@@ -31,6 +31,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -148,7 +149,6 @@ public class OperationLogAspectConfig {
         final List<Object> sufExp = SpElUtils.getElValues(evaluationContext, opLog.sufExp());
         final Long mainId = SpElUtils.getElNotnullLong(evaluationContext, opLog.mainId()).stream().findFirst().orElse(null);
         final Long subId = subClass != null ? SpElUtils.getElNotnullLong(evaluationContext, opLog.subId()).stream().findFirst().orElse(null) : null;
-
         if (mainId == null) {
             log.warn("日志注解配置错误: mainId 计算结果为 null");
             return result;

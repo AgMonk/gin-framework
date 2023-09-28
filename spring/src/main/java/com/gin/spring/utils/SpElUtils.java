@@ -1,5 +1,8 @@
 package com.gin.spring.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.gin.common.utils.StrUtils;
+import com.gin.jackson.utils.JacksonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -58,7 +61,12 @@ public class SpElUtils {
      * @return 计算结果
      */
     public static List<Long> getElNotnullLong(StandardEvaluationContext context, String... spEl) {
-        return getElValues(context, spEl).stream().filter(Objects::nonNull).filter(i -> i instanceof Long).map(i -> (Long) i).toList();
+        return getElValues(context, spEl).stream()
+                .filter(Objects::nonNull)
+                .map(String::valueOf)
+                .filter(StrUtils::isNumber)
+                .map(Long::parseLong)
+                .toList();
     }
 
     /**
@@ -92,7 +100,7 @@ public class SpElUtils {
             try {
                 return getElValue(context, e);
             } catch (SpelEvaluationException ex) {
-                log.warn(ex.getLocalizedMessage());
+                ex.printStackTrace();
                 return null;
             }
         }).toList();

@@ -96,7 +96,7 @@ public class DefaultUpdateStrategy extends AbstractUpdateStrategy {
     public Object getBeforeEntity(OperationLogContext context) {
         // 从preExp第1个元素传入
         final List<Object> list = context.preExp();
-        return list.size() > 0 ? list.get(0) : null;
+        return !list.isEmpty() ? list.get(0) : null;
     }
 
     /**
