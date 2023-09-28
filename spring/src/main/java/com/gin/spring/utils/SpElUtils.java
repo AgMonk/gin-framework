@@ -100,7 +100,7 @@ public class SpElUtils {
             try {
                 return getElValue(context, e);
             } catch (SpelEvaluationException ex) {
-                ex.printStackTrace();
+                log.warn("表达式计算异常: {} : {}",e,ex.getLocalizedMessage());
                 return null;
             }
         }).toList();
