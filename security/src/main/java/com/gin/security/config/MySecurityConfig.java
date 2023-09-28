@@ -1,6 +1,7 @@
 package com.gin.security.config;
 
 
+import com.gin.databasebackup.properties.DatabaseProperties;
 import com.gin.security.Constant.Security;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -87,12 +88,14 @@ public class MySecurityConfig {
      * 自定义RememberMe服务token持久化仓库
      */
     @Bean
-    public PersistentTokenRepository persistentTokenRepository(DataSource datasource) {
+    public PersistentTokenRepository persistentTokenRepository(DataSource datasource, DatabaseProperties  properties) {
         final JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
         //设置数据源
         tokenRepository.setDataSource(datasource);
         //第一次启动的时候建表
-//        tokenRepository.setCreateTableOnStartup(true);
+        if (properties.isInitRememberMe()) {
+            tokenRepository.setCreateTableOnStartup(true);
+        }
         return tokenRepository;
     }
 

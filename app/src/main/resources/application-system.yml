@@ -24,3 +24,5 @@ system:
       - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-client-plugins-8.0.30-1.el8.x86_64.rpm
       - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-common-8.0.30-1.el8.x86_64.rpm
       - https://downloads.mysql.com/archives/get/p/23/file/mysql-community-libs-8.0.30-1.el8.x86_64.rpm
+    # 是否初始化 persistent_logins 表
+    init-remember-me: false

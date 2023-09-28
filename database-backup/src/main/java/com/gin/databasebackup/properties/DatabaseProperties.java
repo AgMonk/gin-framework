@@ -38,6 +38,10 @@ public class DatabaseProperties implements Serializable {
      * mysql client 安装包地址(避免修改)
      */
     List<String> mysqlClient;
+    /**
+     * 初始化remember_me
+     */
+    boolean initRememberMe;
 
     @PostConstruct
     public void onCreated(){
