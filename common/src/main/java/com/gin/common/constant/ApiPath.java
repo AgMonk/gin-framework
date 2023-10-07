@@ -10,6 +10,14 @@ public class ApiPath {
      */
     public static final String ADD = "add";
     /**
+     * 查询单个数据
+     */
+    public static final String GET = "get";
+    /**
+     * 取消
+     */
+    public static final String CANCEL = "cancel";
+    /**
      * 备份接口路径
      */
     public static final String BACKUP = "backup";
