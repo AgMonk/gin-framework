@@ -1,5 +1,6 @@
 package com.gin.security.controller;
 
+import com.gin.common.constant.ApiPath;
 import com.gin.spring.annotation.MyRestController;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileNotExistsException;
@@ -19,12 +20,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
 
 import static com.gin.database.config.redis.RedisConfig.REDIS_CACHE_MANAGER;
+import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 /**
  * 数据库管理接口
@@ -43,6 +47,7 @@ public class DatabaseController extends AbstractDatabaseController {
 
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @GetMapping(ApiPath.DOWNLOAD)
     public void getDownload(String filename, HttpServletResponse response, HttpServletRequest request) throws IOException {
         super.getDownload(filename, response, request);
     }
@@ -50,6 +55,7 @@ public class DatabaseController extends AbstractDatabaseController {
     @Override
     @MenuEntry
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @GetMapping(ApiPath.LIST)
     public Res<List<FileInfo>> getList(HttpServletRequest request) throws IOException {
         return super.getList(request);
     }
@@ -63,6 +69,7 @@ public class DatabaseController extends AbstractDatabaseController {
      */
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @GetMapping("/log/options")
     public Res<List<SubClassOption>> getLogOptions(Boolean old, Long mainId, HttpServletRequest request) {
         return super.getLogOptions(old, mainId, request);
     }
@@ -76,30 +83,35 @@ public class DatabaseController extends AbstractDatabaseController {
      */
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @GetMapping("/log/page")
     public ResPage<SystemOperationLogVo> getLogPage(Boolean old, OperationLogPageParam param, HttpServletRequest request) {
         return super.getLogPage(old, param, request);
     }
 
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @PostMapping(ApiPath.BACKUP)
     public Res<FileInfo> postBackup(Boolean gzip, HttpServletRequest request) throws IOException {
         return super.postBackup(gzip, request);
     }
 
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @PostMapping(ApiPath.DEL)
     public Res<FileInfo> postDel(String filename, HttpServletRequest request) throws FileNotExistsException, FileDeleteException {
         return super.postDel(filename, request);
     }
 
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @PostMapping(ApiPath.RECOVER)
     public Res<FileInfo> postRecover(String filename, HttpServletRequest request) throws IOException {
         return super.postRecover(filename, request);
     }
 
     @Override
     @PreAuthorize(Security.PRE_AUTHORITY_URI_OR_ADMIN)
+    @PostMapping(value = ApiPath.UPLOAD, consumes = {MULTIPART_FORM_DATA_VALUE})
     public Res<FileInfo> postUpload(MultipartFile file, HttpServletRequest request) throws IOException {
         return super.postUpload(file, request);
     }
