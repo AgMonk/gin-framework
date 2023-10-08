@@ -91,7 +91,9 @@ public class CustomRedisHashCache implements Cache {
      * @return hashKey
      */
     public String getHashKey(Object key) {
-        final String s = String.valueOf(key).replace("\n", "");
+        final String s = String.valueOf(key).replace("\n", "")
+                .replace("\r", "")
+                .replace("  ", " ");
         return s.length() < 50 ? s : DigestUtils.md5DigestAsHex(s.getBytes());
     }
 

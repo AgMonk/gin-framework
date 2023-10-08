@@ -28,6 +28,9 @@ public class RedisMybatisCache extends CustomRedisCache {
         if (split.length < 6) {
             return super.getLogKey(key);
         }
-        return split[5].replace("\n", "").replace("  ", "");
+        return split[5]
+                .replace("\n", "")
+                .replace("\r", "")
+                .replace("  ", " ");
     }
 }

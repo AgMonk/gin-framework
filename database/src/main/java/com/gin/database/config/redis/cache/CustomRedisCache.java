@@ -56,7 +56,7 @@ public class CustomRedisCache implements Cache {
     @Override
     public final Object getObject(Object key) {
         final Object value = getRedisTemplate().opsForValue().get(getKey(key));
-        log.debug("[Redis][{}] {}命中: {}", id, value == null ? "未" : "", key);
+        log.debug("[Redis][{}] {}命中: {}", id, value == null ? "未" : "", getLogKey(key));
         return value;
     }
 
