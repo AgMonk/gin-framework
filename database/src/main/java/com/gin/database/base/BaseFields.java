@@ -36,4 +36,11 @@ public class BaseFields implements Serializable {
     @Comment(FieldDescription.CREATE_TIME)
     @Schema(description = FieldDescription.CREATE_TIME)
     Long timeCreate;
+
+    /**
+     * 统计用字段
+     */
+    @Transient
+    @TableField(exist = false)
+    Integer count;
 }   

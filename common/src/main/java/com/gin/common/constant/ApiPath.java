@@ -71,4 +71,8 @@ public class ApiPath {
      * 移动接口路径
      */
     public static final String MOVE = "move";
+    /**
+     * 统计
+     */
+    public static final String STATISTICS = "statistics";
 }
