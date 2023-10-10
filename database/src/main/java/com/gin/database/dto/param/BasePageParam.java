@@ -1,7 +1,6 @@
 package com.gin.database.dto.param;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,9 +17,7 @@ import org.springframework.validation.annotation.Validated;
 @Setter
 @Validated
 @Schema(description = "分页查询条件")
-public abstract class BasePageParam {
-    @JsonUnwrapped
-    PageSize pageSize;
+public abstract class BasePageParam extends PageSize {
     /**
      * 向queryWrapper中添加条件
      * @param queryWrapper 查询条件

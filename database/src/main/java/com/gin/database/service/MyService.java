@@ -10,6 +10,7 @@ import org.springframework.cglib.beans.BeanMap;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.CollectionUtils;
 import com.gin.database.vo.response.ResPage;
+import org.springframework.util.ObjectUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -72,6 +73,9 @@ public interface MyService<T> extends IService<T> {
      * @return 不存在的id
      */
     default List<Long> findNotExistsId(Collection<Long> ids) {
+        if (ObjectUtils.isEmpty(ids)){
+            return new ArrayList<>();
+        }
         final List<T> entities = listByIds(ids);
         if (entities.size() == 0) {
             return new ArrayList<>(ids);
@@ -156,7 +160,7 @@ public interface MyService<T> extends IService<T> {
         qw = qw != null ? qw : new QueryWrapper<>();
         //添加条件
         param.handleQueryWrapper(qw);
-        return page(param.getPageSize().buildPage(), qw);
+        return page(param.buildPage(), qw);
     }
 
     /**

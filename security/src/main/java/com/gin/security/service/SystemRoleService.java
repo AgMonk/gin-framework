@@ -2,6 +2,7 @@ package com.gin.security.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.gin.database.service.MyService;
+import com.gin.security.Constant.Role;
 import com.gin.security.Constant.Security;
 import com.gin.security.Constant.User;
 import com.gin.security.dto.form.SystemRoleForm;
@@ -42,7 +43,7 @@ public interface SystemRoleService extends MyService<SystemRole> {
      * @param roleId 角色id
      */
     default void forbiddenConfigAdminRole(Collection<Long> roleId) {
-        final SystemRole systemRole = getByName(User.ADMIN);
+        final SystemRole systemRole = getByName(Role.ADMIN);
         if (roleId.contains(systemRole.getId())) {
             throw BusinessException.of(HttpStatus.FORBIDDEN, Security.FORBIDDEN_CONFIG_ADMIN);
         }
