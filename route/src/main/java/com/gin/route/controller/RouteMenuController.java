@@ -28,15 +28,16 @@ public class RouteMenuController {
     /**
      * 接口路径前缀
      */
-    public static final String API_PREFIX = "/com/gin/route";
+    public static final String API_PREFIX = "/route";
     public static final String GROUP_NAME = "路由菜单接口";
 
     private final MenuService service;
 
     @GetMapping("menu")
     @Operation(summary = "获取路由菜单", description = "根据当前用户的权限, 返回一个该用户可以访问的路由结构, 超管执行该请求时将显示所有路由。"
-            + "<br/>响应数据可以直接使用<a href='https://element-plus.gitee.io/zh-CN/component/menu.html' target='_blank'>Element的Menu组件</a>进行渲染" + "<br/>如果选择使用本接口, 请按照接口返回的地址来定义路由地址")
-    public List<EleMenuComponent> getMenu(@RequestParam(required = false, defaultValue = "index") String name, HttpSession session) {
+            + "<br/>响应数据可以直接使用<a href='https://element-plus.gitee.io/zh-CN/component/menu.html' target='_blank'>Element的Menu组件</a>进行渲染"
+            + "<br/>如果选择使用本接口, 请按照接口返回的地址来定义路由地址")
+    public List<EleMenuComponent> getMenu(@RequestParam(required = false, defaultValue = "index") String name) {
         return service.listItemByMenuName(name);
     }
 

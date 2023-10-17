@@ -17,7 +17,7 @@ public class RouteDocketConfig {
     public GroupedOpenApi routeApi() {
         return GroupedOpenApi.builder()
                 .group("路由导航菜单")
-                .pathsToMatch(RouteMenuController.GROUP_NAME + "/**")
+                .pathsToMatch(RouteMenuController.API_PREFIX + "/**")
                 .build();
     }
 }   
