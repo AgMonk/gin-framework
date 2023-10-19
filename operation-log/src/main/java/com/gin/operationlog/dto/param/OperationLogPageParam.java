@@ -57,7 +57,8 @@ public class OperationLogPageParam extends BasePageParam {
         if (mainId != null) {
             queryWrapper.eq("main_id", mainId);
         }
-
-        range.handleQueryWrapper(queryWrapper,"time_create");
+        if (range != null) {
+            range.handleQueryWrapper(queryWrapper, "time_create");
+        }
     }
 }
