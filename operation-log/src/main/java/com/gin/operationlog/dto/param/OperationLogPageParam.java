@@ -49,10 +49,8 @@ public class OperationLogPageParam extends BasePageParam {
         if (!CollectionUtils.isEmpty(type)) {
             queryWrapper.in("type", type.stream().map(Enum::name).toList());
         }
-        if (!ObjectUtils.isEmpty(subClassName) && !subClassName.equals(mainClassName)) {
+        if (!ObjectUtils.isEmpty(subClassName)) {
             queryWrapper.eq("sub_class", subClassName);
-        } else {
-            queryWrapper.isNull("sub_class");
         }
         if (mainId != null) {
             queryWrapper.eq("main_id", mainId);
