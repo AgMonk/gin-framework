@@ -38,7 +38,7 @@ public class FileUtils {
      */
     public static void assertNotExists( File file) throws FileExistsException {
         assertNotNull(file);
-        if (!file.exists()) {
+        if (file.exists()) {
             throw new FileExistsException(file);
         }
     }
