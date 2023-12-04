@@ -5,15 +5,16 @@ import com.gin.security.dao.SystemUserDao;
 import com.gin.security.dto.form.RegForm;
 import com.gin.security.entity.SystemUser;
 import com.gin.security.entity.SystemUserInfo;
+import com.gin.security.service.SystemUserInfoService;
+import com.gin.security.service.SystemUserService;
 import com.gin.spring.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.gin.security.service.SystemUserInfoService;
-import com.gin.security.service.SystemUserService;
 
 /**
  * @author : ginstone
@@ -23,6 +24,7 @@ import com.gin.security.service.SystemUserService;
 @Service
 @Transactional(rollbackFor = Exception.class)
 @RequiredArgsConstructor
+@Slf4j
 public class SystemUserServiceImpl extends ServiceImpl<SystemUserDao, SystemUser> implements SystemUserService {
     private final PasswordEncoder passwordEncoder;
     private final SystemUserInfoService systemUserInfoService;
@@ -64,5 +66,25 @@ public class SystemUserServiceImpl extends ServiceImpl<SystemUserDao, SystemUser
         systemUserInfoService.save(info);
 
         return user;
+    }
+
+    @Override
+    public SystemUser findOrRegByOpenId(String openId) {
+        final SystemUser user = findByOpenId(openId);
+        if (user != null) {
+            return user;
+        }
+        //注册用户
+        final SystemUser u = new SystemUser();
+        u.setUsername(openId);
+        u.setPassword(passwordEncoder.encode(openId));
+        save(u);
+        log.info("微信用户首次登录: {}", openId);
+
+        //写入个人信息
+        final SystemUserInfo info = new SystemUserInfo();
+        info.setUserId(u.getId());
+        systemUserInfoService.save(info);
+        return u;
     }
 }

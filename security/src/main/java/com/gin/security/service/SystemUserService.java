@@ -13,6 +13,7 @@ import com.gin.security.entity.SystemUser;
 public interface SystemUserService extends MyService<SystemUser> {
     /**
      * 修改密码
+     *
      * @param userId  需要修改密码的用户id
      * @param oldPass 旧密码
      * @param newPass 新密码
@@ -21,6 +22,7 @@ public interface SystemUserService extends MyService<SystemUser> {
 
     /**
      * 修改密码
+     *
      * @param userId  用户id
      * @param newPass 新密码
      */
@@ -28,6 +30,7 @@ public interface SystemUserService extends MyService<SystemUser> {
 
     /**
      * 注册
+     *
      * @param regForm 注册表单
      * @return 用户
      */
@@ -35,6 +38,7 @@ public interface SystemUserService extends MyService<SystemUser> {
 
     /**
      * 根据用户名查询用户信息
+     *
      * @param username 用户名
      * @return 用户信息
      */
@@ -46,6 +50,7 @@ public interface SystemUserService extends MyService<SystemUser> {
 
     /**
      * 根据用户名查询用户,如果不存在则注册一个
+     *
      * @param regForm 注册表单
      * @return 用户
      */
@@ -54,5 +59,23 @@ public interface SystemUserService extends MyService<SystemUser> {
         return user != null ? user : reg(regForm);
     }
 
+    /**
+     * 通过openId查询一个用户
+     *
+     * @param openId openId
+     * @return 用户
+     */
+    default SystemUser findByOpenId(String openId) {
+        final QueryWrapper<SystemUser> qw = new QueryWrapper<>();
+        qw.eq("open_id", openId);
+        return getOne(qw);
+    }
 
+    /**
+     * 通过openId查找一个用户，如果不存在则先创建
+     *
+     * @param openId openId
+     * @return 用户
+     */
+    SystemUser findOrRegByOpenId(String openId);
 }

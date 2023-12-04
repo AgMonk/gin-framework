@@ -1,9 +1,9 @@
 package com.gin.security.entity;
 
-import com.gin.database.base.BasePo;
 import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.gin.database.base.BasePo;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -13,6 +13,7 @@ import org.hibernate.annotations.Comment;
 
 /**
  * 系统用户
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/6 14:30
@@ -44,4 +45,8 @@ public class SystemUser extends BasePo {
     Boolean enabled;
 
 
+    @Column(length = 100, unique = true)
+    @TableField(updateStrategy = FieldStrategy.NEVER)
+    @Comment("微信OpenId")
+    String openId;
 }
