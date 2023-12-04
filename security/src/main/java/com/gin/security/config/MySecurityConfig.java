@@ -3,6 +3,7 @@ package com.gin.security.config;
 
 import com.gin.databasebackup.properties.DatabaseProperties;
 import com.gin.security.Constant.Security;
+import com.gin.security.wechat.WechatAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -103,6 +104,7 @@ public class MySecurityConfig {
     public SecurityFilterChain securityFilterChain(
             HttpSecurity http,
             MyLoginFilter loginFilter,
+            WechatAuthenticationFilter weChatAuthenticationFilter,
             MyAuthenticationHandler authenticationHandler,
             MyRememberMeServices rememberMeServices
     ) throws Exception {
@@ -114,7 +116,8 @@ public class MySecurityConfig {
                 .requestMatchers(TEST_WHITE_LIST.toArray(new String[0])).permitAll()
                 .anyRequest().authenticated()
         ;
-
+        // 微信登录
+        http.addFilterBefore(weChatAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         //登陆
         http.addFilterAt(loginFilter, UsernamePasswordAuthenticationFilter.class);
 

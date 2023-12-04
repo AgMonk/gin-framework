@@ -6,3 +6,4 @@ spring:
       - application-common.yml
       - application-database.yml
       - application-system.yml
+      - application-wechat.yml
