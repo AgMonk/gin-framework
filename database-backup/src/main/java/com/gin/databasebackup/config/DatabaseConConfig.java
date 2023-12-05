@@ -39,7 +39,7 @@ public class DatabaseConConfig {
             this.port = Integer.valueOf(matcher.group(2));
             this.database = matcher.group(3);
 
-            log.info("host: {}, port: {}, database: {}", host, port, database);
+            log.info("连接数据库IP: {}, 端口: {}, 数据库名称: {}", host, port, database);
 
             final String paramString = matcher.group(4);
             for (String pair : paramString.split("&")) {
