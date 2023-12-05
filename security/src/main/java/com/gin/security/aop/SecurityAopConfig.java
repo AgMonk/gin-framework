@@ -129,8 +129,8 @@ public class SecurityAopConfig {
      */
     private static String obtainSessionId(Object token) {
         if (token instanceof AbstractAuthenticationToken t && t.getDetails() instanceof WebAuthenticationDetails details) {
-            return details.getSessionId();
+            return details.getSessionId() != null ? details.getSessionId() : "";
         }
-        return null;
+        return "";
     }
 }   

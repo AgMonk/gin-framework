@@ -16,7 +16,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -29,7 +28,6 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
 
 import javax.sql.DataSource;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -64,8 +62,8 @@ public class MySecurityConfig {
      * 获取AuthenticationManager（认证管理器），登录时认证使用
      */
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration, WechatAuthenticationProvider wechatAuthenticationProvider) throws Exception {
-        return new ProviderManager(Collections.singletonList(wechatAuthenticationProvider), authenticationConfiguration.getAuthenticationManager());
+    public AuthenticationManager authenticationManager(DaoAuthenticationProvider daoAuthenticationProvider, WechatAuthenticationProvider wechatAuthenticationProvider) throws Exception {
+        return new ProviderManager(wechatAuthenticationProvider, daoAuthenticationProvider);
     }
 
     /**
