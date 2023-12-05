@@ -64,6 +64,8 @@ public class WechatAuthenticationFilter extends AbstractAuthenticationProcessing
         }
         // 创建一个未认证的token，放入code
         final WechatAuthenticationToken token = WechatAuthenticationToken.unauthenticated(code);
+        // 获取一次sessionID，保证其不为空
+        log.info("session login: {}", request.getSession().getId());
         // 设置details
         token.setDetails(this.authenticationDetailsSource.buildDetails(request));
         // 将token提交给 AuthenticationManager
