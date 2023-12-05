@@ -3,12 +3,18 @@ package com.gin.security.config;
 
 import com.gin.databasebackup.properties.DatabaseProperties;
 import com.gin.security.Constant.Security;
+import com.gin.security.component.MyAuthenticationHandler;
+import com.gin.security.component.MyLoginFilter;
+import com.gin.security.component.MyRememberMeServices;
+import com.gin.security.service.MyUserDetailsServiceImpl;
 import com.gin.security.wechat.WechatAuthenticationFilter;
+import com.gin.security.wechat.WechatAuthenticationProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -21,16 +27,14 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
-import com.gin.security.component.MyAuthenticationHandler;
-import com.gin.security.component.MyLoginFilter;
-import com.gin.security.component.MyRememberMeServices;
-import com.gin.security.service.MyUserDetailsServiceImpl;
 
 import javax.sql.DataSource;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * SpringSecurity配置
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/10 11:53
@@ -60,12 +64,13 @@ public class MySecurityConfig {
      * 获取AuthenticationManager（认证管理器），登录时认证使用
      */
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration, WechatAuthenticationProvider wechatAuthenticationProvider) throws Exception {
+        return new ProviderManager(Collections.singletonList(wechatAuthenticationProvider), authenticationConfiguration.getAuthenticationManager());
     }
 
     /**
      * 允许抛出用户不存在的异常
+     *
      * @param myUserDetailsService myUserDetailsService
      * @return DaoAuthenticationProvider
      */
@@ -89,7 +94,7 @@ public class MySecurityConfig {
      * 自定义RememberMe服务token持久化仓库
      */
     @Bean
-    public PersistentTokenRepository persistentTokenRepository(DataSource datasource, DatabaseProperties  properties) {
+    public PersistentTokenRepository persistentTokenRepository(DataSource datasource, DatabaseProperties properties) {
         final JdbcTokenRepositoryImpl tokenRepository = new JdbcTokenRepositoryImpl();
         //设置数据源
         tokenRepository.setDataSource(datasource);

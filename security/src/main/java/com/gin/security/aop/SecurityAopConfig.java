@@ -1,12 +1,12 @@
 package com.gin.security.aop;
 
-import com.gin.spring.utils.WebUtils;
 import com.gin.operationlog.entity.SystemOperationLog;
 import com.gin.operationlog.enums.OperationType;
 import com.gin.operationlog.service.SystemOperationLogService;
 import com.gin.security.bo.MyUserDetails;
 import com.gin.security.entity.SystemUser;
 import com.gin.security.service.SystemUserService;
+import com.gin.spring.utils.WebUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +15,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,6 +23,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
 /**
  * AOP
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/4/10 14:43
@@ -33,19 +35,18 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 public class SecurityAopConfig {
     private final SystemOperationLogService logService;
     private final SystemUserService systemUserService;
-    private static long now() {
-        return System.currentTimeMillis();
-    }
+
     /**
      * 登陆方法环绕切面
+     *
      * @param pjp pjp
      * @return 返回
      */
     @Around(value = "execution(* org.springframework.security.authentication.AuthenticationManager.authenticate(..)) && args(token)", argNames = "pjp,token")
-    public Object login(ProceedingJoinPoint pjp, UsernamePasswordAuthenticationToken token) throws Throwable {
-        if (ProviderManager.class.equals(pjp.getTarget().getClass())
-                && token.getDetails() instanceof WebAuthenticationDetails details
-        ) {
+    public Object login(ProceedingJoinPoint pjp, Authentication token) throws Throwable {
+        // 获取sessionId
+        final String sessionId = obtainSessionId(token);
+        if (ProviderManager.class.equals(pjp.getTarget().getClass())) {
             final long start = now();
             final String userIp = WebUtils.getRemoteHost();
             try {
@@ -56,7 +57,7 @@ public class SecurityAopConfig {
                     final SystemOperationLog operationLog = new SystemOperationLog();
                     final Long userId = userDetails.getId();
                     operationLog.setMainClass(SystemUser.class);
-                    operationLog.setSessionId(details.getSessionId());
+                    operationLog.setSessionId(sessionId);
                     operationLog.setType(OperationType.LOGIN);
                     operationLog.setUserIp(userIp);
                     operationLog.setUserId(userId);
@@ -72,7 +73,7 @@ public class SecurityAopConfig {
                 final long userId = user != null ? user.getId() : -1;
                 final SystemOperationLog operationLog = new SystemOperationLog();
                 operationLog.setMainClass(SystemUser.class);
-                operationLog.setSessionId(details.getSessionId());
+                operationLog.setSessionId(sessionId);
                 operationLog.setType(OperationType.LOGIN_FAILED);
                 operationLog.setUserIp(userIp);
                 operationLog.setUserId(userId);
@@ -114,5 +115,22 @@ public class SecurityAopConfig {
             return result;
         }
         return pjp.proceed();
+    }
+
+    private static long now() {
+        return System.currentTimeMillis();
+    }
+
+    /**
+     * 从token中获取sessionId
+     *
+     * @param token token
+     * @return sessionId
+     */
+    private static String obtainSessionId(Object token) {
+        if (token instanceof AbstractAuthenticationToken t && t.getDetails() instanceof WebAuthenticationDetails details) {
+            return details.getSessionId();
+        }
+        return null;
     }
 }   

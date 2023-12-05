@@ -16,6 +16,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.UUID;
+
 /**
  * @author : ginstone
  * @version : v1.0.0
@@ -78,12 +80,14 @@ public class SystemUserServiceImpl extends ServiceImpl<SystemUserDao, SystemUser
         final SystemUser u = new SystemUser();
         u.setUsername(openId);
         u.setPassword(passwordEncoder.encode(openId));
+        u.setOpenId(openId);
         save(u);
         log.info("微信用户首次登录: {}", openId);
 
         //写入个人信息
         final SystemUserInfo info = new SystemUserInfo();
         info.setUserId(u.getId());
+        info.setNickname("微信用户" + UUID.randomUUID().toString().substring(0, 4));
         systemUserInfoService.save(info);
         return u;
     }

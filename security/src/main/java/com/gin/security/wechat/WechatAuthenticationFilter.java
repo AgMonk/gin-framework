@@ -1,5 +1,6 @@
 package com.gin.security.wechat;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gin.security.component.MyAuthenticationHandler;
 import jakarta.servlet.ServletException;
@@ -52,7 +53,6 @@ public class WechatAuthenticationFilter extends AbstractAuthenticationProcessing
         super(DEFAULT_ANT_PATH_REQUEST_MATCHER, authenticationManager);
         setAuthenticationFailureHandler(authenticationHandler);
         setAuthenticationSuccessHandler(authenticationHandler);
-        setFilterProcessesUrl(WECHAT_LOGIN_PATH);
 
         this.wechatConfig = wechatConfig;
 
@@ -71,6 +71,26 @@ public class WechatAuthenticationFilter extends AbstractAuthenticationProcessing
         if (ObjectUtils.isEmpty(code)) {
             throw new AuthenticationServiceException("code 不允许为空");
         }
+        final String openId = weChatLoginRequest(code, wechatConfig).getOpenId();
+//        final String openId = "open_Id_test";
+        // 登录成功，使用openId创建一个Token
+        final WechatAuthenticationToken token = WechatAuthenticationToken.unauthenticated(openId);
+        log.info("openId: {}", openId);
+        // 设置details
+        token.setDetails(this.authenticationDetailsSource.buildDetails(request));
+        // 将token提交给 AuthenticationManager
+        return this.getAuthenticationManager().authenticate(token);
+    }
+
+    /**
+     * 微信登录请求
+     *
+     * @param code         wx.login()获取的code
+     * @param wechatConfig 微信配置
+     * @return 请求详情
+     * @throws JsonProcessingException 异常
+     */
+    private static WechatLoginResponse weChatLoginRequest(String code, WechatConfig wechatConfig) throws JsonProcessingException {
         // 请求地址
         final String url = wechatConfig.obtainUrl(code);
         log.info("url: {}", url);
@@ -83,14 +103,9 @@ public class WechatAuthenticationFilter extends AbstractAuthenticationProcessing
         }
         // 登录失败，报错
         if (loginResponse.getCode() != 0) {
+            log.warn(loginResponse.getErrMsg());
             throw new AuthenticationServiceException(String.format("%d: %s", loginResponse.getCode(), loginResponse.getErrMsg()));
         }
-        // 登录成功，使用openId创建一个Token
-        final WechatAuthenticationToken token = WechatAuthenticationToken.unauthenticated(loginResponse.getOpenId());
-        log.info("openId: {}", loginResponse.getOpenId());
-        // 设置details
-        token.setDetails(this.authenticationDetailsSource.buildDetails(request));
-        // 将token提交给 AuthenticationManager
-        return this.getAuthenticationManager().authenticate(token);
+        return loginResponse;
     }
 }

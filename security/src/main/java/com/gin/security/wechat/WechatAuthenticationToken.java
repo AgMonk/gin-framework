@@ -1,5 +1,6 @@
 package com.gin.security.wechat;
 
+import lombok.Getter;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -12,8 +13,10 @@ import java.util.Collection;
  * @version : v1.0.0
  * @since : 2023/12/4 15:12
  **/
+@Getter
 public class WechatAuthenticationToken extends AbstractAuthenticationToken {
     private final String openId;
+    private final Object principal;
 
     /**
      * 未认证的Token
@@ -23,6 +26,7 @@ public class WechatAuthenticationToken extends AbstractAuthenticationToken {
     public WechatAuthenticationToken(String openId) {
         super(null);
         this.openId = openId;
+        this.principal = openId;
         setAuthenticated(false);
     }
 
@@ -32,9 +36,10 @@ public class WechatAuthenticationToken extends AbstractAuthenticationToken {
      * @param openId      openId
      * @param authorities 权限
      */
-    public WechatAuthenticationToken(String openId, Collection<? extends GrantedAuthority> authorities) {
+    public WechatAuthenticationToken(String openId, Object principal, Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
         this.openId = openId;
+        this.principal = principal;
         setAuthenticated(true);
     }
 
@@ -53,18 +58,13 @@ public class WechatAuthenticationToken extends AbstractAuthenticationToken {
      * @param openId      openId
      * @param authorities 权限
      */
-    public static WechatAuthenticationToken authenticated(String openId, Collection<? extends GrantedAuthority> authorities) {
-        return new WechatAuthenticationToken(openId, authorities);
+    public static WechatAuthenticationToken authenticated(String openId, Object principal, Collection<? extends GrantedAuthority> authorities) {
+        return new WechatAuthenticationToken(openId, principal, authorities);
     }
 
     @Override
     public Object getCredentials() {
         return null;
-    }
-
-    @Override
-    public Object getPrincipal() {
-        return openId;
     }
 
 }

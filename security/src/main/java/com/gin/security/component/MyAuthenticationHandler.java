@@ -1,10 +1,11 @@
 package com.gin.security.component;
 
-import com.gin.security.Constant.Security;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gin.security.Constant.Security;
+import com.gin.security.vo.MyUserDetailsVo;
+import com.gin.spring.vo.response.Res;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import com.gin.security.vo.MyUserDetailsVo;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.access.AuthorizationServiceException;
@@ -24,7 +25,6 @@ import org.springframework.security.web.server.csrf.CsrfException;
 import org.springframework.security.web.session.SessionInformationExpiredEvent;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 import org.springframework.stereotype.Component;
-import com.gin.spring.vo.response.Res;
 
 import java.io.IOException;
 
@@ -34,6 +34,7 @@ import static com.gin.security.Constant.Security.VERIFY_CODE_KEY;
 
 /**
  * 校验成功、失败，会话过期处理
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/5 10:04
@@ -47,15 +48,9 @@ public class MyAuthenticationHandler implements AuthenticationSuccessHandler
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
-    private static void writeJson(HttpServletResponse response, HttpStatus httpStatus, Object o) throws IOException {
-        response.setContentType(APPLICATION_JSON_CHARSET_UTF_8);
-        response.setStatus(httpStatus.value());
-        response.getWriter().println(OBJECT_MAPPER.writeValueAsString(o));
-    }
-
-
     /**
      * 认证失败处理
+     *
      * @param request  that resulted in an <code>AuthenticationException</code>
      * @param response so that the user agent can begin authentication
      * @param e        that caused the invocation
@@ -76,6 +71,7 @@ public class MyAuthenticationHandler implements AuthenticationSuccessHandler
 
     /**
      * 权限不足时的处理
+     *
      * @param request               that resulted in an <code>AccessDeniedException</code>
      * @param response              so that the user agent can be advised of the failure
      * @param accessDeniedException that caused the invocation
@@ -131,6 +127,7 @@ public class MyAuthenticationHandler implements AuthenticationSuccessHandler
 
     /**
      * 会话过期处理
+     *
      * @throws IOException 异常
      */
     @Override
@@ -142,6 +139,7 @@ public class MyAuthenticationHandler implements AuthenticationSuccessHandler
 
     /**
      * 登出成功处理
+     *
      * @param request        请求
      * @param response       响应
      * @param authentication 认证信息
@@ -154,5 +152,11 @@ public class MyAuthenticationHandler implements AuthenticationSuccessHandler
             Authentication authentication
     ) throws IOException {
         writeJson(response, HttpStatus.OK, Res.of(null, "登出成功"));
+    }
+
+    private static void writeJson(HttpServletResponse response, HttpStatus httpStatus, Object o) throws IOException {
+        response.setContentType(APPLICATION_JSON_CHARSET_UTF_8);
+        response.setStatus(httpStatus.value());
+        response.getWriter().println(OBJECT_MAPPER.writeValueAsString(o));
     }
 }
