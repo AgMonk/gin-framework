@@ -102,7 +102,7 @@ public class WechatAuthenticationFilter extends AbstractAuthenticationProcessing
             throw new AuthenticationServiceException("登录请求发送失败");
         }
         // 登录失败，报错
-        if (loginResponse.getCode() != 0) {
+        if (loginResponse.getCode() != null && loginResponse.getCode() != 0) {
             log.warn(loginResponse.getErrMsg());
             throw new AuthenticationServiceException(String.format("%d: %s", loginResponse.getCode(), loginResponse.getErrMsg()));
         }

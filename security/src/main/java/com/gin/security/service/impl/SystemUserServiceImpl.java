@@ -81,6 +81,10 @@ public class SystemUserServiceImpl extends ServiceImpl<SystemUserDao, SystemUser
         u.setUsername(openId);
         u.setPassword(passwordEncoder.encode(openId));
         u.setOpenId(openId);
+        u.setAccountNonExpired(true);
+        u.setAccountNonLocked(true);
+        u.setCredentialsNonExpired(true);
+        u.setEnabled(true);
         save(u);
         log.info("微信用户首次登录: {}", openId);
 

@@ -1,6 +1,6 @@
 spring:
-  profiles:
-    active: database-dev
+  #  profiles:
+  #    active: database-dev
   config:
     import:
       - application-common.yml
