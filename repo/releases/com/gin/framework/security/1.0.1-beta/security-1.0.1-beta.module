@@ -60,6 +60,13 @@
           }
         },
         {
+          "group": "com.gin.framework",
+          "module": "aliyun",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-security",
           "version": {
@@ -71,11 +78,11 @@
         {
           "name": "security-1.0.1-beta-plain.jar",
           "url": "security-1.0.1-beta-plain.jar",
-          "size": 146690,
-          "sha512": "d79dceb229e178afe0d8fbee197d2c806b35436c6b7aec54e3f9e805f8dcd098bc2cad95d8cd69898c539dea311c96ae37839b2141fbb0575585616826bfb62f",
-          "sha256": "409cc6eb7f4be435c02b641fe912c05820f36d76e438413aa9c183ce45e441cc",
-          "sha1": "731593a15979a9ab538a9700b8c0ecaec267b07b",
-          "md5": "127064dcd75f220cc314759fb844335e"
+          "size": 153034,
+          "sha512": "261a9ea7c004f0f57d762de82d987be3a31c00e105439581983cdec386d9c3b1b1aa576f796c42bdf859036ebd709a8735ebcf80e8d0bda976293b03fa081f9c",
+          "sha256": "7f20472465bf3002cbb540d82ad3a04ed39cc301c25015710513846b7e027c84",
+          "sha1": "b6a9498bcddf930f3b95b06242c901802044f2a5",
+          "md5": "b8335f6dc6d310e33f4557ca2cbdbac9"
         }
       ]
     },
@@ -139,6 +146,13 @@
           }
         },
         {
+          "group": "com.gin.framework",
+          "module": "aliyun",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-security",
           "version": {
@@ -150,11 +164,11 @@
         {
           "name": "security-1.0.1-beta-plain.jar",
           "url": "security-1.0.1-beta-plain.jar",
-          "size": 146690,
-          "sha512": "d79dceb229e178afe0d8fbee197d2c806b35436c6b7aec54e3f9e805f8dcd098bc2cad95d8cd69898c539dea311c96ae37839b2141fbb0575585616826bfb62f",
-          "sha256": "409cc6eb7f4be435c02b641fe912c05820f36d76e438413aa9c183ce45e441cc",
-          "sha1": "731593a15979a9ab538a9700b8c0ecaec267b07b",
-          "md5": "127064dcd75f220cc314759fb844335e"
+          "size": 153034,
+          "sha512": "261a9ea7c004f0f57d762de82d987be3a31c00e105439581983cdec386d9c3b1b1aa576f796c42bdf859036ebd709a8735ebcf80e8d0bda976293b03fa081f9c",
+          "sha256": "7f20472465bf3002cbb540d82ad3a04ed39cc301c25015710513846b7e027c84",
+          "sha1": "b6a9498bcddf930f3b95b06242c901802044f2a5",
+          "md5": "b8335f6dc6d310e33f4557ca2cbdbac9"
         }
       ]
     },
@@ -190,11 +204,11 @@
         {
           "name": "security-1.0.1-beta-sources.jar",
           "url": "security-1.0.1-beta-sources.jar",
-          "size": 93553,
-          "sha512": "07b2ba308e9dea9636ace56772f9c722fb8b6a0903bc2f8f76736547ff594c87208feaff200cb4ebd51190f74c1fbbba9e6d724649266492f395565aa197b0a0",
-          "sha256": "eda1a735f8b403f659e38835135b8be84d025e4f29ea557a24826b0da63aac02",
-          "sha1": "6da64d7bf71f72cd8ecc10aaa9f77422b5c993e6",
-          "md5": "47bcc6dade3ec9655ed395737fbb28d4"
+          "size": 98110,
+          "sha512": "12b6a4f72afc85950f68dc4d8b4542206c103a6988110a76145aa18b7336d012d6f05dd1536ef974b3940886fef7178ba09368e295042b9ce79e06d6f582ebf0",
+          "sha256": "a41790ac2cf0f75bc4b0687ae1793cba1ec0b468167c117caf4626c65ac2cae7",
+          "sha1": "330b6d7ae0957d47a8a268c834724f45793c1fa4",
+          "md5": "8c5bda9f42ed59e6944a3e220a7b679d"
         }
       ]
     }

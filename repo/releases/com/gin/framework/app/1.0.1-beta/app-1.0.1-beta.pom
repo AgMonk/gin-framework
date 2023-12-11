@@ -13,12 +13,6 @@
   <dependencies>
     <dependency>
       <groupId>com.gin.framework</groupId>
-      <artifactId>aliyun</artifactId>
-      <version>1.0.1-beta</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.gin.framework</groupId>
       <artifactId>security</artifactId>
       <version>1.0.1-beta</version>
       <scope>compile</scope>

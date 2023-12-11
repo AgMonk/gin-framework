@@ -13,7 +13,7 @@
   <dependencies>
     <dependency>
       <groupId>com.gin.framework</groupId>
-      <artifactId>spring</artifactId>
+      <artifactId>redis</artifactId>
       <version>1.0.1-beta</version>
       <scope>compile</scope>
     </dependency>

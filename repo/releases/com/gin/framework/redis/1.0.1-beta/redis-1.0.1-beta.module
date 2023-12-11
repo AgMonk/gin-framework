@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "redis",
+    "version": "1.0.1-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-data-redis",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.session",
+          "module": "spring-session-data-redis",
+          "version": {
+            "requires": "3.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "redis-1.0.1-beta-plain.jar",
+          "url": "redis-1.0.1-beta-plain.jar",
+          "size": 6934,
+          "sha512": "bde5597662be6c4a558a849d7650ea5afef90a791adce9107faf7357a8d77c0b4a14304f4015828416e4872ebf048453f909b8843363dd23f5f8be03029c2708",
+          "sha256": "c10a53a5770f9e1ac0b4328084fcb8b56bdcd2b397fd3c9f33f6912fa0cd1154",
+          "sha1": "408f9dd01968c07a5927b447e2e77990c4bf583b",
+          "md5": "925a2f2aa6ab1e34478fbd813aee449f"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-data-redis",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.session",
+          "module": "spring-session-data-redis",
+          "version": {
+            "requires": "3.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "redis-1.0.1-beta-plain.jar",
+          "url": "redis-1.0.1-beta-plain.jar",
+          "size": 6934,
+          "sha512": "bde5597662be6c4a558a849d7650ea5afef90a791adce9107faf7357a8d77c0b4a14304f4015828416e4872ebf048453f909b8843363dd23f5f8be03029c2708",
+          "sha256": "c10a53a5770f9e1ac0b4328084fcb8b56bdcd2b397fd3c9f33f6912fa0cd1154",
+          "sha1": "408f9dd01968c07a5927b447e2e77990c4bf583b",
+          "md5": "925a2f2aa6ab1e34478fbd813aee449f"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "redis-1.0.1-beta-javadoc.jar",
+          "url": "redis-1.0.1-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "90afef09d38dc223b29273d026f488b2f06ba0bce81e025cc3dded457af20ca2cc00f591dd686e2e0276c029862ae9706d98234a64b4a3a62a95289fcb425703",
+          "sha256": "14393d0486979a55c7cf6f80fc9046ed4510733fa429059d4f0b7cb6e1115c73",
+          "sha1": "34e4d8b0df93b358a385d1d926dbaa2894eb719b",
+          "md5": "ca5b0b5afb98a6ddb8bea0a6b2d3fd81"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "redis-1.0.1-beta-sources.jar",
+          "url": "redis-1.0.1-beta-sources.jar",
+          "size": 3644,
+          "sha512": "5197d374fca1f3a8b4ac7e127f2393d9038011190278b7aecfe8b403befe4bf14949aa2a4e8cc6b2766324e73bec6dc423cb3752800d448752a20ecf11dcc22b",
+          "sha256": "eeeb0cd5a81e72a3d92121334a5beefe061cbfe86453d1fc2ca660632f497b6c",
+          "sha1": "801419073b1f05d6e906bf7d78218f32ed71d9c4",
+          "md5": "5f9ce2df87dbcea348e2d49736631760"
+        }
+      ]
+    }
+  ]
+}

@@ -26,13 +26,6 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
-          "module": "aliyun",
-          "version": {
-            "requires": "1.0.1-beta"
-          }
-        },
-        {
-          "group": "com.gin.framework",
           "module": "security",
           "version": {
             "requires": "1.0.1-beta"
@@ -43,11 +36,11 @@
         {
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
-          "size": 6275,
-          "sha512": "08c37a70a10d9cdd52e2bab24f9ed7c46999887789ce1bcd3505338ba4bb59850da16873c76be534bb3b89cabd0fb4e7fc77070a9dd32d1bc3c9060ed1ccb312",
-          "sha256": "6cb718ff6094f14570e8899a95eda1281d4d4e91e316f9521d9f80864f287ca3",
-          "sha1": "480af9b471f891bc5c2d3dfb84edf30030e2b27d",
-          "md5": "528554b2d42ce05bdd707d4017892abf"
+          "size": 6350,
+          "sha512": "aad1fca75ee89b1659e1af658b57fc9a68bd513a9d26e36c3b545878c46aabd5ef5bf85a064cb404786cb5194a287ccaa2f51af365176c773e8c82a2e9d0b161",
+          "sha256": "7a7573c0b9dc77260bfa89b7be43f548fd3a6936f75ff9faefceda0895eb742f",
+          "sha1": "bf6b2d05fe507408cb771b28e39e85d1fca18e61",
+          "md5": "f5fa040737bcac386512b6cc15c325c9"
         }
       ]
     },
@@ -63,13 +56,6 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
-          "module": "aliyun",
-          "version": {
-            "requires": "1.0.1-beta"
-          }
-        },
-        {
-          "group": "com.gin.framework",
           "module": "security",
           "version": {
             "requires": "1.0.1-beta"
@@ -80,11 +66,11 @@
         {
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
-          "size": 6275,
-          "sha512": "08c37a70a10d9cdd52e2bab24f9ed7c46999887789ce1bcd3505338ba4bb59850da16873c76be534bb3b89cabd0fb4e7fc77070a9dd32d1bc3c9060ed1ccb312",
-          "sha256": "6cb718ff6094f14570e8899a95eda1281d4d4e91e316f9521d9f80864f287ca3",
-          "sha1": "480af9b471f891bc5c2d3dfb84edf30030e2b27d",
-          "md5": "528554b2d42ce05bdd707d4017892abf"
+          "size": 6350,
+          "sha512": "aad1fca75ee89b1659e1af658b57fc9a68bd513a9d26e36c3b545878c46aabd5ef5bf85a064cb404786cb5194a287ccaa2f51af365176c773e8c82a2e9d0b161",
+          "sha256": "7a7573c0b9dc77260bfa89b7be43f548fd3a6936f75ff9faefceda0895eb742f",
+          "sha1": "bf6b2d05fe507408cb771b28e39e85d1fca18e61",
+          "md5": "f5fa040737bcac386512b6cc15c325c9"
         }
       ]
     },
@@ -120,11 +106,11 @@
         {
           "name": "app-1.0.1-beta-sources.jar",
           "url": "app-1.0.1-beta-sources.jar",
-          "size": 4943,
-          "sha512": "08c13f87849c4ca621fc8d44d55e13448f7cf699be852a4e5421b5f52f58cfc9ac95e1f33c1f7c7a31c366e8522f0210a35a75c18b6fefcdc2823f44889e895e",
-          "sha256": "4c00b0e863cf51bc3a722127306aa6102bb589d8ea9ffb0353d6dadb53c0c1ce",
-          "sha1": "726898997b6b369bcc0dd2fa36c9e77f81ce6815",
-          "md5": "3894d618dfa5b7df9f7094f73b1275b2"
+          "size": 5018,
+          "sha512": "6d0c0d022f11cb673eae4a429a44de18e6ea2e1daad138b9442846a90430d9e29862852033d88aedbbff1af85c8d564d6ba035e0c5d0d590c84f2f27c853a54b",
+          "sha256": "7a22fff383f7198288212a28e89ff1f53c7693b49b904e7c83b7f07a78517bc7",
+          "sha1": "f2a632faea10eb328836a9736eb9e8c2e8b26eb8",
+          "md5": "be081e255d15a183bd233dc53f8482e7"
         }
       ]
     }

@@ -18,6 +18,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>com.gin.framework</groupId>
+      <artifactId>redis</artifactId>
+      <version>1.0.1-beta</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>org.mybatis.spring.boot</groupId>
       <artifactId>mybatis-spring-boot-starter</artifactId>
       <version>3.0.1</version>
@@ -27,18 +33,6 @@
       <groupId>com.baomidou</groupId>
       <artifactId>mybatis-plus-boot-starter</artifactId>
       <version>3.5.3.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
-      <version>3.0.4</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.session</groupId>
-      <artifactId>spring-session-data-redis</artifactId>
-      <version>3.0.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

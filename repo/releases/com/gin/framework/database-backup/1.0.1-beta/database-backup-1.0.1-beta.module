@@ -44,10 +44,10 @@
           "name": "database-backup-1.0.1-beta-plain.jar",
           "url": "database-backup-1.0.1-beta-plain.jar",
           "size": 22740,
-          "sha512": "a935dc7cc5741c9f784a73ecf22fedf99f0e6932f274834807ebeb0dfd1a2aec871a686c5bcd37ee2fbde38c93f06453022310e8f7cbdf246c0a92036cb83b89",
-          "sha256": "917b5661af64a79d2ff392082c211ed20ee59de0a711a39a41d21c5a49d8b58b",
-          "sha1": "6e4c28b699f23dc76aae536e19c05679327f6d22",
-          "md5": "96b643417c10040eab1794dd1c7905b8"
+          "sha512": "5ce796e79ba97bcf45b3fb6983c2d4ef0c7886bcbde08f176b69c5e097e5c5cd34790a8ea530fc7ce0ebde4b8588901ed525f734fefb13955968b96605184bd5",
+          "sha256": "2bfd13121545da17965a512d2dffcac37c8f813b69d28e8d0353e493022bc1ac",
+          "sha1": "7f02ef4d8610dc4f97b24c64fdb74ea481db9e4f",
+          "md5": "c56c0eef8202c2bba700dfb3bae81af1"
         }
       ]
     },
@@ -81,10 +81,10 @@
           "name": "database-backup-1.0.1-beta-plain.jar",
           "url": "database-backup-1.0.1-beta-plain.jar",
           "size": 22740,
-          "sha512": "a935dc7cc5741c9f784a73ecf22fedf99f0e6932f274834807ebeb0dfd1a2aec871a686c5bcd37ee2fbde38c93f06453022310e8f7cbdf246c0a92036cb83b89",
-          "sha256": "917b5661af64a79d2ff392082c211ed20ee59de0a711a39a41d21c5a49d8b58b",
-          "sha1": "6e4c28b699f23dc76aae536e19c05679327f6d22",
-          "md5": "96b643417c10040eab1794dd1c7905b8"
+          "sha512": "5ce796e79ba97bcf45b3fb6983c2d4ef0c7886bcbde08f176b69c5e097e5c5cd34790a8ea530fc7ce0ebde4b8588901ed525f734fefb13955968b96605184bd5",
+          "sha256": "2bfd13121545da17965a512d2dffcac37c8f813b69d28e8d0353e493022bc1ac",
+          "sha1": "7f02ef4d8610dc4f97b24c64fdb74ea481db9e4f",
+          "md5": "c56c0eef8202c2bba700dfb3bae81af1"
         }
       ]
     },
@@ -120,11 +120,11 @@
         {
           "name": "database-backup-1.0.1-beta-sources.jar",
           "url": "database-backup-1.0.1-beta-sources.jar",
-          "size": 14715,
-          "sha512": "a0a627d1c6d508dbb3f87716ad54ab2ebafbd5159b4a8983d614a18bcca64dc9dfb732bd5aeb6fb5a77ddf39e548d3ce1646ed0ebb259a111e8635b8306ab6ad",
-          "sha256": "436ee857983c2c145f88945b509daa1f70afebac4448ba746e8f835fbb28dc63",
-          "sha1": "36532315eef54f568c445fffe5422df7e516854f",
-          "md5": "46d261594e80858c8095d2224348edcc"
+          "size": 14674,
+          "sha512": "787ab00f1847da39952ecaa9e3ed9df22d10ba8feced29e712490935bf29d0c9eadd13a0a848a89183a432eeda2c0fc7b939aae89d2aee621c0261a59418ed80",
+          "sha256": "0c257a8bbc43977c6579e7c12070aac00e45f0fa34484eaa5633e7a66975cba9",
+          "sha1": "2212e08103af6e10768b3fa4cede22c503a459ac",
+          "md5": "96299de9ff86996da6b222486fbd93a6"
         }
       ]
     }

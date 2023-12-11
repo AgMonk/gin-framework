@@ -38,6 +38,19 @@
           ]
         },
         {
+          "group": "com.gin.framework",
+          "module": "redis",
+          "version": {
+            "requires": "1.0.1-beta"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
           "group": "org.mybatis.spring.boot",
           "module": "mybatis-spring-boot-starter",
           "version": {
@@ -65,32 +78,6 @@
         },
         {
           "group": "org.springframework.boot",
-          "module": "spring-boot-starter-data-redis",
-          "version": {
-            "requires": "3.0.4"
-          },
-          "excludes": [
-            {
-              "group": "com.google.protobuf",
-              "module": "protobuf-java"
-            }
-          ]
-        },
-        {
-          "group": "org.springframework.session",
-          "module": "spring-session-data-redis",
-          "version": {
-            "requires": "3.0.0"
-          },
-          "excludes": [
-            {
-              "group": "com.google.protobuf",
-              "module": "protobuf-java"
-            }
-          ]
-        },
-        {
-          "group": "org.springframework.boot",
           "module": "spring-boot-starter-data-jpa",
           "version": {
             "requires": "3.0.4"
@@ -107,11 +94,11 @@
         {
           "name": "database-1.0.1-beta-plain.jar",
           "url": "database-1.0.1-beta-plain.jar",
-          "size": 45691,
-          "sha512": "1545d628583177871fd6a6f03a54cf8b24e88da1105b62304afef7c0fcacea1e36245d90d8f754ebb93c44408bc8a8e28a10246c330e9b624783d0c16612a574",
-          "sha256": "56a87d857e7729f3c8f9ad24921a9b94368496a12c965d1177b1bfe09e7e10a1",
-          "sha1": "c480e971cf5669c0a886dfcdb5dcb780ab12ac80",
-          "md5": "373304a0d39071ca35e17636b2673a36"
+          "size": 38986,
+          "sha512": "1c48f12da76f5e2247bc3cb09f936fe5518942d6c40436ebac9130ff4ecf0ef7b5e313fd23a9939c0af4f4adcdaa10ff20074758f18ffc05239ea163e2fbe979",
+          "sha256": "8993a3dcc4c79bcbfe543f1d35916d37e4bd1bba685e102d2ad9672ada56f931",
+          "sha1": "d22d8fa8f1fddeb020b7d1e41716a9ee2b6e336d",
+          "md5": "abb9ab8ecd6ebfdaba09cfbe7ec2aea8"
         }
       ]
     },
@@ -165,6 +152,19 @@
           ]
         },
         {
+          "group": "com.gin.framework",
+          "module": "redis",
+          "version": {
+            "requires": "1.0.1-beta"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
           "group": "org.mybatis.spring.boot",
           "module": "mybatis-spring-boot-starter",
           "version": {
@@ -192,32 +192,6 @@
         },
         {
           "group": "org.springframework.boot",
-          "module": "spring-boot-starter-data-redis",
-          "version": {
-            "requires": "3.0.4"
-          },
-          "excludes": [
-            {
-              "group": "com.google.protobuf",
-              "module": "protobuf-java"
-            }
-          ]
-        },
-        {
-          "group": "org.springframework.session",
-          "module": "spring-session-data-redis",
-          "version": {
-            "requires": "3.0.0"
-          },
-          "excludes": [
-            {
-              "group": "com.google.protobuf",
-              "module": "protobuf-java"
-            }
-          ]
-        },
-        {
-          "group": "org.springframework.boot",
           "module": "spring-boot-starter-data-jpa",
           "version": {
             "requires": "3.0.4"
@@ -234,11 +208,11 @@
         {
           "name": "database-1.0.1-beta-plain.jar",
           "url": "database-1.0.1-beta-plain.jar",
-          "size": 45691,
-          "sha512": "1545d628583177871fd6a6f03a54cf8b24e88da1105b62304afef7c0fcacea1e36245d90d8f754ebb93c44408bc8a8e28a10246c330e9b624783d0c16612a574",
-          "sha256": "56a87d857e7729f3c8f9ad24921a9b94368496a12c965d1177b1bfe09e7e10a1",
-          "sha1": "c480e971cf5669c0a886dfcdb5dcb780ab12ac80",
-          "md5": "373304a0d39071ca35e17636b2673a36"
+          "size": 38986,
+          "sha512": "1c48f12da76f5e2247bc3cb09f936fe5518942d6c40436ebac9130ff4ecf0ef7b5e313fd23a9939c0af4f4adcdaa10ff20074758f18ffc05239ea163e2fbe979",
+          "sha256": "8993a3dcc4c79bcbfe543f1d35916d37e4bd1bba685e102d2ad9672ada56f931",
+          "sha1": "d22d8fa8f1fddeb020b7d1e41716a9ee2b6e336d",
+          "md5": "abb9ab8ecd6ebfdaba09cfbe7ec2aea8"
         }
       ]
     },
@@ -274,11 +248,11 @@
         {
           "name": "database-1.0.1-beta-sources.jar",
           "url": "database-1.0.1-beta-sources.jar",
-          "size": 26567,
-          "sha512": "e2e90f87feb1d051ea6de6a9304baf9bf6707c34843c6c89334b3fa247a66fb173529072244c761ebb382efde85b877723f767bde38d3a5b02567e9b01383d57",
-          "sha256": "eaec73a7755456553be76823faed1859c036ab5538a86fcfd08f9a2699ab634a",
-          "sha1": "04e621505d7be35a35f7dcb6775ee1e00847c1fb",
-          "md5": "c7eb8a6118086b31b29a1fbc5b963bbb"
+          "size": 23217,
+          "sha512": "fff57ee71dcf79da6c218fce4531f362198bedb6dfc81b26bf2ffbf9628af1a304d2e75a85cd77aaa89ad934755378cccb36bc1d12bfaa540e1a7c61c40dcd2d",
+          "sha256": "d8a38aeefc2e7cc06380cf49ac0ebfc97936c6807bb9f9d6fbdaa52b72544ff1",
+          "sha1": "c1b07454773b46ab1c1d4afce5fccb5f9b0a87e6",
+          "md5": "774ef102d8a7b10b38e02b90c602028c"
         }
       ]
     }
