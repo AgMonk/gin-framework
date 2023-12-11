@@ -1,0 +1,6 @@
+dependencies {
+    api project(":spring")
+    //redis
+    api "org.springframework.boot:spring-boot-starter-data-redis"
+    api "org.springframework.session:spring-session-data-redis"
+}

@@ -1,4 +1,4 @@
-package com.gin.database.config.redis;
+package com.gin.redis;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -30,6 +30,7 @@ import java.time.Duration;
 
 /**
  * Redis配置
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/4/16 15:46
@@ -41,28 +42,6 @@ import java.time.Duration;
 public class RedisConfig {
     public static final GenericJackson2JsonRedisSerializer GENERIC_JACKSON_2_JSON_REDIS_SERIALIZER = getSerializer();
     public static final String REDIS_CACHE_MANAGER = "redisCacheManager";
-
-    private static GenericJackson2JsonRedisSerializer getSerializer() {
-        final ObjectMapper mapper = new Jackson2ObjectMapperBuilder()
-                .serializationInclusion(JsonInclude.Include.NON_NULL)
-                .visibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY)
-                .featuresToEnable(
-                        //反序列化时 空串识别为 null
-                        DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT
-                ).featuresToDisable(
-                        // 反序列化时,遇到未知属性会不会报错
-                        DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
-                        SerializationFeature.FAIL_ON_EMPTY_BEANS,
-                        MapperFeature.USE_ANNOTATIONS
-                ).modules(
-                        //支持 ZonedDateTime
-                        new JavaTimeModule()
-                )
-
-                .build();
-        mapper.activateDefaultTyping(mapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);
-        return new GenericJackson2JsonRedisSerializer(mapper);
-    }
 
     @Bean
     @Primary
@@ -90,9 +69,32 @@ public class RedisConfig {
                 new StringRedisSerializer()).build();
     }
 
+    private static GenericJackson2JsonRedisSerializer getSerializer() {
+        final ObjectMapper mapper = new Jackson2ObjectMapperBuilder()
+                .serializationInclusion(JsonInclude.Include.NON_NULL)
+                .visibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY)
+                .featuresToEnable(
+                        //反序列化时 空串识别为 null
+                        DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT
+                ).featuresToDisable(
+                        // 反序列化时,遇到未知属性会不会报错
+                        DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
+                        SerializationFeature.FAIL_ON_EMPTY_BEANS,
+                        MapperFeature.USE_ANNOTATIONS
+                ).modules(
+                        //支持 ZonedDateTime
+                        new JavaTimeModule()
+                )
+
+                .build();
+        mapper.activateDefaultTyping(mapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);
+        return new GenericJackson2JsonRedisSerializer(mapper);
+    }
+
     /**
      * RedisTemplate 构造器
      * key的序列化方式默认为string
+     *
      * @param <K> Key类型
      * @param <V> Value类型
      */

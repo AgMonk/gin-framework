@@ -1,7 +1,7 @@
 package com.gin.security.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.gin.database.config.redis.RedisMybatisCache;
+import com.gin.database.config.cache.RedisMybatisCache;
 import com.gin.security.entity.SystemPermission;
 import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;

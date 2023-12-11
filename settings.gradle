@@ -9,4 +9,5 @@ include 'app'
 include 'spring'
 include 'jackson'
 include 'aliyun'
+include 'redis'
 

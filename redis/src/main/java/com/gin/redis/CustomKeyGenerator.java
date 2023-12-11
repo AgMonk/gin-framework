@@ -1,8 +1,9 @@
-package com.gin.database.config.redis;
+package com.gin.redis;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gin.common.utils.ParamArg;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -10,7 +11,6 @@ import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-import com.gin.common.utils.ParamArg;
 
 import java.lang.reflect.Method;
 import java.util.List;
@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 
 /**
  * 缓存注解使用的Key生成器, 在 {@link org.springframework.cache.annotation.CacheConfig} 等上使用
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/3/24 10:42
@@ -43,6 +44,7 @@ public class CustomKeyGenerator implements KeyGenerator {
 
     /**
      * Generate a key for the given method and its parameters.
+     *
      * @param target 被调用方法的类实例
      * @param method 被调用的方法
      * @param params 参数列表

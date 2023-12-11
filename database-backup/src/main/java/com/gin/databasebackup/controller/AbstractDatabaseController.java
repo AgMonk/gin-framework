@@ -3,22 +3,20 @@ package com.gin.databasebackup.controller;
 import com.gin.common.constant.ApiPath;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileNotExistsException;
-import com.gin.spring.vo.FileInfo;
-import com.gin.spring.vo.response.Res;
 import com.gin.database.enums.ServiceStatus;
 import com.gin.databasebackup.service.DatabaseBackupService;
 import com.gin.operationlog.annotation.OpLog;
 import com.gin.operationlog.controller.OperationLogController;
 import com.gin.operationlog.enums.OperationType;
+import com.gin.spring.vo.FileInfo;
+import com.gin.spring.vo.response.Res;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Nullable;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.orm.jpa.vendor.Database;
@@ -30,16 +28,15 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
-import static com.gin.database.config.redis.RedisConfig.REDIS_CACHE_MANAGER;
 import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 /**
  * 数据库备份接口(抽象)
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/4/10 12:10
  */
-
 
 
 @Slf4j
@@ -67,6 +64,7 @@ public abstract class AbstractDatabaseController implements OperationLogControll
 
     /**
      * 主实体类型
+     *
      * @return 主实体类型
      */
     @Override
@@ -76,6 +74,7 @@ public abstract class AbstractDatabaseController implements OperationLogControll
 
     /**
      * 主实体ID
+     *
      * @param mainId 用户传入的主实体Id
      * @return 主实体ID
      */

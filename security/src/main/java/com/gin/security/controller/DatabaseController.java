@@ -1,22 +1,22 @@
 package com.gin.security.controller;
 
 import com.gin.common.constant.ApiPath;
-import com.gin.operationlog.annotation.OpLog;
-import com.gin.operationlog.enums.OperationType;
-import com.gin.spring.annotation.MyRestController;
 import com.gin.common.exception.file.FileDeleteException;
 import com.gin.common.exception.file.FileNotExistsException;
-import com.gin.spring.vo.FileInfo;
-import com.gin.spring.vo.response.Res;
 import com.gin.database.vo.response.ResPage;
 import com.gin.databasebackup.controller.AbstractDatabaseController;
 import com.gin.databasebackup.service.DatabaseBackupService;
+import com.gin.operationlog.annotation.OpLog;
 import com.gin.operationlog.dto.param.OperationLogPageParam;
+import com.gin.operationlog.enums.OperationType;
 import com.gin.operationlog.vo.SubClassOption;
 import com.gin.operationlog.vo.SystemOperationLogVo;
 import com.gin.route.annotation.MenuEntry;
 import com.gin.route.annotation.MenuItem;
 import com.gin.security.Constant.Security;
+import com.gin.spring.annotation.MyRestController;
+import com.gin.spring.vo.FileInfo;
+import com.gin.spring.vo.response.Res;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,11 +31,12 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
-import static com.gin.database.config.redis.RedisConfig.REDIS_CACHE_MANAGER;
+import static com.gin.redis.RedisConfig.REDIS_CACHE_MANAGER;
 import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 /**
  * 数据库管理接口
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/4/10 15:58
@@ -69,6 +70,7 @@ public class DatabaseController extends AbstractDatabaseController {
 
     /**
      * 列出该主实体类型(和主实体ID)下, 所有的副实体类型,及每个副实体类型下的操作类型
+     *
      * @param old     是否查询旧日志
      * @param mainId  主实体Id ， 是否由用户指定由接口决定
      * @param request 请求
@@ -84,6 +86,7 @@ public class DatabaseController extends AbstractDatabaseController {
 
     /**
      * 日志分页查询
+     *
      * @param old     是否查询旧日志
      * @param param   查询参数
      * @param request 请求

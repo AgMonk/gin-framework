@@ -1,11 +1,11 @@
-package com.gin.database.config.redis;
+package com.gin.database.config.cache;
 
-import com.gin.database.config.redis.cache.CustomRedisCache;
-import lombok.extern.slf4j.Slf4j;
 import com.gin.common.utils.StrUtils;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * RedisRedis-Mybatis缓存
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/4/18 10:40
@@ -19,6 +19,7 @@ public class RedisMybatisCache extends CustomRedisCache {
 
     /**
      * 在打印日志时使用的key
+     *
      * @param key key
      * @return 日志key
      */

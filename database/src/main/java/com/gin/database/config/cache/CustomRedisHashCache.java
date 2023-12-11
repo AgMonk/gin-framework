@@ -1,6 +1,7 @@
-package com.gin.database.config.redis.cache;
+package com.gin.database.config.cache;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.gin.spring.utils.SpringContextUtils;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,12 +9,12 @@ import org.apache.ibatis.cache.Cache;
 import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
-import com.gin.spring.utils.SpringContextUtils;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * 自定义Redis Hash缓存
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2023/3/22 09:11
@@ -87,6 +88,7 @@ public class CustomRedisHashCache implements Cache {
 
     /**
      * 将key转换为在Hash中保存的key
+     *
      * @param key 原key
      * @return hashKey
      */
@@ -99,6 +101,7 @@ public class CustomRedisHashCache implements Cache {
 
     /**
      * 在打印日志时使用的key
+     *
      * @param key key
      * @return 日志key
      */
@@ -109,8 +112,8 @@ public class CustomRedisHashCache implements Cache {
     public RedisTemplate<String, Object> getRedisTemplate() {
         //noinspection unchecked
         return (RedisTemplate<String, Object>) SpringContextUtils.getContext().getBean("jsonTemplate",
-                                                                                       new TypeReference<RedisTemplate<String, Object>>() {
-                                                                                       });
+                new TypeReference<RedisTemplate<String, Object>>() {
+                });
     }
 
     private BoundHashOperations<String, String, Object> getOps() {
