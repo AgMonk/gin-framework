@@ -26,6 +26,13 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
+          "module": "aliyun",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
           "module": "security",
           "version": {
             "requires": "1.0.1-beta"
@@ -36,11 +43,11 @@
         {
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
-          "size": 6075,
-          "sha512": "b48bf494844983f7a0e2f38b90e12c7ac6026dfccd7b12008b904cf568a9d09415ff1a33541d294891d478f059cccc40533f0d882c661168f8e259042641f5c8",
-          "sha256": "b6e3c9e3dce6e24f007dc1638bdc3bb423e1f7cfd9ebffb9932722d90338987f",
-          "sha1": "1d3cfd6ecbbd245273c780ccfdd4e6afc5ce2908",
-          "md5": "b5bd6c70270476b3bdfdedc5bc13ccfc"
+          "size": 6275,
+          "sha512": "08c37a70a10d9cdd52e2bab24f9ed7c46999887789ce1bcd3505338ba4bb59850da16873c76be534bb3b89cabd0fb4e7fc77070a9dd32d1bc3c9060ed1ccb312",
+          "sha256": "6cb718ff6094f14570e8899a95eda1281d4d4e91e316f9521d9f80864f287ca3",
+          "sha1": "480af9b471f891bc5c2d3dfb84edf30030e2b27d",
+          "md5": "528554b2d42ce05bdd707d4017892abf"
         }
       ]
     },
@@ -56,6 +63,13 @@
       "dependencies": [
         {
           "group": "com.gin.framework",
+          "module": "aliyun",
+          "version": {
+            "requires": "1.0.1-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
           "module": "security",
           "version": {
             "requires": "1.0.1-beta"
@@ -66,11 +80,11 @@
         {
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
-          "size": 6075,
-          "sha512": "b48bf494844983f7a0e2f38b90e12c7ac6026dfccd7b12008b904cf568a9d09415ff1a33541d294891d478f059cccc40533f0d882c661168f8e259042641f5c8",
-          "sha256": "b6e3c9e3dce6e24f007dc1638bdc3bb423e1f7cfd9ebffb9932722d90338987f",
-          "sha1": "1d3cfd6ecbbd245273c780ccfdd4e6afc5ce2908",
-          "md5": "b5bd6c70270476b3bdfdedc5bc13ccfc"
+          "size": 6275,
+          "sha512": "08c37a70a10d9cdd52e2bab24f9ed7c46999887789ce1bcd3505338ba4bb59850da16873c76be534bb3b89cabd0fb4e7fc77070a9dd32d1bc3c9060ed1ccb312",
+          "sha256": "6cb718ff6094f14570e8899a95eda1281d4d4e91e316f9521d9f80864f287ca3",
+          "sha1": "480af9b471f891bc5c2d3dfb84edf30030e2b27d",
+          "md5": "528554b2d42ce05bdd707d4017892abf"
         }
       ]
     },
@@ -87,10 +101,10 @@
           "name": "app-1.0.1-beta-javadoc.jar",
           "url": "app-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "06096a774cabb840fa8dc581eeec21bda372c7df748ec42475ec8e758a0d31779c2cbea45d4818c33fdf6299736d6fa8424bfbe948606f3ffe80665371e01bc8",
-          "sha256": "aceab66e5b204fabaa4dcc6ace432a339770c7142f69ed86246477162062f1bd",
-          "sha1": "97cf48c0a8b89db3ad52e1e55b0c4adede61ccb5",
-          "md5": "e23fb731ca9dbdb23ac4eefea4f81f34"
+          "sha512": "3d12d444265444c63ac53fd7e1bd20b09c8d24af4ecc08e4fabf320d799e37e6ebb032c6777b3cb19259295232c4b6a280a167044bb7453bff657cf55f9fa9cb",
+          "sha256": "82d9c75dfd225ce0ba7a34bb30dad2360f0e0a16bb46e42bb83b9753f5999ea1",
+          "sha1": "7674c80e2f124a8bf021d800c223e1153b1ff6f4",
+          "md5": "e2a22c4bde08958ea149cece891b1dd8"
         }
       ]
     },
@@ -106,11 +120,11 @@
         {
           "name": "app-1.0.1-beta-sources.jar",
           "url": "app-1.0.1-beta-sources.jar",
-          "size": 4741,
-          "sha512": "f912dc3b5ee39fd21f2604edc365c11be4dcd25b57d7275973ee2797f7b594a941b11b6005518056ccc7a3a44d6d34f8e54e2d6eac788f7e934404aca7ed0385",
-          "sha256": "6391e7d56ac0fb160d9347dab24d11d9c29ec79c972742b3e92463c71335e824",
-          "sha1": "7085e8456308ff379d474926eb88d8bcf9cdb92f",
-          "md5": "3da3028dfbf4e0703091d694c3bc9a1a"
+          "size": 4943,
+          "sha512": "08c13f87849c4ca621fc8d44d55e13448f7cf699be852a4e5421b5f52f58cfc9ac95e1f33c1f7c7a31c366e8522f0210a35a75c18b6fefcdc2823f44889e895e",
+          "sha256": "4c00b0e863cf51bc3a722127306aa6102bb589d8ea9ffb0353d6dadb53c0c1ce",
+          "sha1": "726898997b6b369bcc0dd2fa36c9e77f81ce6815",
+          "md5": "3894d618dfa5b7df9f7094f73b1275b2"
         }
       ]
     }

@@ -72,10 +72,10 @@
           "name": "security-1.0.1-beta-plain.jar",
           "url": "security-1.0.1-beta-plain.jar",
           "size": 146690,
-          "sha512": "aae255344aaa3b42422466b9bf6e724eea45cade9070bf73b6b72653256787992e72a55bfb45975b15a3ca3e09cddcc510f50c6ce950d2a94ec7ae5b86ae46b0",
-          "sha256": "ada7d75a77e1fc71be53573da376d70ee1d135a31e93bbb80147d4f85783265b",
-          "sha1": "6590802390f548348a0b73d5a645ef4647c38ad6",
-          "md5": "3dee43c12957b446dec0e11442bc23f0"
+          "sha512": "d79dceb229e178afe0d8fbee197d2c806b35436c6b7aec54e3f9e805f8dcd098bc2cad95d8cd69898c539dea311c96ae37839b2141fbb0575585616826bfb62f",
+          "sha256": "409cc6eb7f4be435c02b641fe912c05820f36d76e438413aa9c183ce45e441cc",
+          "sha1": "731593a15979a9ab538a9700b8c0ecaec267b07b",
+          "md5": "127064dcd75f220cc314759fb844335e"
         }
       ]
     },
@@ -151,10 +151,10 @@
           "name": "security-1.0.1-beta-plain.jar",
           "url": "security-1.0.1-beta-plain.jar",
           "size": 146690,
-          "sha512": "aae255344aaa3b42422466b9bf6e724eea45cade9070bf73b6b72653256787992e72a55bfb45975b15a3ca3e09cddcc510f50c6ce950d2a94ec7ae5b86ae46b0",
-          "sha256": "ada7d75a77e1fc71be53573da376d70ee1d135a31e93bbb80147d4f85783265b",
-          "sha1": "6590802390f548348a0b73d5a645ef4647c38ad6",
-          "md5": "3dee43c12957b446dec0e11442bc23f0"
+          "sha512": "d79dceb229e178afe0d8fbee197d2c806b35436c6b7aec54e3f9e805f8dcd098bc2cad95d8cd69898c539dea311c96ae37839b2141fbb0575585616826bfb62f",
+          "sha256": "409cc6eb7f4be435c02b641fe912c05820f36d76e438413aa9c183ce45e441cc",
+          "sha1": "731593a15979a9ab538a9700b8c0ecaec267b07b",
+          "md5": "127064dcd75f220cc314759fb844335e"
         }
       ]
     },
