@@ -9,7 +9,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 小程序配置类
+ * 阿里云配置
  */
 @Configuration
 @ConfigurationProperties(prefix = "aliyun.profile")

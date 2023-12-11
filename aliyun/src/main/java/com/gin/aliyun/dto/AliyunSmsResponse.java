@@ -20,6 +20,6 @@ public class AliyunSmsResponse {
     String code;
 
     public boolean isSuccess() {
-        return "OK".equals(code);
+        return "OK".equalsIgnoreCase(code);
     }
 }

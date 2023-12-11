@@ -1,5 +1,10 @@
 aliyun:
+  #基础配置
   profile:
     region-id: cn-hangzhou
     access-key: aaaa
     access-key-secret: bbbb
+  #短信验证码服务
+  code:
+    sign-name: aaa
+    template-code: bbbb

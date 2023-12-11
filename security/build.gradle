@@ -4,6 +4,7 @@ dependencies {
     api project(":database-backup")
     api project(":operation-log")
     api project(":route")
+    api project(":aliyun")
     api "org.springframework.boot:spring-boot-starter-security"
     // 验证码
     implementation "com.github.whvcse:easy-captcha:1.6.2"

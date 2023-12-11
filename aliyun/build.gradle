@@ -1,5 +1,5 @@
 dependencies {
-    api project(":spring")
+    api project(":redis")
     // 阿里云SDK
     api "com.aliyun:aliyun-java-sdk-core:4.5.3"
 }
