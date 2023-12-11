@@ -1,0 +1,5 @@
+aliyun:
+  profile:
+    region-id: cn-hangzhou
+    access-key: aaaa
+    access-key-secret: bbbb

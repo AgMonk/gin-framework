@@ -1,3 +1,4 @@
 dependencies {
-   api project(":security")
+    api project(":aliyun")
+    api project(":security")
 }

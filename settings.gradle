@@ -8,4 +8,5 @@ include 'operation-log'
 include 'app'
 include 'spring'
 include 'jackson'
+include 'aliyun'
 

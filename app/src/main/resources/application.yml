@@ -7,3 +7,4 @@ spring:
       - application-database.yml
       - application-system.yml
       - application-wechat.yml
+      - application-aliyun.yml
