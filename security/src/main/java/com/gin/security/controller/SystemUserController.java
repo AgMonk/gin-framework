@@ -1,16 +1,12 @@
 package com.gin.security.controller;
 
 
-import com.gin.spring.annotation.MyRestController;
-import com.gin.spring.exception.BusinessException;
-import com.gin.spring.vo.response.Res;
 import com.gin.operationlog.annotation.OpLog;
 import com.gin.operationlog.controller.OperationLogController;
 import com.gin.operationlog.enums.OperationType;
 import com.gin.operationlog.subclass.PasswordSubClass;
 import com.gin.route.annotation.MenuItem;
 import com.gin.security.Constant.Security;
-import com.gin.security.bo.SystemUserBo;
 import com.gin.security.dto.form.LoginForm;
 import com.gin.security.dto.form.RegForm;
 import com.gin.security.dto.form.SystemUserInfoForm;
@@ -27,6 +23,9 @@ import com.gin.security.validation.Password;
 import com.gin.security.vo.MyUserDetailsVo;
 import com.gin.security.vo.SystemUserInfoVo;
 import com.gin.security.vo.SystemUserVo;
+import com.gin.spring.annotation.MyRestController;
+import com.gin.spring.exception.BusinessException;
+import com.gin.spring.vo.response.Res;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -44,7 +43,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.Collections;
 
 import static com.gin.security.Constant.Security.PASSWORD_MAX_LENGTH;
 import static com.gin.security.Constant.Security.PASSWORD_MIN_LENGTH;
@@ -52,6 +50,7 @@ import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
 /**
  * 用户接口
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/13 10:28
@@ -71,10 +70,6 @@ public class SystemUserController implements OperationLogController {
     private final UserProperties userProperties;
     private final RolePermissionService rolePermissionService;
     private final SystemUserAvatarService systemUserAvatarService;
-
-    private static Long getUserId() {
-        return MySecurityUtils.currentUserDetails().getId();
-    }
 
     @PostMapping("changePwd")
     @Operation(summary = "修改密码", description = "修改成功后会自动登出,需要重新登陆")
@@ -106,6 +101,7 @@ public class SystemUserController implements OperationLogController {
 
     /**
      * 主实体类型
+     *
      * @return 主实体类型
      */
     @Override
@@ -115,6 +111,7 @@ public class SystemUserController implements OperationLogController {
 
     /**
      * 主实体ID
+     *
      * @return 主实体ID
      */
     @Override
@@ -133,8 +130,8 @@ public class SystemUserController implements OperationLogController {
 
     @PostMapping("token")
     @Operation(summary = "查询自己的认证/授权信息", description = "包含用户名,ID,账号状态,权限信息;<br/>可以用来查询登陆状态,以及更新CSRF TOKEN")
-    public Res<SystemUserBo> token() {
-        return Res.of(rolePermissionService.listAuthorityByUserId(Collections.singleton(MyUserDetailsVo.of().getId())).get(0));
+    public Res<MyUserDetailsVo> token() {
+        return Res.of(MyUserDetailsVo.of());
     }
 
     @PostMapping(value = "avatar/delete")
@@ -181,6 +178,10 @@ public class SystemUserController implements OperationLogController {
     public Res<SystemUserInfoVo> userInfoUpdate(@RequestBody @Validated SystemUserInfoForm form) {
         final SystemUserInfo info = systemUserInfoService.saveOrUpdate(getUserId(), form);
         return Res.of(new SystemUserInfoVo(info), "修改成功");
+    }
+
+    private static Long getUserId() {
+        return MySecurityUtils.currentUserDetails().getId();
     }
 
 
