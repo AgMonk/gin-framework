@@ -79,10 +79,10 @@
           "name": "security-1.0.1-beta-plain.jar",
           "url": "security-1.0.1-beta-plain.jar",
           "size": 152875,
-          "sha512": "9df8470de23baf0ac23546f24ff66b0007784fb61bb739826ea2ff3b74192c26900e4b2c8f8cfcd711326f100e4b4fbba2da5edf3f22338360a7ae2b82ef747d",
-          "sha256": "61e96c9b68714ec3a158e23f4b760da97142bf8f5d7413eee8a863d9d6c7459d",
-          "sha1": "964c29973e3faae747020d3884d47b392e811e2e",
-          "md5": "aa0d59d1f82d69c4d9748b2332eafc18"
+          "sha512": "724c50477acc928151943de51bc5656428ea46fc13559619cdd543f91c3658c18a8e8bd67f3fb66ef8fde49e54b2c8638e936ec0b864fbdb157f9eb219397e59",
+          "sha256": "622e9cb5d4eb988290a3653485180a76c27b3118ab2d61b652146400cccda9d4",
+          "sha1": "a3acf22b9f0a4ad1f379f9ec04ca8c016859c8ca",
+          "md5": "b9c0ba104436ce4dbf3371784bd6154b"
         }
       ]
     },
@@ -165,10 +165,10 @@
           "name": "security-1.0.1-beta-plain.jar",
           "url": "security-1.0.1-beta-plain.jar",
           "size": 152875,
-          "sha512": "9df8470de23baf0ac23546f24ff66b0007784fb61bb739826ea2ff3b74192c26900e4b2c8f8cfcd711326f100e4b4fbba2da5edf3f22338360a7ae2b82ef747d",
-          "sha256": "61e96c9b68714ec3a158e23f4b760da97142bf8f5d7413eee8a863d9d6c7459d",
-          "sha1": "964c29973e3faae747020d3884d47b392e811e2e",
-          "md5": "aa0d59d1f82d69c4d9748b2332eafc18"
+          "sha512": "724c50477acc928151943de51bc5656428ea46fc13559619cdd543f91c3658c18a8e8bd67f3fb66ef8fde49e54b2c8638e936ec0b864fbdb157f9eb219397e59",
+          "sha256": "622e9cb5d4eb988290a3653485180a76c27b3118ab2d61b652146400cccda9d4",
+          "sha1": "a3acf22b9f0a4ad1f379f9ec04ca8c016859c8ca",
+          "md5": "b9c0ba104436ce4dbf3371784bd6154b"
         }
       ]
     },
@@ -205,10 +205,10 @@
           "name": "security-1.0.1-beta-sources.jar",
           "url": "security-1.0.1-beta-sources.jar",
           "size": 98061,
-          "sha512": "2e4a535be961141a42dcba780d8fcb9bba23badf19ab291b3caa65e91d92eabc957746c3bb1c8047406d049d4d13593823e73a0f05be707b17ed8e0a8f0192c3",
-          "sha256": "02b1e8c160ce024b78990fc6fd024f0515f4788b92e4b7a589a1bbcf1eaa37d8",
-          "sha1": "c31fb58be9cb16c4e557c376e807f7f944187b28",
-          "md5": "9892ad3c1e9cbb8133d2d87f8d62ea9f"
+          "sha512": "e3733806e42ad3fdd27b2a75bbdc31853f9b3bae3348f62733f35d9fdcce27badf378915b7841c7f7689c14ddc7a519bd5ec6fc5dccc08d541078777f7ee2b35",
+          "sha256": "ecb230ec23acc2f1e5e018984f87ad3f585a21930bec1ea9e4be0bd5e5c93674",
+          "sha1": "09840dea0278936da49069cd5dff9b099221d7d4",
+          "md5": "d557fc0effb49c0849922b8c5ee86cd0"
         }
       ]
     }
