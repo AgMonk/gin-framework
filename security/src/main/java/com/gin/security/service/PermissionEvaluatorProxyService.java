@@ -2,16 +2,16 @@ package com.gin.security.service;
 
 
 import com.gin.security.Constant.Role;
+import com.gin.security.bo.MyUserDetails;
 import com.gin.security.exception.AuthorityEvaluatorDuplicatedException;
+import com.gin.security.interfaze.ClassAuthorityEvaluator;
+import com.gin.security.interfaze.TypeNameAuthorityEvaluator;
+import com.gin.spring.utils.SpringContextUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
-import com.gin.security.bo.MyUserDetails;
-import com.gin.security.interfaze.ClassAuthorityEvaluator;
-import com.gin.security.interfaze.TypeNameAuthorityEvaluator;
-import com.gin.spring.utils.SpringContextUtils;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -20,6 +20,7 @@ import java.util.List;
 
 /**
  * 权限评估代理
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/14 13:31
@@ -80,6 +81,7 @@ public class PermissionEvaluatorProxyService implements PermissionEvaluator {
 
     /**
      * 判断指定用户对指定类型和ID的资源持有指定权限
+     *
      * @param authentication 用户认证信息
      * @param targetId       目标资源id
      * @param targetType     目标资源类型
@@ -103,11 +105,12 @@ public class PermissionEvaluatorProxyService implements PermissionEvaluator {
             log.warn("没有负责该类型的权限评估器: " + targetType);
             return false;
         }
-        return authorityEvaluator.hasPermission(myUserDetails, targetId, permission);
+        return authorityEvaluator.hasPermission(myUserDetails, targetType, targetId, permission);
     }
 
     /**
      * 判断指定用户对指定资源持有指定权限
+     *
      * @param authentication     用户认证信息
      * @param targetDomainObject 判断的资源
      * @param permission         权限
