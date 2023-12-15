@@ -18,6 +18,7 @@ import java.util.Set;
 public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
     /**
      * 配置附件的持有者id
+     *
      * @param ownerId  持有者id
      * @param attachId 附件id
      */
@@ -25,6 +26,7 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
 
     /**
      * 根据所有者id 查询附件
+     *
      * @param ownerId 所有者id
      * @return 附件
      */
@@ -32,6 +34,7 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
 
     /**
      * 根据所有者id 查询附件
+     *
      * @param ownerId 所有者id
      * @return 附件
      */
@@ -39,8 +42,9 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
 
     /**
      * 上传一个附件
+     *
      * @param file   上传的文件
-     * @param entity 附件对象
+     * @param entity 附件对象, 需要填写上传者id，备注，所有者id
      * @return 附件对象
      * @throws IOException 异常
      */
@@ -48,6 +52,7 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
 
     /**
      * 删除附件
+     *
      * @param attachments 附件实体
      * @return 被删除的附件
      */
@@ -55,12 +60,14 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
 
     /**
      * 校验上传文件
+     *
      * @param file 上传的文件
      */
     void validateMultipartFile(@NotNull MultipartFile file);
 
     /**
      * 允许的文件ContentType 应当在接收文件之前进行校验
+     *
      * @return ContentType 列表
      */
     default List<String> acceptContentType() {
