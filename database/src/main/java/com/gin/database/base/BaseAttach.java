@@ -9,6 +9,7 @@ import org.hibernate.annotations.Comment;
 
 /**
  * 基础附件对象
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/26 10:45
@@ -18,7 +19,7 @@ import org.hibernate.annotations.Comment;
 @MappedSuperclass
 @Schema(description = "基础附件对象")
 public class BaseAttach extends BasePo {
-    @Column(length = 10)
+    @Column(length = 10, nullable = false)
     @Comment("文件后缀")
     @Schema(description = "文件后缀")
     String ext;
