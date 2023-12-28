@@ -1,10 +1,10 @@
 package com.gin.spring.advice;
 
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 import com.gin.spring.exception.BusinessException;
 import com.gin.spring.exception.MyFieldError;
 import com.gin.spring.vo.response.Res;
-import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +17,7 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ import java.util.stream.Collectors;
 
 /**
  * 统一异常处理
+ *
  * @author : ginstone
  * @version : v1.0.0
  * @since : 2022/12/10 11:16
@@ -38,10 +40,11 @@ public class GlobalExceptionHandler {
     /**
      * 唯一约束异常的描述正则
      */
-    public static final Pattern DUPLICATE_KEY_PATTERN =Pattern.compile("Duplicate entry '(.+?)' for key");
+    public static final Pattern DUPLICATE_KEY_PATTERN = Pattern.compile("Duplicate entry '(.+?)' for key");
 
     /**
      * 兜底异常处理
+     *
      * @param e 其他异常
      * @return 处理
      */
@@ -52,7 +55,30 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * 数字格式不正确
+     *
+     * @param e 其他异常
+     * @return 处理
+     */
+    @ExceptionHandler({NumberFormatException.class})
+    public ResponseEntity<Res<?>> exceptionHandler(NumberFormatException e) {
+        return new ResponseEntity<>(Res.of(e.getLocalizedMessage(), "数字格式不正确"), HttpStatus.BAD_REQUEST);
+    }
+
+    /**
+     * 方法参数类型不匹配
+     *
+     * @param e 其他异常
+     * @return 处理
+     */
+    @ExceptionHandler({MethodArgumentTypeMismatchException.class})
+    public ResponseEntity<Res<?>> exceptionHandler(MethodArgumentTypeMismatchException e) {
+        return new ResponseEntity<>(Res.of(e.getLocalizedMessage(), "方法参数类型不匹配"), HttpStatus.BAD_REQUEST);
+    }
+
+    /**
      * 触发唯一约束异常
+     *
      * @param e 唯一约束异常
      * @return
      */
@@ -60,15 +86,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Res<?>> exceptionHandler(DuplicateKeyException e) {
         final String message = e.getMessage();
         final Matcher matcher = DUPLICATE_KEY_PATTERN.matcher(message);
-        if (matcher.find()){
+        if (matcher.find()) {
             final String msg = String.format("'%s' 已存在", matcher.group(1));
             return new ResponseEntity<>(Res.of(null, msg), HttpStatus.BAD_REQUEST);
-        }else{
+        } else {
             e.printStackTrace();
         }
         return new ResponseEntity<>(Res.of(e.getMessage(), "唯一约束异常"), HttpStatus.BAD_REQUEST);
     }
-
 
 
     @ExceptionHandler({HttpMessageNotReadableException.class})
@@ -99,6 +124,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 参数校验处理
+     *
      * @param e 阐述校验异常
      * @return 处理
      */
@@ -109,6 +135,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 业务异常处理
+     *
      * @param e 业务异常
      * @return 处理
      */
@@ -129,6 +156,7 @@ public class GlobalExceptionHandler {
 
     /**
      * 不支持的请求方法
+     *
      * @param e 其他异常
      * @return 处理
      */
