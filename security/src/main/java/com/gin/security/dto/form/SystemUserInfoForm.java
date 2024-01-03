@@ -1,13 +1,13 @@
 package com.gin.security.dto.form;
 
+import com.gin.security.entity.SystemUserInfo;
+import com.gin.spring.validation.Phone;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
-import com.gin.security.entity.SystemUserInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.validation.annotation.Validated;
-import com.gin.spring.validation.Phone;
 
 /**
  * @author bx002
@@ -23,7 +23,7 @@ public class SystemUserInfoForm {
     @NotEmpty
     String nickname;
     @Schema(description = "联系电话")
-    @Phone(nullable = true)
+    @Phone
     String phone;
 
     public SystemUserInfo build(long userId) {
