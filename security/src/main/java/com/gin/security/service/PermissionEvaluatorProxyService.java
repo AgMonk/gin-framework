@@ -80,6 +80,36 @@ public class PermissionEvaluatorProxyService implements PermissionEvaluator {
     }
 
     /**
+     * 判断指定用户对指定资源持有指定权限
+     *
+     * @param authentication     用户认证信息
+     * @param targetDomainObject 判断的资源
+     * @param permission         权限
+     * @return 是否持有权限
+     */
+    @Override
+    public boolean hasPermission(Authentication authentication, Object targetDomainObject, Object permission) {
+        log.debug("检查权限: {} {}", targetDomainObject, permission);
+        final MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
+        //如果持有 admin 角色 ，直接放行
+        if (myUserDetails.hasRole(Role.ADMIN)) {
+            return true;
+        }
+        if (targetDomainObject != null) {
+            //从 classMap 中选择  权限评估器
+            final ClassAuthorityEvaluator authorityEvaluator = getClassAuthorityEvaluator(targetDomainObject.getClass());
+            if (authorityEvaluator == null) {
+                log.warn("没有负责该 Class 的权限评估器: " + targetDomainObject.getClass());
+                return false;
+            }
+            return authorityEvaluator.hasPermission(myUserDetails, targetDomainObject, permission);
+        } else {
+            log.warn("targetDomainObject is null - {}", permission);
+            return false;
+        }
+    }
+
+    /**
      * 判断指定用户对指定类型和ID的资源持有指定权限
      *
      * @param authentication 用户认证信息
@@ -91,48 +121,22 @@ public class PermissionEvaluatorProxyService implements PermissionEvaluator {
     @Override
     public boolean hasPermission(Authentication authentication, Serializable targetId, String targetType, Object permission) {
         log.debug("检查权限: {} {} {}", targetId, targetType, permission);
-        if (targetId == null) {
-            return false;
-        }
         final MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
         //如果持有 admin 角色 ，直接放行
         if (myUserDetails.hasRole(Role.ADMIN)) {
             return true;
         }
         //从 nameMap 中选择  权限评估器
-        final TypeNameAuthorityEvaluator authorityEvaluator = getTypeNameAuthorityEvaluator(targetType);
-        if (authorityEvaluator == null) {
-            log.warn("没有负责该类型的权限评估器: " + targetType);
+        if (targetId != null) {
+            final TypeNameAuthorityEvaluator authorityEvaluator = getTypeNameAuthorityEvaluator(targetType);
+            if (authorityEvaluator == null) {
+                log.warn("没有负责该类型的权限评估器: " + targetType);
+                return false;
+            }
+            return authorityEvaluator.hasPermission(myUserDetails, targetType, targetId, permission);
+        } else {
+            log.warn("targetId is null - {}", permission);
             return false;
         }
-        return authorityEvaluator.hasPermission(myUserDetails, targetType, targetId, permission);
-    }
-
-    /**
-     * 判断指定用户对指定资源持有指定权限
-     *
-     * @param authentication     用户认证信息
-     * @param targetDomainObject 判断的资源
-     * @param permission         权限
-     * @return 是否持有权限
-     */
-    @Override
-    public boolean hasPermission(Authentication authentication, Object targetDomainObject, Object permission) {
-        log.debug("检查权限: {} {}", targetDomainObject, permission);
-        if (targetDomainObject == null) {
-            return false;
-        }
-        final MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
-        //如果持有 admin 角色 ，直接放行
-        if (myUserDetails.hasRole(Role.ADMIN)) {
-            return true;
-        }
-        //从 classMap 中选择  权限评估器
-        final ClassAuthorityEvaluator authorityEvaluator = getClassAuthorityEvaluator(targetDomainObject.getClass());
-        if (authorityEvaluator == null) {
-            log.warn("没有负责该 Class 的权限评估器: " + targetDomainObject.getClass());
-            return false;
-        }
-        return authorityEvaluator.hasPermission(myUserDetails, targetDomainObject, permission);
     }
 }
