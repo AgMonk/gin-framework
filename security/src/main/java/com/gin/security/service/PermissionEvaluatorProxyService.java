@@ -127,16 +127,11 @@ public class PermissionEvaluatorProxyService implements PermissionEvaluator {
             return true;
         }
         //从 nameMap 中选择  权限评估器
-        if (targetId != null) {
-            final TypeNameAuthorityEvaluator authorityEvaluator = getTypeNameAuthorityEvaluator(targetType);
-            if (authorityEvaluator == null) {
-                log.warn("没有负责该类型的权限评估器: " + targetType);
-                return false;
-            }
-            return authorityEvaluator.hasPermission(myUserDetails, targetType, targetId, permission);
-        } else {
-            log.warn("targetId is null - {}", permission);
+        final TypeNameAuthorityEvaluator authorityEvaluator = getTypeNameAuthorityEvaluator(targetType);
+        if (authorityEvaluator == null) {
+            log.warn("没有负责该类型的权限评估器: " + targetType);
             return false;
         }
+        return authorityEvaluator.hasPermission(myUserDetails, targetType, targetId, permission);
     }
 }
