@@ -17,12 +17,16 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 @Slf4j
 public class MyStaticConfig implements WebMvcConfigurer {
+    /**
+     * 静态资源映射路径前缀
+     */
+    public static final String STATIC_PATH_PREFIX = "/files";
     private final FileProperties systemProperties;
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         final String location = "file://" + systemProperties.getHomePath() + "/";
-        final String path = "/files/**";
+        final String path = STATIC_PATH_PREFIX + "/**";
         log.info("配置静态资源映射: {} -> {}", path, location);
         registry
                 .addResourceHandler(path)

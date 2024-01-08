@@ -117,6 +117,7 @@ public class MySecurityConfig {
                 .requestMatchers(HttpMethod.GET, VERIFY_CODE_WHITE_LIST.toArray(new String[0])).permitAll()
                 .requestMatchers(WHITE_LIST.toArray(new String[0])).permitAll()
                 .requestMatchers(TEST_WHITE_LIST.toArray(new String[0])).permitAll()
+                .requestMatchers(HttpMethod.GET, "/files/attach/**").permitAll()
                 .anyRequest().authenticated()
         ;
         // 微信登录
