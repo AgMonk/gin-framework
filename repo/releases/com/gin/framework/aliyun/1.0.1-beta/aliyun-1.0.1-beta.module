@@ -44,10 +44,10 @@
           "name": "aliyun-1.0.1-beta-plain.jar",
           "url": "aliyun-1.0.1-beta-plain.jar",
           "size": 10698,
-          "sha512": "92de1c618b2413f144c5998a2e907792c6ffdc71e65a5bb56df8667ad13e6cd6d36ca069a0cc1bb1d82a11a21fc8fc5ebc7163983d42babb15106fe6171800f0",
-          "sha256": "bae925fe30917a10d01d9f6a218239c00602a27d6814a6a82da268300e2f0377",
-          "sha1": "a96258002442569678437429f7d19394408a5368",
-          "md5": "5f50f6e8cf72df7490f5eb12aef7975c"
+          "sha512": "833a56adf534bac451eefd10ba24a1f5a1b30964766e9575006eb9c85f9d05a5b1d16a5fe0a10c6bfb6c47d5a1620e55760d79721632239a58ed959d4ddf7cff",
+          "sha256": "2b62ddc2b681ac8aa1752c864d4dce1d51ae8c2c8543160eae32d4e77e913ded",
+          "sha1": "c2fd0cffef6ef915d8e9f8142cacd85d8ad4a5d0",
+          "md5": "48fb1d8b478f69f88b6642a2ba64ffee"
         }
       ]
     },
@@ -81,10 +81,10 @@
           "name": "aliyun-1.0.1-beta-plain.jar",
           "url": "aliyun-1.0.1-beta-plain.jar",
           "size": 10698,
-          "sha512": "92de1c618b2413f144c5998a2e907792c6ffdc71e65a5bb56df8667ad13e6cd6d36ca069a0cc1bb1d82a11a21fc8fc5ebc7163983d42babb15106fe6171800f0",
-          "sha256": "bae925fe30917a10d01d9f6a218239c00602a27d6814a6a82da268300e2f0377",
-          "sha1": "a96258002442569678437429f7d19394408a5368",
-          "md5": "5f50f6e8cf72df7490f5eb12aef7975c"
+          "sha512": "833a56adf534bac451eefd10ba24a1f5a1b30964766e9575006eb9c85f9d05a5b1d16a5fe0a10c6bfb6c47d5a1620e55760d79721632239a58ed959d4ddf7cff",
+          "sha256": "2b62ddc2b681ac8aa1752c864d4dce1d51ae8c2c8543160eae32d4e77e913ded",
+          "sha1": "c2fd0cffef6ef915d8e9f8142cacd85d8ad4a5d0",
+          "md5": "48fb1d8b478f69f88b6642a2ba64ffee"
         }
       ]
     },
@@ -101,10 +101,10 @@
           "name": "aliyun-1.0.1-beta-javadoc.jar",
           "url": "aliyun-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "653a9ebc73be78126cebd2913843224e8d22e824010ac65f8484daebae652d699332f001229af72adb4a83af3e689e7020d6e0b73b4ac72da5ed1b7d233e5ccd",
-          "sha256": "39a4194a8e57fa43881d054dadd28d6ce05a44ab921c26b7db7fa9244144d293",
-          "sha1": "6d431f7fbfc3e2d61a06f2eb4fd4e39a540261ec",
-          "md5": "e5513372e358578e74811888ca32f9dc"
+          "sha512": "124af4075e2b322d1c9894377fa161c6634898c239e261ac6d332afd52fd19ce3c4e2d631cacb06c125b65285cf39724971175052fc961e4789300011e47ed27",
+          "sha256": "c1649873822bafdcbbc76b48ef0bf36e69cb6bf0db0426fdf56708ae2972ce5a",
+          "sha1": "8f7bc5874ecf6c84da2b92552f08df244176f075",
+          "md5": "48854b283975a294d1576d1d11de4e2d"
         }
       ]
     },
@@ -121,10 +121,10 @@
           "name": "aliyun-1.0.1-beta-sources.jar",
           "url": "aliyun-1.0.1-beta-sources.jar",
           "size": 7523,
-          "sha512": "ec0a3eb60927b9bfc9d2dcabdd4a6059ffb8d2039bc693421e6359c6b38058d7fcaab86bd5e88e7850db9ea3cc864887ffe48e9f9e4f3b3d58585d4faf263368",
-          "sha256": "beeaff20e6c236c3b2335032fc789e447a0bbcd6baf97b9813a3e55e4d5472b9",
-          "sha1": "478604a18f720119d7921ecf054f08d5341869c9",
-          "md5": "5fbeb9b58351190f0ddc767e5ad7b95f"
+          "sha512": "8e6195b9471098959dcfa07437e66402d3c31181a4d6e1d73b53367d5201f4a66d5ac95fa5d945116f5badc1de0f04574f44ad0b71bda21c611c0a5a65596f20",
+          "sha256": "15b7e3ae9fa5b1a9e23c1b1c7140c3d85a979d62f89c5df52bcb4eca723c4283",
+          "sha1": "b6e0a9559595cfc7973f38100ec8f7c347d6f5fd",
+          "md5": "10bd2ae0477b4265926a2cda2bb9df08"
         }
       ]
     }

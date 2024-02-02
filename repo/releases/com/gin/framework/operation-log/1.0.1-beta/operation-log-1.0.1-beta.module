@@ -37,10 +37,10 @@
           "name": "operation-log-1.0.1-beta-plain.jar",
           "url": "operation-log-1.0.1-beta-plain.jar",
           "size": 41865,
-          "sha512": "34fab0834194d59d7856a48ea1184bb9edebcef6199e973ac09726978d3fcbda79666fbeff5698d2c49949a719ac50e53cfcf61b90026a37de8f9b88567cac9d",
-          "sha256": "9394372c37659d4aa3956727cdc22b1a111cfde7bee1dec870ca85396c82d640",
-          "sha1": "9488e428bb8c16b8e9db8499fba0677b432f21d9",
-          "md5": "03bf15cfb2a4658cbf26fec2668e1be2"
+          "sha512": "c3c73a1a585e72bd5de82ad50194d39361fbe0b5f11112037d96e40f6fdf0179f30e30a997f7e7dad296de0bda6e9edc9724d2ef6ba379ce00e17de80ec29bf8",
+          "sha256": "bb17a4e402d8a3c98de3dc9782574ca038356f4341d58ede038a0ef4b2db120f",
+          "sha1": "9684ef90d2a3c3761712e88b68360742d5cd620c",
+          "md5": "f2b0c68397ea39542a5619c300ee41d2"
         }
       ]
     },
@@ -67,10 +67,10 @@
           "name": "operation-log-1.0.1-beta-plain.jar",
           "url": "operation-log-1.0.1-beta-plain.jar",
           "size": 41865,
-          "sha512": "34fab0834194d59d7856a48ea1184bb9edebcef6199e973ac09726978d3fcbda79666fbeff5698d2c49949a719ac50e53cfcf61b90026a37de8f9b88567cac9d",
-          "sha256": "9394372c37659d4aa3956727cdc22b1a111cfde7bee1dec870ca85396c82d640",
-          "sha1": "9488e428bb8c16b8e9db8499fba0677b432f21d9",
-          "md5": "03bf15cfb2a4658cbf26fec2668e1be2"
+          "sha512": "c3c73a1a585e72bd5de82ad50194d39361fbe0b5f11112037d96e40f6fdf0179f30e30a997f7e7dad296de0bda6e9edc9724d2ef6ba379ce00e17de80ec29bf8",
+          "sha256": "bb17a4e402d8a3c98de3dc9782574ca038356f4341d58ede038a0ef4b2db120f",
+          "sha1": "9684ef90d2a3c3761712e88b68360742d5cd620c",
+          "md5": "f2b0c68397ea39542a5619c300ee41d2"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "name": "operation-log-1.0.1-beta-javadoc.jar",
           "url": "operation-log-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "de8855ba0efc3c297b881bd4ce028a8ba7b7188bfb148736910be453892e2ee878662a96319d43a94caeb67273058210db6c09079ff45da781918a0c347985bb",
-          "sha256": "3d8bfdef1f136569f70e14a8b52760151d63cc1e763f7dd5abee6244546f9ca0",
-          "sha1": "f9606eb4090119874b4f479d828a11486577187c",
-          "md5": "1beb9734685dcbc065e7acc48945d366"
+          "sha512": "1e057d1986c50e9ad6c819f70812bfca53b5d3e53af80ff66d6a572635d2421db301f34feedff39a13654e14fe42c8181c0a3aad97f75109b264b52c3ae6396e",
+          "sha256": "e81d990e5584fcff6b520e82f89165140f907d2c6229345e58a194c90a0f2b19",
+          "sha1": "7b518c30ce3f6faa492e2b1b1784df6372b4a8f2",
+          "md5": "b99afbacf0e2c8b02c2792f6a7ad1efb"
         }
       ]
     },
@@ -107,10 +107,10 @@
           "name": "operation-log-1.0.1-beta-sources.jar",
           "url": "operation-log-1.0.1-beta-sources.jar",
           "size": 27811,
-          "sha512": "320df42c384e5e6ec479bb6583e39afff53d0bd8387903a06ef29a2979b179a729fbefc6106b00f21440cd269f6955e3016e2b887f5408a8293752a681b1211c",
-          "sha256": "3648f24b8f5c06c2728b5064f44c6189f4d06fe5f897919ba3fee1bab341f033",
-          "sha1": "ef87989cea35213df997e12f3b61acc6c26d9824",
-          "md5": "6546f36f85e20c8abe65e4d90f5ee7d6"
+          "sha512": "4a8be7aea4484f8ff97fa811101d402e72d01c9bed9d9896649d501c4265a81a277a4928849a42fbb0cda4ef87ea30bdb93f8e1cb1cdaf591239f099397f6d3a",
+          "sha256": "2a82fc99e7c6dbc08583f23412c20be3275dc1e10deb2c91e44be7530a466714",
+          "sha1": "6065754e5d3b371490a479c9eea4db981b64a435",
+          "md5": "2b8637a6b35f4f63b8b49365b6405687"
         }
       ]
     }

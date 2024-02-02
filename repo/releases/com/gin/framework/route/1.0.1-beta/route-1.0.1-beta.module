@@ -37,10 +37,10 @@
           "name": "route-1.0.1-beta-plain.jar",
           "url": "route-1.0.1-beta-plain.jar",
           "size": 19313,
-          "sha512": "04334c078c6b2b9d9921eeae65f6f12d4bf5e4ca146848206b00d30b94285fc080d6d96ca712cc1ea69529d64d077b88ebcee21b6f2ffd035ef3b3d3caa8f581",
-          "sha256": "aac782ae223ad6966af6d4f7dc6f4a4e7b915d72f413474b651c9b4d63e08a7c",
-          "sha1": "5a5ba746d2eadf370e7673a0d4fdd0f31d673e40",
-          "md5": "6bc9a84e76258e0970586a2356f0e720"
+          "sha512": "9254d303866b111510b7f2deddc7fc82348d445c3fda39f56f88055682752ec66db82405c7b19c07946c6b984101ff72aa9229813098dcda340cb1223a3b82d6",
+          "sha256": "754410f0b28c1688e7f575ef6b7cf95c44e7251e4e474cdc5724d857ad3b3672",
+          "sha1": "8a419e3aacb67cd3a2f9a4fb1fe72c8152c5a65d",
+          "md5": "fcaa7f10ee7f1f62e0f810416295ecaa"
         }
       ]
     },
@@ -67,10 +67,10 @@
           "name": "route-1.0.1-beta-plain.jar",
           "url": "route-1.0.1-beta-plain.jar",
           "size": 19313,
-          "sha512": "04334c078c6b2b9d9921eeae65f6f12d4bf5e4ca146848206b00d30b94285fc080d6d96ca712cc1ea69529d64d077b88ebcee21b6f2ffd035ef3b3d3caa8f581",
-          "sha256": "aac782ae223ad6966af6d4f7dc6f4a4e7b915d72f413474b651c9b4d63e08a7c",
-          "sha1": "5a5ba746d2eadf370e7673a0d4fdd0f31d673e40",
-          "md5": "6bc9a84e76258e0970586a2356f0e720"
+          "sha512": "9254d303866b111510b7f2deddc7fc82348d445c3fda39f56f88055682752ec66db82405c7b19c07946c6b984101ff72aa9229813098dcda340cb1223a3b82d6",
+          "sha256": "754410f0b28c1688e7f575ef6b7cf95c44e7251e4e474cdc5724d857ad3b3672",
+          "sha1": "8a419e3aacb67cd3a2f9a4fb1fe72c8152c5a65d",
+          "md5": "fcaa7f10ee7f1f62e0f810416295ecaa"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "name": "route-1.0.1-beta-javadoc.jar",
           "url": "route-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "de8855ba0efc3c297b881bd4ce028a8ba7b7188bfb148736910be453892e2ee878662a96319d43a94caeb67273058210db6c09079ff45da781918a0c347985bb",
-          "sha256": "3d8bfdef1f136569f70e14a8b52760151d63cc1e763f7dd5abee6244546f9ca0",
-          "sha1": "f9606eb4090119874b4f479d828a11486577187c",
-          "md5": "1beb9734685dcbc065e7acc48945d366"
+          "sha512": "1e057d1986c50e9ad6c819f70812bfca53b5d3e53af80ff66d6a572635d2421db301f34feedff39a13654e14fe42c8181c0a3aad97f75109b264b52c3ae6396e",
+          "sha256": "e81d990e5584fcff6b520e82f89165140f907d2c6229345e58a194c90a0f2b19",
+          "sha1": "7b518c30ce3f6faa492e2b1b1784df6372b4a8f2",
+          "md5": "b99afbacf0e2c8b02c2792f6a7ad1efb"
         }
       ]
     },
@@ -107,10 +107,10 @@
           "name": "route-1.0.1-beta-sources.jar",
           "url": "route-1.0.1-beta-sources.jar",
           "size": 13582,
-          "sha512": "47f32afb6d883201b179494a19d6066e855994c93a1fa99c23905e81c48326fd4b5d4bca59428bb388a79a83adde0a98255cbda45809a32a0f5adda21b8bd623",
-          "sha256": "90591715313e1c384a663bbfbcedb3e895bdbbccbab2583797409d39fe9a65bf",
-          "sha1": "c9ce733e80abe9b4480cd66ec04404bbce430054",
-          "md5": "6490a76030bd3929e383bd8dfb28b39a"
+          "sha512": "18b6e867373ba30739c1319d029a787a881f4ac5bdb1a85b71f1a33510f2c09c62ddfd2a8ef11c07b603a827731e3d13afd9c0b6eed2382d5205c3a3d9574694",
+          "sha256": "09dc89ad0eb30b22ac4f1fb0d436cd9887c66c3c4bed4f9fb375a104bb15de11",
+          "sha1": "95ecbe2a90c472c8a76487da7184ba033860b40b",
+          "md5": "2d546848a45c48d432b8763774ec7003"
         }
       ]
     }

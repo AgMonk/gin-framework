@@ -51,10 +51,10 @@
           "name": "redis-1.0.1-beta-plain.jar",
           "url": "redis-1.0.1-beta-plain.jar",
           "size": 6934,
-          "sha512": "b8b656abac65701d3aef0bfccd364a7dbb48b01383f24d32dcbe878f2dfa6b6492a81a1a1026f0607b66970b1a78ce030a16438bfce557da02b41c7713ad0097",
-          "sha256": "1faf1dc3ff387202b5a2b37bd8991db9cfca3e065449bd0a5041ec34b56a634d",
-          "sha1": "846e5680916cc3d99902430ca1e10aed150c8db7",
-          "md5": "0ee06f29aa34ddc6fdcac606c7b90159"
+          "sha512": "37e7bb3d03d174cff3aa3e5a11817b444313a2e3ccc7455023eb428036324e358c386434218d57b04653aaeebd8e2b259b4cdc4dbae7dc764994e8df905fd077",
+          "sha256": "4a960b67aede08e6124d596d83be64e54db64ad6ab3d50efe379a3437954961c",
+          "sha1": "ab8b7719ba0f698b5d65b3bed850eee07709663a",
+          "md5": "9e8a1314ebb5d9055ccdc75bc237b642"
         }
       ]
     },
@@ -95,10 +95,10 @@
           "name": "redis-1.0.1-beta-plain.jar",
           "url": "redis-1.0.1-beta-plain.jar",
           "size": 6934,
-          "sha512": "b8b656abac65701d3aef0bfccd364a7dbb48b01383f24d32dcbe878f2dfa6b6492a81a1a1026f0607b66970b1a78ce030a16438bfce557da02b41c7713ad0097",
-          "sha256": "1faf1dc3ff387202b5a2b37bd8991db9cfca3e065449bd0a5041ec34b56a634d",
-          "sha1": "846e5680916cc3d99902430ca1e10aed150c8db7",
-          "md5": "0ee06f29aa34ddc6fdcac606c7b90159"
+          "sha512": "37e7bb3d03d174cff3aa3e5a11817b444313a2e3ccc7455023eb428036324e358c386434218d57b04653aaeebd8e2b259b4cdc4dbae7dc764994e8df905fd077",
+          "sha256": "4a960b67aede08e6124d596d83be64e54db64ad6ab3d50efe379a3437954961c",
+          "sha1": "ab8b7719ba0f698b5d65b3bed850eee07709663a",
+          "md5": "9e8a1314ebb5d9055ccdc75bc237b642"
         }
       ]
     },
@@ -115,10 +115,10 @@
           "name": "redis-1.0.1-beta-javadoc.jar",
           "url": "redis-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "9cfb295bba4a92616bcba13472bbc9e69055b614319f426d187f42efc6648764701102120491d81eaca2fd13587dc8ea7e1f567b8685b30275259cb398448eee",
-          "sha256": "11fee9445b031c48177cf0ccf7320e33433a83647d9e76aa551c2d82ac54763b",
-          "sha1": "220cfbb5ef6a05159e1219f34b7e75d0550febb7",
-          "md5": "d81740e0badfb5dde1377ecd2a93f815"
+          "sha512": "ccfb49025278a6524085f590498f5d7426bde7c820d264c220a7b529f906d2cc36dea86d887da52d39f3e767a5efe81acb710241f39d4320dd0ea15867c51346",
+          "sha256": "d81530a1de64e7c4d501db5300f4d42b45f692b55116156af66e6659b3ee8076",
+          "sha1": "b86447b040b06cd17890f0e37f387d0932b847d6",
+          "md5": "9c8d05d3e51c536809a40492ccd03e64"
         }
       ]
     },
@@ -135,10 +135,10 @@
           "name": "redis-1.0.1-beta-sources.jar",
           "url": "redis-1.0.1-beta-sources.jar",
           "size": 3644,
-          "sha512": "1a3ea0106d99d7762ef93c62fc2adc79564aa44fa871ecb8e71b0f03a5e0dcf951054577bc1fdcb00a57367fd0860344a7a1870f7f7bbd85ae43e1b7d30545a9",
-          "sha256": "6d7d0761579beb774ddcb0541a4ab800f9f6af025a432946fef2b435609a31a3",
-          "sha1": "a2dea601159bbe48de9d0728b658c4b0d5534bd7",
-          "md5": "f30e34819b15335eea780932d982e4fa"
+          "sha512": "bb019184849f0e8162093a170f8e452446d011fad3249880b33a20938cc8b014f1fcf60a307b0a1a4932ace389b450db7c83fd5d987dd3c25fc0532402644496",
+          "sha256": "751916d444c72a59c18482197c8fa2cc34b68d34ee97fbc829d65e70df8ec47d",
+          "sha1": "8a839f44e41a56c9ae6b1bc564e74b1fb97c249e",
+          "md5": "c6ad81a220329bf5932ea38ee542bbe3"
         }
       ]
     }

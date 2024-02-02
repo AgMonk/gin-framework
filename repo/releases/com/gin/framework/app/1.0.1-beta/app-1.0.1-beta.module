@@ -37,10 +37,10 @@
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
           "size": 6350,
-          "sha512": "87a7f0383852add810cda58389531862fddfd8ecf8b5b304b208aeef4f256dbc586d8acf8d5a05b40beb15dd2ebcc2534a83ac00f572b27878eb6916fcf386d2",
-          "sha256": "54f15aa7f2c0527ff6a500a2c9469d04fc39edbd1304c548827a56ce676160ec",
-          "sha1": "3d515d4027064d94bca075605e73c6b5d084829c",
-          "md5": "928926d19959fd3a02a0c8244dba41e5"
+          "sha512": "7f4b4f70ddcab75f04b2106df038436a8ab6d547d257ae215aec0075fff29b071e7384145cd7df41cd471eb54ca6afce9e344c89f68dedce8b8131c880b2a80e",
+          "sha256": "2c4889bcd73f9fc3b40d2dac24dc7df5763ccee2c579b84775f8e55b006adfec",
+          "sha1": "52b71902c7ab1be41065b8f24d7224a659b2e22c",
+          "md5": "e0a7976f342d715fb4211a57cc4dbf77"
         }
       ]
     },
@@ -67,10 +67,10 @@
           "name": "app-1.0.1-beta-plain.jar",
           "url": "app-1.0.1-beta-plain.jar",
           "size": 6350,
-          "sha512": "87a7f0383852add810cda58389531862fddfd8ecf8b5b304b208aeef4f256dbc586d8acf8d5a05b40beb15dd2ebcc2534a83ac00f572b27878eb6916fcf386d2",
-          "sha256": "54f15aa7f2c0527ff6a500a2c9469d04fc39edbd1304c548827a56ce676160ec",
-          "sha1": "3d515d4027064d94bca075605e73c6b5d084829c",
-          "md5": "928926d19959fd3a02a0c8244dba41e5"
+          "sha512": "7f4b4f70ddcab75f04b2106df038436a8ab6d547d257ae215aec0075fff29b071e7384145cd7df41cd471eb54ca6afce9e344c89f68dedce8b8131c880b2a80e",
+          "sha256": "2c4889bcd73f9fc3b40d2dac24dc7df5763ccee2c579b84775f8e55b006adfec",
+          "sha1": "52b71902c7ab1be41065b8f24d7224a659b2e22c",
+          "md5": "e0a7976f342d715fb4211a57cc4dbf77"
         }
       ]
     },
@@ -87,10 +87,10 @@
           "name": "app-1.0.1-beta-javadoc.jar",
           "url": "app-1.0.1-beta-javadoc.jar",
           "size": 261,
-          "sha512": "db3426b488044d3112b77ef348e6b493bf353fd2c338baa6857559f33143c568a096255d81d734a9f4f9fdf1267288a25978458d0d2d041066705de3ae1888b5",
-          "sha256": "ef79eccd6ada92ea2ea6bde31dab5c64d2fe2e83d289aa87b1ce6f8da57a6795",
-          "sha1": "59942989e53cc34bb0bdb29a517320637864e366",
-          "md5": "e7929bb615b1b1e6a43881fdd1544f06"
+          "sha512": "ee9ca6185792b72005b262f5104418ee5ada7b0eb59d8cddad941bdc8daf739a616c458f3561767d7a5b4520e398866d43a6412f33c9c414b266f00076c1a31e",
+          "sha256": "cf983342fb167aa7204663065ecd921ee5f490a674b931a956201535dff2374d",
+          "sha1": "0239e0bc5c73012e3c282e9cf882a1957773ab3c",
+          "md5": "97f5da75c13adaf60c49439c722dcc59"
         }
       ]
     },
@@ -107,10 +107,10 @@
           "name": "app-1.0.1-beta-sources.jar",
           "url": "app-1.0.1-beta-sources.jar",
           "size": 5018,
-          "sha512": "f03573cd2cd276fad526c212d0790c21217880b99a15215aeb320f2c0aab67640fe7daadbc64fe0518a8f5c45b929b4b91f4cd14b87314f08b0accf9b5051535",
-          "sha256": "79b1da1e6c918447e0b8b77943019b5690ff3dd213f2bdf5a7cada8dc1ee5431",
-          "sha1": "34023b9e1d08d32ea99b9c6a25628cadfeb9b511",
-          "md5": "492ff9b18c8e8e625edbd07b39eb167f"
+          "sha512": "f60c8cc2d399e75d9805d4cdfc3e48e877044e9257e8787388cf5e14f66aabc2cf2f688464d0ab452c3a5b51fb0e0860fe736c8fb095abe3e39510fa01683d92",
+          "sha256": "51c958c3f005c050ab73a26b0e61f92ea140143ac176d52347038b06ac7b8644",
+          "sha1": "fc0b2b7728fde4f807ef8b36762c2fd1db4771c6",
+          "md5": "0f2ce8665f5af3bc1c1d2760680d154f"
         }
       ]
     }
