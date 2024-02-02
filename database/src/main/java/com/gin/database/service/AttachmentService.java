@@ -62,9 +62,17 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
      * 删除一个附件
      *
      * @param attachment 附件
-     * @return 删除的附件
+     * @return 被删除的附件
      */
     T deleteEntity(T attachment);
+
+    /**
+     * 根据ID删除一个附件
+     *
+     * @param id id
+     * @return 被删除的附件
+     */
+    T deleteEntityById(long id);
 
     /**
      * 校验上传文件

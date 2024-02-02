@@ -114,6 +114,11 @@ public abstract class AttachmentServiceImpl<M extends BaseMapper<T>, T extends B
     }
 
     @Override
+    public T deleteEntityById(long id) {
+        return deleteEntity(getById(id));
+    }
+
+    @Override
     public final void validateMultipartFile(@NotNull MultipartFile file) {
         //校验content-type
         final List<String> acceptContentType = acceptContentType();
