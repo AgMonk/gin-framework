@@ -115,7 +115,11 @@ public abstract class AttachmentServiceImpl<M extends BaseMapper<T>, T extends B
 
     @Override
     public T deleteEntityById(long id) {
-        return deleteEntity(getById(id));
+        final T entity = getById(id);
+        if (entity == null) {
+            return null;
+        }
+        return deleteEntity(entity);
     }
 
     @Override
