@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -19,7 +20,7 @@ import java.util.HashMap;
  * @since : 2022/12/23 15:44
  */
 public class JacksonUtils {
-    public static final  DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    public static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public final static ObjectMapper MAPPER = getMapper();
 
@@ -51,12 +52,25 @@ public class JacksonUtils {
         }
     }
 
+    /**
+     * 获取泛型的Collection Type
+     *
+     * @param containerClass 容器类型
+     * @param elementClasses 泛型类型
+     * @return JavaType Java类型
+     * @since 1.0
+     */
+    public static JavaType obtainJavaType(Class<?> containerClass, Class<?>... elementClasses) {
+        return MAPPER.getTypeFactory().constructParametricType(containerClass, elementClasses);
+    }
+
     public static <T> T parseObj(Object obj, Class<T> clazz) throws JsonProcessingException {
         return MAPPER.readValue(MAPPER.writeValueAsString(obj), clazz);
     }
 
     /**
      * 美化输出
+     *
      * @param obj 对象
      */
     public static void printPretty(Object obj) {
@@ -69,9 +83,10 @@ public class JacksonUtils {
 
     /**
      * 单行输出
+     *
      * @param obj 对象
      */
-    public static void print(Object obj){
+    public static void print(Object obj) {
         try {
             System.out.println(getMapper().disable(SerializationFeature.INDENT_OUTPUT).writeValueAsString(obj));
         } catch (JsonProcessingException e) {
