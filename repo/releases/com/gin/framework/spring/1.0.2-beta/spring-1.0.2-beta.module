@@ -1,0 +1,216 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "spring",
+    "version": "1.0.2-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "common",
+          "version": {
+            "requires": "1.0.2-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "6.0.12"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springdoc",
+          "module": "springdoc-openapi-starter-webmvc-ui",
+          "version": {
+            "requires": "2.0.0"
+          }
+        },
+        {
+          "group": "com.github.xiaoymin",
+          "module": "knife4j-springdoc-ui",
+          "version": {
+            "requires": "3.0.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-1.0.2-beta-plain.jar",
+          "url": "spring-1.0.2-beta-plain.jar",
+          "size": 42458,
+          "sha512": "27da6ebfb59603a11b9cd39439778ae1cf363801765b654798bcaf9264a758c7726dbd9c5a22263786580d317ceb52cb598de16511830b78c57800345d6c657e",
+          "sha256": "8655f2599b6021355f855d4874f0c26a3c3c317ca27edf52f8cfc13e5f9714eb",
+          "sha1": "15d0eefdc84e0095c5447f0594a481aa38853a3c",
+          "md5": "d027051663022924194769aeafb8dca1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-configuration-processor",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-actuator",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "common",
+          "version": {
+            "requires": "1.0.2-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-aop",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "6.0.12"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "version": {
+            "requires": "3.1.4"
+          }
+        },
+        {
+          "group": "org.springdoc",
+          "module": "springdoc-openapi-starter-webmvc-ui",
+          "version": {
+            "requires": "2.0.0"
+          }
+        },
+        {
+          "group": "com.github.xiaoymin",
+          "module": "knife4j-springdoc-ui",
+          "version": {
+            "requires": "3.0.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-1.0.2-beta-plain.jar",
+          "url": "spring-1.0.2-beta-plain.jar",
+          "size": 42458,
+          "sha512": "27da6ebfb59603a11b9cd39439778ae1cf363801765b654798bcaf9264a758c7726dbd9c5a22263786580d317ceb52cb598de16511830b78c57800345d6c657e",
+          "sha256": "8655f2599b6021355f855d4874f0c26a3c3c317ca27edf52f8cfc13e5f9714eb",
+          "sha1": "15d0eefdc84e0095c5447f0594a481aa38853a3c",
+          "md5": "d027051663022924194769aeafb8dca1"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-1.0.2-beta-javadoc.jar",
+          "url": "spring-1.0.2-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "3242975453f89105a99c7608501593db49d62b83b51940272d72eb594c89a4cd373d9068c8d4048a923ff57da58252651fcbc5e483a6b6940081f7883601047e",
+          "sha256": "cc7ae9a34775f5faba21e588b5a2b06a535174ae7098cbacdae29a3ae25e404f",
+          "sha1": "54ed3b3a8ec60d9865b8d8b249ff37f14aa3b0a4",
+          "md5": "9005d5be55721c3f542d918a1f5c42ae"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-1.0.2-beta-sources.jar",
+          "url": "spring-1.0.2-beta-sources.jar",
+          "size": 27565,
+          "sha512": "478020cd3c6be1071016de985c98b6c3538eb3b2a75d0c9110aea46192bf85cbf31d45b709cd904be88280b1205b59fe7260d0a4c7b91733d7ab760683ed129c",
+          "sha256": "c94b8e3be8252b5f80081c23b742038c05653ab94b9f7ddaba1b61981e3f099c",
+          "sha1": "da21a72e9bcee13c025cc8221eb9110ea69a99eb",
+          "md5": "c6969ec34ec68137f408435bfb719534"
+        }
+      ]
+    }
+  ]
+}

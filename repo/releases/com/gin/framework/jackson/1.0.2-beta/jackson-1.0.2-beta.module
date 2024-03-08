@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "jackson",
+    "version": "1.0.2-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-core",
+          "version": {
+            "requires": "2.14.2"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.datatype",
+          "module": "jackson-datatype-jsr310",
+          "version": {
+            "requires": "2.14.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jackson-1.0.2-beta-plain.jar",
+          "url": "jackson-1.0.2-beta-plain.jar",
+          "size": 16356,
+          "sha512": "0da5af92421bed7bb78ea8c6de98a350c19638f2f86621c92911d8d8793389d6c8a6d4b36e23d29e607898947c8691b27dc5ec74c7800a8682f33e4515a51157",
+          "sha256": "5d8a03e12dc8e67321515ed24513442eb58cf46f37c5775368b053e00910d586",
+          "sha1": "be82cc84af6152777a7f15af810fe40cf212d1b8",
+          "md5": "7ec16e3ed25015d7511d65d33201bde7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.fasterxml.jackson.core",
+          "module": "jackson-core",
+          "version": {
+            "requires": "2.14.2"
+          }
+        },
+        {
+          "group": "com.fasterxml.jackson.datatype",
+          "module": "jackson-datatype-jsr310",
+          "version": {
+            "requires": "2.14.2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jackson-1.0.2-beta-plain.jar",
+          "url": "jackson-1.0.2-beta-plain.jar",
+          "size": 16356,
+          "sha512": "0da5af92421bed7bb78ea8c6de98a350c19638f2f86621c92911d8d8793389d6c8a6d4b36e23d29e607898947c8691b27dc5ec74c7800a8682f33e4515a51157",
+          "sha256": "5d8a03e12dc8e67321515ed24513442eb58cf46f37c5775368b053e00910d586",
+          "sha1": "be82cc84af6152777a7f15af810fe40cf212d1b8",
+          "md5": "7ec16e3ed25015d7511d65d33201bde7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jackson-1.0.2-beta-javadoc.jar",
+          "url": "jackson-1.0.2-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "d4b4bf43919d50712128d4161496977ca7b042b3457edf37195a802bcf0edf25c2e0d1215ac19651a741581afde3462a18fd89bb95cd05a52f9b0aebe2ffe5b4",
+          "sha256": "0b31768b115af2794d3b7364ff1b5f9a14474c7d6d1034dc4c9a111360cf1f87",
+          "sha1": "016e4eecb5abef108f3afd8b93804c28a2e7a1e7",
+          "md5": "43bf3e3f1077fa6233e0a0500e71c196"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jackson-1.0.2-beta-sources.jar",
+          "url": "jackson-1.0.2-beta-sources.jar",
+          "size": 9984,
+          "sha512": "563941df39119fbf5aba29deeb333b4204db8513090c0605107730490af042f828ede8e12757a703286f0fe0621d1abea7ea95bdf87a10ea1eb0c21d9d157531",
+          "sha256": "ce1f79f78cda09acdbcf2ad1a3a9f9f5e0753a837bc7213b5eb81b938cc158d1",
+          "sha1": "e6c60fb53b1af025048181ab82f8756a0f32a384",
+          "md5": "ccea34103a1b33a8f2d7f5ea7e0fcfd4"
+        }
+      ]
+    }
+  ]
+}

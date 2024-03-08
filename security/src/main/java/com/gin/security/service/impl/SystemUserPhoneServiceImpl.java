@@ -77,7 +77,7 @@ public class SystemUserPhoneServiceImpl extends ServiceImpl<SystemUserPhoneDao, 
     @Override
     public SystemUserPhone getByPhoneNumber(String phoneNumber) {
         final QueryWrapper<SystemUserPhone> qw = new QueryWrapper<>();
-        qw.eq("phone_number", phoneNumber);
+        qw.eq("phone", phoneNumber);
         return getOne(qw);
     }
 

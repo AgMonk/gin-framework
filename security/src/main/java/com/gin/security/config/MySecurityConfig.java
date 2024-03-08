@@ -112,34 +112,32 @@ public class MySecurityConfig {
             MyRememberMeServices rememberMeServices
     ) throws Exception {
         //路径配置
-        http.authorizeHttpRequests()
-                .requestMatchers(HttpMethod.GET, DOC_WHITE_LIST.toArray(new String[0])).permitAll()
+        http.authorizeHttpRequests(registry -> registry.requestMatchers(HttpMethod.GET, DOC_WHITE_LIST.toArray(new String[0])).permitAll()
                 .requestMatchers(HttpMethod.GET, VERIFY_CODE_WHITE_LIST.toArray(new String[0])).permitAll()
                 .requestMatchers(WHITE_LIST.toArray(new String[0])).permitAll()
                 .requestMatchers(TEST_WHITE_LIST.toArray(new String[0])).permitAll()
                 .requestMatchers(HttpMethod.GET, "/files/attach/**").permitAll()
-                .anyRequest().authenticated()
-        ;
+                .anyRequest().authenticated());
+
         // 微信登录
         http.addFilterBefore(weChatAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         //登陆
         http.addFilterAt(loginFilter, UsernamePasswordAuthenticationFilter.class);
 
         //登出
-        http.logout().logoutUrl(Security.LOGOUT_URI).logoutSuccessHandler(authenticationHandler);
+        http.logout(config -> config.logoutUrl(Security.LOGOUT_URI).logoutSuccessHandler(authenticationHandler));
 
         //禁用 csrf
 //        http.csrf().disable();
 
         //csrf验证 存储到Cookie中
-        http.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler())
-        ;
+        http.csrf(config -> config.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                .csrfTokenRequestHandler(new CsrfTokenRequestAttributeHandler()));
 
         //会话管理
-        http.sessionManagement()
-                .maximumSessions(1)
-                .expiredSessionStrategy(authenticationHandler)
+        http.sessionManagement(config -> config.maximumSessions(1)
+                .expiredSessionStrategy(authenticationHandler))
+
         //引入redis-session依赖后已不再需要手动配置 sessionRegistry
 //                .sessionRegistry(new SpringSessionBackedSessionRegistry<>(new RedisIndexedSessionRepository(RedisConfig.createRedisTemplate())))
         //禁止后登陆挤下线
@@ -147,12 +145,12 @@ public class MySecurityConfig {
         ;
 
         //rememberMe
-        http.rememberMe().rememberMeServices(rememberMeServices);
+        http.rememberMe(config -> config.rememberMeServices(rememberMeServices));
 
         // 权限不足时的处理
-        http.exceptionHandling()
-                .accessDeniedHandler(authenticationHandler)
-                .authenticationEntryPoint(authenticationHandler)
+        http.exceptionHandling(config -> config.accessDeniedHandler(authenticationHandler)
+                .authenticationEntryPoint(authenticationHandler))
+
         ;
 
 
