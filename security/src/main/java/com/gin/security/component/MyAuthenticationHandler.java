@@ -104,7 +104,7 @@ public class MyAuthenticationHandler implements AuthenticationSuccessHandler
             HttpServletResponse response,
             AuthenticationException exception
     ) throws IOException {
-        writeJson(response, HttpStatus.UNAUTHORIZED, Res.of(exception.getLocalizedMessage(), "登陆失败"));
+        writeJson(response, HttpStatus.UNAUTHORIZED, Res.of("用户名或密码错误", "登陆失败"));
     }
 
     /**

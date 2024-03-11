@@ -14,7 +14,7 @@ javadoc.options.encoding = "UTF-8"
 // 为所有项目配置
 allprojects {
     group = 'com.gin.framework'
-    version = '1.0.2-beta'
+    version = '1.0.3-beta'
     sourceCompatibility = JavaVersion.VERSION_17
 
     apply plugin: 'java'
