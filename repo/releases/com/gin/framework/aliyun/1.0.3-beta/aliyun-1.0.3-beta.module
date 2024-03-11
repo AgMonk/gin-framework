@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "aliyun",
+    "version": "1.0.3-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "redis",
+          "version": {
+            "requires": "1.0.3-beta"
+          }
+        },
+        {
+          "group": "com.aliyun",
+          "module": "aliyun-java-sdk-core",
+          "version": {
+            "requires": "4.5.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "aliyun-1.0.3-beta-plain.jar",
+          "url": "aliyun-1.0.3-beta-plain.jar",
+          "size": 10698,
+          "sha512": "75f3ab13017e3372371a289852be3217e234e1cf4c1f61035ac422d08fd045f4dd36e5aecc9e7141334b4b1fa774d22bc0b0ce9eb2a10a867deccea3f1d57faa",
+          "sha256": "74b57663bac95d24de8c0744ff5f80fc750f658375404a102b5d58ba43ef9a9c",
+          "sha1": "2201af1d42d65845c43e75f31f8c9b27ae209b34",
+          "md5": "cedbe2f1a95766d1cdfb867fa5257395"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "redis",
+          "version": {
+            "requires": "1.0.3-beta"
+          }
+        },
+        {
+          "group": "com.aliyun",
+          "module": "aliyun-java-sdk-core",
+          "version": {
+            "requires": "4.5.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "aliyun-1.0.3-beta-plain.jar",
+          "url": "aliyun-1.0.3-beta-plain.jar",
+          "size": 10698,
+          "sha512": "75f3ab13017e3372371a289852be3217e234e1cf4c1f61035ac422d08fd045f4dd36e5aecc9e7141334b4b1fa774d22bc0b0ce9eb2a10a867deccea3f1d57faa",
+          "sha256": "74b57663bac95d24de8c0744ff5f80fc750f658375404a102b5d58ba43ef9a9c",
+          "sha1": "2201af1d42d65845c43e75f31f8c9b27ae209b34",
+          "md5": "cedbe2f1a95766d1cdfb867fa5257395"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "aliyun-1.0.3-beta-javadoc.jar",
+          "url": "aliyun-1.0.3-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "7a1a1280ffe114b55c6ec9b7dc64b876416bc6b1a36e6459dbccfc1e50e878393dc9af9e4281bbf4262228005a865afac3a561cb7839114b1f1a3c45f73d78d1",
+          "sha256": "b788753477ebc6443d9fa012213d30eb459264217c740abd9a6006d93d77be54",
+          "sha1": "0258d5c6978c3e80f4f25880c7cf18014384af1e",
+          "md5": "bcdf6c665e807175829e5d7d1532837c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "aliyun-1.0.3-beta-sources.jar",
+          "url": "aliyun-1.0.3-beta-sources.jar",
+          "size": 7523,
+          "sha512": "b7f6ff8d3e13a3a18175c240dadc0154851fa16a5cf5a275896868a0c63a046344dc1f9bf0e498838f9facad65674bfcb561b00a1d71702fe28dbf32ba8c9a76",
+          "sha256": "27c1ba58f97f15f79a5585a3a32597f5c0c863fd25c2fae057e0f1d4782fcdee",
+          "sha1": "1438aa1835597e3c753fedb49ff0d9b527458990",
+          "md5": "d8026199ea87e60689ed219464a79d74"
+        }
+      ]
+    }
+  ]
+}
