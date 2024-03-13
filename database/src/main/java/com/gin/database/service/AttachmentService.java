@@ -1,5 +1,6 @@
 package com.gin.database.service;
 
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.gin.database.base.BaseAttach;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.web.multipart.MultipartFile;
@@ -88,5 +89,16 @@ public interface AttachmentService<T extends BaseAttach> extends MyService<T> {
      */
     default List<String> acceptContentType() {
         return null;
+    }
+
+    /**
+     * 修改附件名称
+     * @param id id
+     * @param filename 文件名
+     */
+    default void rename(long id,String filename){
+        final UpdateWrapper<T> uw = new UpdateWrapper<>();
+        uw.set("filename",filename).eq("id",id);
+        update(uw);
     }
 }
