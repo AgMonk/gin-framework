@@ -1,0 +1,260 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "database",
+    "version": "1.0.4-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.4-beta"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "redis",
+          "version": {
+            "requires": "1.0.4-beta"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "org.mybatis.spring.boot",
+          "module": "mybatis-spring-boot-starter",
+          "version": {
+            "requires": "3.0.1"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "com.baomidou",
+          "module": "mybatis-plus-boot-starter",
+          "version": {
+            "requires": "3.5.3.1"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-data-jpa",
+          "version": {
+            "requires": "3.1.4"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "database-1.0.4-beta-plain.jar",
+          "url": "database-1.0.4-beta-plain.jar",
+          "size": 39843,
+          "sha512": "3ab07165b36ef87aa2590847565c97b7e6c4f8ec82dc705c08a6ad2239748ec7e8a64d1616b386f83b1cc6fdc4bde492e64ea2d963c26c3d6562f0ae556ddacb",
+          "sha256": "bb708ed87dd722efb4b9fc5d826a2bc029801d24790fb6a7ec71c255e6408be1",
+          "sha1": "7f47d7777c9bf63db579a193467957e146854235",
+          "md5": "7d1ee747ae1422e1540bc1d4ce41d25c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.mysql",
+          "module": "mysql-connector-j",
+          "version": {
+            "requires": "8.0.33"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "com.alibaba",
+          "module": "druid-spring-boot-starter",
+          "version": {
+            "requires": "1.2.16"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.4-beta"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "redis",
+          "version": {
+            "requires": "1.0.4-beta"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "org.mybatis.spring.boot",
+          "module": "mybatis-spring-boot-starter",
+          "version": {
+            "requires": "3.0.1"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "com.baomidou",
+          "module": "mybatis-plus-boot-starter",
+          "version": {
+            "requires": "3.5.3.1"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-data-jpa",
+          "version": {
+            "requires": "3.1.4"
+          },
+          "excludes": [
+            {
+              "group": "com.google.protobuf",
+              "module": "protobuf-java"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "database-1.0.4-beta-plain.jar",
+          "url": "database-1.0.4-beta-plain.jar",
+          "size": 39843,
+          "sha512": "3ab07165b36ef87aa2590847565c97b7e6c4f8ec82dc705c08a6ad2239748ec7e8a64d1616b386f83b1cc6fdc4bde492e64ea2d963c26c3d6562f0ae556ddacb",
+          "sha256": "bb708ed87dd722efb4b9fc5d826a2bc029801d24790fb6a7ec71c255e6408be1",
+          "sha1": "7f47d7777c9bf63db579a193467957e146854235",
+          "md5": "7d1ee747ae1422e1540bc1d4ce41d25c"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "database-1.0.4-beta-javadoc.jar",
+          "url": "database-1.0.4-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "3277bc10a0bcf19b9556fc03eec9b96592ac0f6756be20404af0de38ed7ab8ae6233218e0a7356addb86996ffe97c411d4362a3e58901709f4fb92f902973f8c",
+          "sha256": "fd9415b13fd6746e64584aa31d748c070b5f09c79bad86042b44582f26322023",
+          "sha1": "f44eafdefdac47c338aebc13590f426b68866046",
+          "md5": "a6a6c65bae01a577c565499caa6f03ef"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "database-1.0.4-beta-sources.jar",
+          "url": "database-1.0.4-beta-sources.jar",
+          "size": 23594,
+          "sha512": "d4d5a509e75a3f4af7703f169efd6bdb217317c808ef40e471383ef977553c75fd039123145512a9ba5dca3e4be6361b81a5a236d713fa3afd2544a6eb95099e",
+          "sha256": "b96db1ee0d678242d79a9e51a01fcb7c4702690f5b74c88d7d2cc4a068070faa",
+          "sha1": "03b56a014818b8b3c09fff94173b49ebc2b0cab6",
+          "md5": "21b498ff6748b093d973eacf6f2ea64b"
+        }
+      ]
+    }
+  ]
+}

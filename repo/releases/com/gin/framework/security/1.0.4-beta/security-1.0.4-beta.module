@@ -1,0 +1,216 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.gin.framework",
+    "module": "security",
+    "version": "1.0.4-beta",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database-backup",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "route",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "aliyun",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security",
+          "version": {
+            "requires": "3.1.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "security-1.0.4-beta-plain.jar",
+          "url": "security-1.0.4-beta-plain.jar",
+          "size": 153602,
+          "sha512": "5f148a606707f0c49cd19f99e67e6e37ef0139e2c7817ba0a447948db586f334d081cbdf0ddc8ddcf2db61bcc84039748060c14d84f762cec6cf5f6f5b7aae8f",
+          "sha256": "f06f39543969533acc6b1a4ebcb603624496bcc8ef5afab6818eb72469124bca",
+          "sha1": "1fe92bef9ca26341455c3a941d5a6e211bf69ddf",
+          "md5": "d2c1b7c842dd2290692b24e4c093d2ea"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.whvcse",
+          "module": "easy-captcha",
+          "version": {
+            "requires": "1.6.2"
+          }
+        },
+        {
+          "group": "org.openjdk.nashorn",
+          "module": "nashorn-core",
+          "version": {
+            "requires": "15.4"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "spring",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "database-backup",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "operation-log",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "route",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "com.gin.framework",
+          "module": "aliyun",
+          "version": {
+            "requires": "1.0.4-beta"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-security",
+          "version": {
+            "requires": "3.1.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "security-1.0.4-beta-plain.jar",
+          "url": "security-1.0.4-beta-plain.jar",
+          "size": 153602,
+          "sha512": "5f148a606707f0c49cd19f99e67e6e37ef0139e2c7817ba0a447948db586f334d081cbdf0ddc8ddcf2db61bcc84039748060c14d84f762cec6cf5f6f5b7aae8f",
+          "sha256": "f06f39543969533acc6b1a4ebcb603624496bcc8ef5afab6818eb72469124bca",
+          "sha1": "1fe92bef9ca26341455c3a941d5a6e211bf69ddf",
+          "md5": "d2c1b7c842dd2290692b24e4c093d2ea"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "security-1.0.4-beta-javadoc.jar",
+          "url": "security-1.0.4-beta-javadoc.jar",
+          "size": 261,
+          "sha512": "1bd776432ad1ce3e94786ea424cac3319902526d2713adc3801c7efae3c61983b8044cae12107e9dde8f8a21c0c9ff9f91466735cf203c0c93c46df790655474",
+          "sha256": "5549ea18c4edf6371887988dbeebbdeb38c967620f0d2d16e55855911bc986c7",
+          "sha1": "735bc3607590cd26c6974d5a5f0f461398e8140c",
+          "md5": "041b8c13c5e3c25f1e8fddfc81a8b0bd"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "security-1.0.4-beta-sources.jar",
+          "url": "security-1.0.4-beta-sources.jar",
+          "size": 98153,
+          "sha512": "36f57fa8b1777d035775ac9ee218cfe32d96d34cade96b9a9ceb99cf10fa2b5086d68f967a9916e48c3f7f9ddb530d6903534df7d610b62770596a601579632f",
+          "sha256": "a5d8e39c1c8480aca193eb7b3b96289b0a52c928e04c2359ce0065295dfe9255",
+          "sha1": "e99dd67170721315b0d495c627a78482057126a2",
+          "md5": "5b2fc855080365c039d937bd212a1748"
+        }
+      ]
+    }
+  ]
+}
